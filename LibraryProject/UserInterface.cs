@@ -17,5 +17,9 @@ namespace LibraryProject
             InitializeComponent();
         }
 
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
