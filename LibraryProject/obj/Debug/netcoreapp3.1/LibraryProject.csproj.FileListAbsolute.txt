@@ -1,0 +1,6 @@
+C:\Users\bever\Source\Repos\CIS560Team5Project\LibraryProject\obj\Debug\netcoreapp3.1\LibraryProject.csprojAssemblyReference.cache
+C:\Users\bever\Source\Repos\CIS560Team5Project\LibraryProject\obj\Debug\netcoreapp3.1\LibraryProject.UserInterface.resources
+C:\Users\bever\Source\Repos\CIS560Team5Project\LibraryProject\obj\Debug\netcoreapp3.1\LibraryProject.csproj.GenerateResource.cache
+C:\Users\bever\Source\Repos\CIS560Team5Project\LibraryProject\obj\Debug\netcoreapp3.1\LibraryProject.AssemblyInfoInputs.cache
+C:\Users\bever\Source\Repos\CIS560Team5Project\LibraryProject\obj\Debug\netcoreapp3.1\LibraryProject.AssemblyInfo.cs
+C:\Users\bever\Source\Repos\CIS560Team5Project\LibraryProject\obj\Debug\netcoreapp3.1\LibraryProject.csproj.CoreCompileInputs.cache
