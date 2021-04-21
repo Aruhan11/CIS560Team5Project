@@ -8,7 +8,7 @@ BEGIN
         AssetCategoryID INT NOT NULL,
         AssetTypeID INT NOT NULL,
         CreatorID INT NOT NULL,
-        ReleaseDate DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
+        ReleaseDate DATETIME(2) NOT NULL DEFAULT('0000-00-00'),
         Stock INT NOT NULL ,
 
         CONSTRAINT PK_Library_Asset_AssetID PRIMARY KEY CLUSTERED

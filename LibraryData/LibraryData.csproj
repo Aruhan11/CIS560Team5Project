@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DataDelegates\CreateAssetBookDelegate.cs" />
+    <Compile Remove="DataDelegates\CreateDeveloperBookDelegate.cs" />
     <Compile Remove="DataDelegates\CreateNewBookDelegate.cs" />
+    <Compile Remove="DataDelegates\CreatePersonDataDelegate.cs" />
   </ItemGroup>
 
   <ItemGroup>

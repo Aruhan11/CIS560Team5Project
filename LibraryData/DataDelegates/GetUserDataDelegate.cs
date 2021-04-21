@@ -33,7 +33,7 @@ namespace LibarayData.DataDelegates
                reader.GetString("FirstName"),
                reader.GetString("LastName"),
                phonenumber,
-               reader.GetString("LastCheckOutDate"));
+               reader.GetDateTime("LastCheckOutDate"));
         }
     }
 }

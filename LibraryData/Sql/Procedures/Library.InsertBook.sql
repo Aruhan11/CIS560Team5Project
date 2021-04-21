@@ -8,10 +8,7 @@ AS
 
 DECLARE @CreatorID TINYINT;
 
-INSERT [Library].Author(FirstName, LastName, CreatorTypeID)
-VALUES(@FirstName, @LastName, 2);
 
-SET @CreatorID = SCOPE_IDENTITY();
 
 INSERT [Library].Asset([Name], LastName, PhoneNumber, LastCheckedOutDATE)
 VALUES(@FirstName, @LastName, @PhoneNumber, @LastCheckedOutDATE);

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj": {}
+    "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryProject\\LibraryProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj": {
+    "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryProject\\LibraryProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj",
+        "projectUniqueName": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryProject\\LibraryProject.csproj",
         "projectName": "LibraryProject",
-        "projectPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj",
-        "packagesPath": "C:\\Users\\amb10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\obj\\",
+        "projectPath": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryProject\\LibraryProject.csproj",
+        "packagesPath": "C:\\Users\\86975\\.nuget\\packages\\",
+        "outputPath": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\amb10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\86975\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -67,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
