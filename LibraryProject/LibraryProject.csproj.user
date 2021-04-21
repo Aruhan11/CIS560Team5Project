@@ -10,6 +10,9 @@
     <Compile Update="CheckOut.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DeleteAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="DeleteUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,6 +20,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SearchLibraryContents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UpdateAsset.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UpdateUser.cs">

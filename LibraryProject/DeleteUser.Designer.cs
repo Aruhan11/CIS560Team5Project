@@ -40,9 +40,9 @@ namespace LibraryProject
             this.uxDelUserIDLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.uxDelUserIDLabel.Location = new System.Drawing.Point(117, 110);
             this.uxDelUserIDLabel.Name = "uxDelUserIDLabel";
-            this.uxDelUserIDLabel.Size = new System.Drawing.Size(89, 32);
+            this.uxDelUserIDLabel.Size = new System.Drawing.Size(96, 32);
             this.uxDelUserIDLabel.TabIndex = 16;
-            this.uxDelUserIDLabel.Text = "UserID:";
+            this.uxDelUserIDLabel.Text = "User ID:";
             // 
             // uxDelUserIDTextBox
             // 
