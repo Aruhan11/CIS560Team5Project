@@ -35,7 +35,7 @@ namespace LibarayData.DataDelegates
             p = command.Parameters.Add("PhoneNumber", SqlDbType.NVarChar);
             p.Value = phonenumber;
 
-            p = command.Paramaters.Add("UserID", SqlDbType.NVarChar);
+            p = command.Parameters.Add("UserID", SqlDbType.NVarChar);
             p.Direction = ParameterDirection.Output;
         }
 
