@@ -48,7 +48,7 @@ namespace LibraryProject
             this.uxGridView.Name = "uxGridView";
             this.uxGridView.RowHeadersWidth = 62;
             this.uxGridView.RowTemplate.Height = 33;
-            this.uxGridView.Size = new System.Drawing.Size(1858, 1156);
+            this.uxGridView.Size = new System.Drawing.Size(1858, 1238);
             this.uxGridView.TabIndex = 0;
             // 
             // uxTypeDDL
@@ -133,7 +133,7 @@ namespace LibraryProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2172, 1467);
+            this.ClientSize = new System.Drawing.Size(2172, 1520);
             this.Controls.Add(this.uxTypeLabel);
             this.Controls.Add(this.uxCategoryLabel);
             this.Controls.Add(this.uxCreatorLabel);
