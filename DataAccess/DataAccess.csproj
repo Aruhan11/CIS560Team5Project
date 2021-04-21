@@ -5,11 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="DataDelegates\CreateNewBookDelegate.cs" />
+    <Compile Remove="Class1.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="DataDelegates\NewFile1.txt" />
+    <None Remove="NewFile1.txt" />
+    <None Remove="using System.Data.SqlClient%3b" />
   </ItemGroup>
 
 </Project>

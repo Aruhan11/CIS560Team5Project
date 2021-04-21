@@ -66,7 +66,7 @@ IF NOT EXISTS
    )
 BEGIN
    ALTER TABLE [Library].[User]
-   ADD CONSTRAINT [CK_Library_User_LastName_FirstName] CHECK
+   ADD CONSTRAINT [CK_Library_User_FirstName_LastName] CHECK
    (
       FirstName > N'' OR LastName > N''
    )

@@ -6,6 +6,11 @@ BEGIN
         LibrarianID INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
         UserID INT NOT NULL,
 
+        CONSTRAINT PK_Library_Librarian_LibrarianID PRIMARY KEY CLUSTERED
+        (
+             LibrarianID ASC
+        ),
+
         CONSTRAINT [FK_Library_Librarian_UserID] FOREIGN KEY(UserID)
         REFERENCES [Library].[User](UserID)
 
