@@ -17,3 +17,5 @@ D:\Study\Spring21\CIS560\LibraryProjectRepo\LibraryProject\obj\Debug\netcoreapp3
 D:\Study\Spring21\CIS560\LibraryProjectRepo\LibraryProject\obj\Debug\netcoreapp3.1\LibraryProject.AssemblyInfoInputs.cache
 D:\Study\Spring21\CIS560\LibraryProjectRepo\LibraryProject\obj\Debug\netcoreapp3.1\LibraryProject.AssemblyInfo.cs
 D:\Study\Spring21\CIS560\LibraryProjectRepo\LibraryProject\obj\Debug\netcoreapp3.1\LibraryProject.csproj.CoreCompileInputs.cache
+D:\Study\Spring21\CIS560\LibraryProjectRepo\LibraryProject\obj\Debug\netcoreapp3.1\LibraryProject.DeleteAsset.resources
+D:\Study\Spring21\CIS560\LibraryProjectRepo\LibraryProject\obj\Debug\netcoreapp3.1\LibraryProject.UpdateAsset.resources

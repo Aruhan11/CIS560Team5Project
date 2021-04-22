@@ -2,7 +2,10 @@ CREATE OR ALTER PROCEDURE [Library].DeleteUser
 	@UserID
 AS
 
-DELETE FROM [Library].[User]
+UPDATE [Library].[User]
+SET
+	IsDeleted = 1,
+	UpdatedOn = SYSDATETIMEOFFSET()
 WHERE UserID = @UserID;
 
 GO

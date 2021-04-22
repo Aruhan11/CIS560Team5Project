@@ -1,3 +1,6 @@
+/***************************** 
+** Create a librarian 
+*****************************/
 CREATE OR ALTER PROCEDURE [Library].CreateLibrarian
    @FirstName NVARCHAR(32),
    @LastName NVARCHAR(32),
