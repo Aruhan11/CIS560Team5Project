@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryData\\LibraryData.csproj": {}
+    "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\LibraryData\\LibraryData.csproj": {}
   },
   "projects": {
-    "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\86975\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\amb10\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\86975\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amb10\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -64,24 +64,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryData\\LibraryData.csproj": {
+    "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\LibraryData\\LibraryData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryData\\LibraryData.csproj",
+        "projectUniqueName": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\LibraryData\\LibraryData.csproj",
         "projectName": "LibraryData",
-        "projectPath": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryData\\LibraryData.csproj",
-        "packagesPath": "C:\\Users\\86975\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryData\\obj\\",
+        "projectPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\LibraryData\\LibraryData.csproj",
+        "packagesPath": "C:\\Users\\amb10\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\LibraryData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\86975\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amb10\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -96,8 +96,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -132,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

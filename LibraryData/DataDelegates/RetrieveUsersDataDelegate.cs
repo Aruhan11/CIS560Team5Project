@@ -10,7 +10,7 @@ namespace LibarayData.DataDelegates
     internal class RetrieveUsersDataDelegate : DataReaderDelegate<IReadOnlyList<User>>
     {
         public RetrieveUsersDataDelegate()
-           : base("Library.RetrievePersons")
+           : base("Library.RetrieveUser")
         {
         }
 
