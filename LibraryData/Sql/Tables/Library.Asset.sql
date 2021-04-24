@@ -6,7 +6,7 @@ BEGIN
         AssetID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
         [Name] NVARCHAR(64) NOT NULL,
         AssetCategoryID INT NOT NULL,
-        AssetTypeID INT NOT NULL,
+        AssetTypeID TINYINT NOT NULL,
         CreatorID INT NOT NULL,
         ReleaseDate DATETIME(2) NOT NULL DEFAULT('0000-00-00'),
         Stock INT NOT NULL ,

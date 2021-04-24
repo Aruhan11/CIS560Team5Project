@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LibraryData
 {
-    public interface IAssetRepository
+    public class SqlComplexQueryRepository: IQuestionQueryRepository
     {
     }
 }

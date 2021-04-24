@@ -1,3 +1,7 @@
+/*
+*  1. Get user’s personal information by the given phone number
+*/
+
 CREATE OR ALTER PROCEDURE [Library].GetUser
    @PhoneNumber NVARCHAR(10)
 AS

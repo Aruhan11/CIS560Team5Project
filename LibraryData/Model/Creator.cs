@@ -6,15 +6,22 @@ namespace LibarayData.Model
 {
     public class Creator
     {
-        public int CreatorID { get;}
+        public int CreatorID { get; }
 
-        public int CreatorTypeID { get; }
+        public string FirstName { get; }
 
-        public Creator(int CreatorID, int CreatorTypeID)
+        public string LastName { get; }
+
+        public string CompanyName { get; }
+
+
+        public Creator(string FirstName, string LastName, string CompanyName)
         {
             this.CreatorID = CreatorID;
-            this.CreatorTypeID = CreatorTypeID;
-        
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.CompanyName = CompanyName;
+
         }
     }
 }

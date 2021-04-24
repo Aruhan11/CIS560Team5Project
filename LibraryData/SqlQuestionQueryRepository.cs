@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LibraryData
 {
-    public class SqlUserRepository: IUserRepository
+    public class SqlQuestionQueryRepository: IComplexQueryRepository
     {
     }
 }

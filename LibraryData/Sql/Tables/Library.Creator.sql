@@ -3,7 +3,7 @@ BEGIN
 
    CREATE TABLE [Library].Creator 
     (
-        CreatorID TINYINT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
+        CreatorID INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
         FirstName NVARCHAR(32) NOT NULL,
         LastName NVARCHAR(32) NOT NULL,
         Company NVARCHAR(32) NOT NULL,

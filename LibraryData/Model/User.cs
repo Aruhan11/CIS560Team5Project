@@ -17,13 +17,16 @@ namespace LibarayData.Model
 
         public DateTime LastCheckOutDate { get; }
 
-        public User(int UserID, string FirstName, string LastName, string PhoneNumber, DateTime LastCheckOutDate)
+        public Boolean IsDeleted { get; }
+
+        public User(int UserID, string FirstName, string LastName, string PhoneNumber, DateTime LastCheckOutDate, Boolean IsDeleted)
         {
             this.UserID = UserID;
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.PhoneNumber = PhoneNumber;
             this.LastCheckOutDate = LastCheckOutDate;
+            this.IsDeleted = IsDeleted;
         }
     }
 }

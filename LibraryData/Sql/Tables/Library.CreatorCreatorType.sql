@@ -3,8 +3,8 @@ BEGIN
 
    CREATE TABLE [Library].CreatorCreatorType 
     (
-        CreatorCreatorType TINYINT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
-        CreatorID TINYINT NOT NULL,
+        CreatorCreatorType INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
+        CreatorID INT NOT NULL,
         CreatorTypeID TINYINT NOT NULL,
 
 

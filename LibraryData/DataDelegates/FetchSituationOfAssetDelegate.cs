@@ -7,14 +7,14 @@ using LibarayData.Model;
 namespace LibarayData.DataDelegates
 {
 
-    internal class CreateLibrarianDataDelegate : NonQueryDataDelegate<Librarian>
+    internal class FetchSituationOfAssetDelegate : NonQueryDataDelegate<Librarian>
     {
 
         public readonly int userId;
 
 
 
-        public CreateLibrarianDataDelegate(int userId)
+        public FetchSituationOfAssetDelegate(int userId)
             : base("Library.CreateLibrarian")
         {
 

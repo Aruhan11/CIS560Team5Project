@@ -1,3 +1,6 @@
+/*
+* 5. Fetch the situation of a asset  by the given AssetID
+*/
 CREATE OR ALTER PROCEDURE [Library].FetchSituationOfAsset
    @AssetID INT
 AS

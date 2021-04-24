@@ -1,5 +1,5 @@
 /*
-* The ranking of assets which are borrowed the most in each  asset type by year and season.
+*  9. The ranking of assets which are borrowed the most in each  asset type by year and season.
 */
 CREATE OR ALTER PROCEDURE [Library].RankingAssetByAssetType
 

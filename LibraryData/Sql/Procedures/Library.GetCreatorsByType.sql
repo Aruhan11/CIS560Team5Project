@@ -1,5 +1,5 @@
 /*
-* Get the list of craters and their name and company  by the given creator type
+* 8. Get the list of craters and their name and company  by the given creator type
 */
 
 CREATE OR ALTER PROCEDURE [Library].GetCreatorsByType
@@ -7,7 +7,7 @@ CREATE OR ALTER PROCEDURE [Library].GetCreatorsByType
 AS
 
 
-SELECT ROW_NUMBER() OVER(ORDER BY C.CreatorID ASC),
+SELECT ROW_NUMBER() OVER(ORDER BY C.CreatorID ASC) AS [RowNumber],
 	   CT.[Name], (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, 
 	   A.Stock, COA.CheckOutDate, COA.ReturnByDate, S.InBorrowingTotal
 FROM  CreatorType CT 

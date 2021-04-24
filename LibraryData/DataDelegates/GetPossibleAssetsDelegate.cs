@@ -1,0 +1,43 @@
+﻿
+using DataAccess;
+using LibarayData.Model;
+using System.Data;
+using System.Data.SqlClient;
+using System;
+
+namespace LibarayData.DataDelegates
+{
+
+    internal class GetPossibleAssetsDelegate : DataReaderDelegate<User>
+    {
+
+        private readonly int userID;
+
+        public GetPossibleAssetsDelegate(int userID)
+           : base("Library.FetchUser")
+        {
+            this.userID = userID;
+        }
+
+        public override void PrepareCommand(SqlCommand command)
+        {
+            base.PrepareCommand(command);
+
+            var p = command.Parameters.Add("UserID", SqlDbType.Int);
+            p.Value = userID;
+        }
+
+        public override User Translate(SqlCommand command, IDataRowReader reader)
+        {
+            if (!reader.Read())
+                throw new RecordNotFoundException(userID.ToString());
+
+            return new User(userID,
+               reader.GetString("FirstName"),
+               reader.GetString("LastName"),
+               reader.GetString("PhoneNumber"), 
+               reader.GetDateTime("LastCheckOutDate"));
+        }
+
+    }
+}

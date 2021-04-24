@@ -1,4 +1,7 @@
-CREATE OR ALTER PROCEDURE [Library].FetchCheckOutHistory
+/*
+* 4. Get the information of possible  assets by the given asset name
+*/
+CREATE OR ALTER PROCEDURE [Library].GetPossibleAssets
    @Name VARCHAR(10)
 AS
 

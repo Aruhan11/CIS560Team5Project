@@ -1,5 +1,5 @@
 /*
-* The ranking of creators whose productions are borrowed in most  in each asset type by year
+* 10. The ranking of creators whose productions are borrowed in most  in each asset type by year
 */
 CREATE OR ALTER PROCEDURE [Library].RankingCreatorByAssetType
 
