@@ -19,9 +19,9 @@ namespace LibarayData.Model
 
         public DateTime ReturnByDate { get;}
 
-        public bool Returned { get; }
+        public bool IsReturned { get; }
 
-        public CheckedOutAssets(int CheckOutID, int AssetID, int UserID, int LibrarianID, DateTime CheckOutDate, DateTime ReturnByDate, bool Returned)
+        public CheckedOutAssets(int CheckOutID, int AssetID, int UserID, int LibrarianID, DateTime CheckOutDate, DateTime ReturnByDate, bool IsReturned)
         {
             this.CheckOutID = CheckOutID;
             this.AssetID = AssetID;
@@ -29,7 +29,7 @@ namespace LibarayData.Model
             this.LibrarianID = LibrarianID;
             this.CheckOutDate = CheckOutDate;
             this.ReturnByDate = ReturnByDate;
-            this.Returned = Returned;
+            this.IsReturned = IsReturned;
         }
 
 
