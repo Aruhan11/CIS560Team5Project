@@ -1,0 +1,4 @@
+C:\Users\bever\Source\Repos\CIS560Team5Project\LibraryData\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\bever\Source\Repos\CIS560Team5Project\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csprojAssemblyReference.cache
+C:\Users\bever\Source\Repos\CIS560Team5Project\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.AssemblyInfoInputs.cache
+C:\Users\bever\Source\Repos\CIS560Team5Project\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.AssemblyInfo.cs

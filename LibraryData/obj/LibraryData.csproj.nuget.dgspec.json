@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryData\\LibraryData.csproj": {}
+    "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryData\\LibraryData.csproj": {}
   },
   "projects": {
-    "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\86975\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\bever\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\86975\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\bever\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\bever\\source\\repos\\Team-03-B-Fall2020\\BID501-Client\\BID501Client\\AuctionLibrary\\bin\\Release\\netstandard2.0": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,25 +61,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryData\\LibraryData.csproj": {
+    "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryData\\LibraryData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryData\\LibraryData.csproj",
+        "projectUniqueName": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryData\\LibraryData.csproj",
         "projectName": "LibraryData",
-        "projectPath": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryData\\LibraryData.csproj",
-        "packagesPath": "C:\\Users\\86975\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\LibraryData\\obj\\",
+        "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryData\\LibraryData.csproj",
+        "packagesPath": "C:\\Users\\bever\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryData\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\86975\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\bever\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,14 +83,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\bever\\source\\repos\\Team-03-B-Fall2020\\BID501-Client\\BID501Client\\AuctionLibrary\\bin\\Release\\netstandard2.0": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\Study\\Spring21\\CIS560\\LibraryProjectRepo\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\DataAccess\\DataAccess.csproj"
+              },
+              "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj": {
+                "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj"
               }
             }
           }
@@ -130,9 +127,76 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj",
+        "projectName": "LibraryProject",
+        "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj",
+        "packagesPath": "C:\\Users\\bever\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\bever\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\bever\\source\\repos\\Team-03-B-Fall2020\\BID501-Client\\BID501Client\\AuctionLibrary\\bin\\Release\\netstandard2.0": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

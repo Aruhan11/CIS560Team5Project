@@ -8,7 +8,7 @@ using System;
 namespace LibarayData.DataDelegates
 {
 
-    internal class GetCreatorsByTypeDelegate : DataReaderDelegate<User>
+    internal class GetCreatorsByTypeDelegate : DataReaderDelegate<CreatorsByType>
     {
 
         private readonly int userID;
@@ -27,7 +27,7 @@ namespace LibarayData.DataDelegates
             p.Value = userID;
         }
 
-        public override User Translate(SqlCommand command, IDataRowReader reader)
+        public override CreatorByType Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
                 throw new RecordNotFoundException(userID.ToString());
