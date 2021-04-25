@@ -23,7 +23,7 @@ namespace LibraryData
         IReadOnlyList<SituationOfAsset> FetchSituationOfAsset(int assetID);
 
 
-        IReadOnlyList<CreatorsByType> GetCreatorsByType(string CreatorTypeName);
+        IReadOnlyList<CreatorByType> GetCreatorsByType(string CreatorTypeName);
 
 
     }

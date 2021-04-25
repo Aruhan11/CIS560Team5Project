@@ -10,7 +10,7 @@ namespace LibraryData
         IReadOnlyList<CreatorByAssetType> RankingCreatorByAssetType();
 
 
-        IReadOnlyList<CreatorsByUser> RankingCreatorByUser();
+        IReadOnlyList<CreatorByUser> RankingCreatorByUser();
 
 
         IReadOnlyList<TopTenAsset> TopTenAssetsStillAvaliable();

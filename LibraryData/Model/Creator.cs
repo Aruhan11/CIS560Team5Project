@@ -15,7 +15,7 @@ namespace LibarayData.Model
         public string CompanyName { get; }
 
 
-        public Creator(string FirstName, string LastName, string CompanyName)
+        public Creator(int CreatorID, string FirstName, string LastName, string CompanyName)
         {
             this.CreatorID = CreatorID;
             this.FirstName = FirstName;

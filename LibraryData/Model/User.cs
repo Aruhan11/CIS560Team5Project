@@ -19,7 +19,7 @@ namespace LibarayData.Model
 
         public int IsDeleted { get; }
 
-        public User(int UserID, string FirstName, string LastName, string PhoneNumber, DateTime LastCheckOutDate, bool IsDeleted)
+        public User(int UserID, string FirstName, string LastName, string PhoneNumber, DateTime LastCheckOutDate, int IsDeleted)
         {
             this.UserID = UserID;
             this.FirstName = FirstName;

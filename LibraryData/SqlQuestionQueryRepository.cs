@@ -29,7 +29,7 @@ namespace LibraryData
 
         // User FetchUser(int userID);
 
-        public User FetechUser(int userID)
+        public User FetchUser(int userID)
         {
             var d = new FetchUserDataDelegate(userID);
             return executor.ExecuteReader(d);
@@ -67,7 +67,7 @@ namespace LibraryData
         }
 
 
-        public IReadOnlyList<CreatorsByType> GetCreatorsByType(string CreatorTypeName)
+        public IReadOnlyList<CreatorByType> GetCreatorsByType(string CreatorTypeName)
         {
             return executor.ExecuteReader(new GetCreatorsByTypeDelegate(CreatorTypeName));
         }

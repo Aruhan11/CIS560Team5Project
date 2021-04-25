@@ -27,12 +27,12 @@ namespace LibarayData.Model
         public DateTime ReturnByDate { get; }
 
 
-        public bool IsReturned { get; }
+        public int IsReturned { get; }
 
 
 
         public CheckOutHistory(int UserID, int RowNumber, string AssetName, string TypeName, string CreatorName, string CompanyName,
-                               DateTime CheckOutDate, DateTime ReturnByDate, bool IsReturned)
+                               DateTime CheckOutDate, DateTime ReturnByDate, int IsReturned)
         {
             this.UserID = UserID;
             this.RowNumber = RowNumber;

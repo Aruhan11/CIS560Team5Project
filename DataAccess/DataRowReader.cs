@@ -41,9 +41,9 @@ namespace DataAccess
             return GetValue(name, reader.GetString);
         }
 
-        public DateTimeOffset GetDateTimeOffset(string name)
+        public DateTime GetDateTime(string name)
         {
-            return GetValue(name, reader.GetDateTimeOffset);
+            return GetValue(name, reader.GetDateTime);
         }
 
         public T GetValue<T>(string name)

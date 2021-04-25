@@ -3,37 +3,37 @@ using LibarayData.Model;
 using System.Data;
 using System.Data.SqlClient;
 using System;
+using System.Collections.Generic;
 
 namespace LibarayData.DataDelegates
 {
-    internal class RankingCreatorByAssetTypeDelegate : DataReaderDelegate<User>
+    internal class RankingCreatorByAssetTypeDelegate : DataReaderDelegate<IReadOnlyList<CreatorByAssetType>>
     {
-        private readonly string phonenumber;
 
-        public RankingCreatorByAssetTypeDelegate(string phonenumber)
-           : base("Library.GetPerson")
+
+        public RankingCreatorByAssetTypeDelegate()
+           : base("Library.RankingCreatorByAssetType")
         {
-            this.phonenumber = phonenumber;
+          
         }
 
-        public override void PrepareCommand(SqlCommand command)
+        public override IReadOnlyList<CreatorByAssetType> Translate(SqlCommand command, IDataRowReader reader)
         {
-            base.PrepareCommand(command);
+            var creatorList = new List<CreatorByAssetType>();
 
-            command.Parameters.AddWithValue("PhoneNumber", phonenumber);
-        }
+            while (reader.Read())
+            {
+                creatorList.Add(new CreatorByAssetType(
+                    reader.GetInt32("RowNumber"),
+                    reader.GetString("CreatorName"),
+                    reader.GetString("CompanyName"),
+                    reader.GetString("AssetTypeName"),
+                    reader.GetInt32("CheckOutRank"),
+                    reader.GetString("AssetName"),
+                    reader.GetInt32("CheckOutCount")));
+            }
 
-        public override User Translate(SqlCommand command, IDataRowReader reader)
-        {
-            if (!reader.Read())
-                return null;
-
-            return new User(
-               reader.GetInt32("PersonId"),
-               reader.GetString("FirstName"),
-               reader.GetString("LastName"),
-               phonenumber,
-               reader.GetDateTime("LastCheckOutDate"));
+            return creatorList;
         }
     }
 }

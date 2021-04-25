@@ -13,7 +13,7 @@ namespace LibarayData.DataDelegates
         private readonly int librarianID;
 
         public FetchLibrarianDataDelegate(int librarianID)
-           : base("Library.FetchLibrarian")
+           : base("Library.FetchLibrarianData")
         {
             this.librarianID = librarianID;
         }
@@ -22,7 +22,7 @@ namespace LibarayData.DataDelegates
         {
             base.PrepareCommand(command);
 
-            var p = command.Parameters.Add("UserID", SqlDbType.Int);
+            var p = command.Parameters.Add("LibrarianID", SqlDbType.Int);
             p.Value = librarianID;
         }
 

@@ -21,7 +21,7 @@ namespace LibarayData.Model
 
         public int IsReturned { get; }
 
-        public CheckedOutAssets(int CheckOutID, int AssetID, int UserID, int LibrarianID, DateTime CheckOutDate, DateTime ReturnByDate, bool IsReturned)
+        public CheckedOutAssets(int CheckOutID, int AssetID, int UserID, int LibrarianID, DateTime CheckOutDate, DateTime ReturnByDate, int IsReturned)
         {
             this.CheckOutID = CheckOutID;
             this.AssetID = AssetID;

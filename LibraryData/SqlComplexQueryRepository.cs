@@ -8,6 +8,8 @@ namespace LibraryData
 {
     public class SqlComplexQueryRepository: IComplexQueryRepository
     {
+        private readonly SqlCommandExecutor executor;
+
         public IReadOnlyList<AssetByAssetType> RankingAssetByAssetType()
         {
             return executor.ExecuteReader(new RankingAssetByAssetTypeDelegate());

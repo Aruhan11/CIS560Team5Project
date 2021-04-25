@@ -7,38 +7,40 @@ using LibarayData.Model;
 namespace LibarayData.DataDelegates
 {
 
-    internal class FetchSituationOfAssetDelegate : NonQueryDataDelegate<Librarian>
+    internal class FetchSituationOfAssetDelegate : DataReaderDelegate<SituationOfAsset>
     {
 
-        public readonly int userId;
+        public readonly int assetId;
 
-
-
-        public FetchSituationOfAssetDelegate(int userId)
-            : base("Library.CreateLibrarian")
+        public FetchSituationOfAssetDelegate(int assetId)
+            : base("Library.FetchSituationOfAsset")
         {
-
-            this.userId = userId;
-
-
+            this.assetId = assetId;
         }
 
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
 
-            var p = command.Parameters.Add("UserID", SqlDbType.NVarChar);
-            p.Value = userId;
+            var p = command.Parameters.Add("AssetID", SqlDbType.Int);
+            p.Value = assetId;
 
-
-
-            p = command.Parameters.Add("LibrarianID", SqlDbType.NVarChar);
-            p.Direction = ParameterDirection.Output;
         }
 
-        public override Librarian Translate(SqlCommand command)
+        public override SituationOfAsset Translate(SqlCommand command, IDataRowReader reader)
         {
-            return new Librarian((int)command.Parameters["CreatorID"].Value, userId);
+            if (!reader.Read())
+                throw new RecordNotFoundException(assetId.ToString());
+
+            return new SituationOfAsset(assetId,
+                reader.GetInt32("RowNumber"),
+                reader.GetString("Name"),
+                reader.GetString("TypeName"),
+                reader.GetString("CreatorName"),
+                reader.GetString("CompanyName"),
+                reader.GetDateTime("CheckOutDate"),
+                reader.GetDateTime("ReturnByDate"),
+                reader.GetInt32("Stock"));
         }
 
     }

@@ -1,5 +1,4 @@
-﻿
-using DataAccess;
+﻿using DataAccess;
 using LibarayData.Model;
 using System.Data;
 using System.Data.SqlClient;
@@ -14,7 +13,7 @@ namespace LibarayData.DataDelegates
         private readonly int userID;
 
         public FetchUserDataDelegate(int userID)
-           : base("Library.FetchUser")
+           : base("Library.FetchUserData")
         {
             this.userID = userID;
         }
@@ -35,8 +34,9 @@ namespace LibarayData.DataDelegates
             return new User(userID,
                reader.GetString("FirstName"),
                reader.GetString("LastName"),
-               reader.GetString("PhoneNumber"), 
-               reader.GetDateTime("LastCheckOutDate"));
+               reader.GetString("PhoneNumber"),
+               reader.GetDateTime("LastCheckOutDate"),
+               reader.GetInt32("IsDeleted"));
         }
 
     }

@@ -14,7 +14,7 @@ namespace LibarayData.DataDelegates
         public readonly string phonenumber;
 
         public CreateUserDataDelegate(string firstname, string lastname, string phonenumber)
-            :base("Library.CreateUser")
+            : base("Library.CreateUser")
         {
 
             this.firstname = firstname;
@@ -41,7 +41,7 @@ namespace LibarayData.DataDelegates
 
         public override User Translate(SqlCommand command)
         {
-            return new User((int)command.Parameters["UserID"].Value, firstname, lastname, phonenumber, DateTime.Now);
+            return new User((int)command.Parameters["UserID"].Value, firstname, lastname, phonenumber, DateTime.Now, 0);
 
         }
 

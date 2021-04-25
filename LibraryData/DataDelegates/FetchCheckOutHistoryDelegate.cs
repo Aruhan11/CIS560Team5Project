@@ -3,11 +3,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System;
 using LibarayData.Model;
+using System.Collections.Generic;
 
 namespace LibarayData.DataDelegates
 {
 
-    internal class FetchCheckOutHistoryDelegate : NonQueryDataDelegate<Librarian>
+    internal class FetchCheckOutHistoryDelegate : DataReaderDelegate<CheckOutHistory>
     {
 
         public readonly int userId;
@@ -22,18 +23,30 @@ namespace LibarayData.DataDelegates
         {
             base.PrepareCommand(command);
 
-            var p = command.Parameters.Add("UserID", SqlDbType.NVarChar);
+            var p = command.Parameters.Add("UserID", SqlDbType.Int);
             p.Value = userId;
 
-
-
-            p = command.Parameters.Add("LibrarianID", SqlDbType.NVarChar);
-            p.Direction = ParameterDirection.Output;
         }
 
-        public override Librarian Translate(SqlCommand command)
+        public override IReadOnlyList<CheckOutHistory> Translate(SqlCommand command, IDataRowReader reader)
         {
-            return new Librarian((int)command.Parameters["CreatorID"].Value, userId);
+            var checkOutAssets = new List<CheckOutHistory>();
+
+            while (reader.Read())
+            {
+                checkOutAssets.Add(new CheckOutHistory(
+               reader.GetInt32("UserID"),
+               reader.GetInt32("RowNumber"),
+               reader.GetString("AssetName"),
+               reader.GetString("TypeName"),
+               reader.GetString("CreatorName"),
+               reader.GetString("CompanyName"),
+               reader.GetDateTime("CheckOutDate"),
+               reader.GetDateTime("ReturnByDate"),
+               reader.GetInt32("IsReturned")));
+            }
+
+            return checkOutAssets;
         }
 
     }

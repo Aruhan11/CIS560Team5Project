@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LibarayData.Model
 {
-    public class CreatorsByType
+    public class CreatorByType
     {
         //SELECT ROW_NUMBER() OVER(ORDER BY C.CreatorID ASC),
 	   //CT.[Name], (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, 
@@ -29,7 +29,7 @@ namespace LibarayData.Model
         public int InBorrowingTotal { get; }
 
 
-        public CreatorsByType(string CreatorTypeName, int RowNumber, string CreatorType, string CreatorName, string CompanyName, 
+        public CreatorByType(string CreatorTypeName, int RowNumber, string CreatorType, string CreatorName, string CompanyName, 
                               int Stock, DateTime CheckOutDate, DateTime ReturnByDate, int InBorrowingTotal)
         {
             this.CreatorTypeName = CreatorTypeName;

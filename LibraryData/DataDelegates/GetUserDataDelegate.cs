@@ -11,7 +11,7 @@ namespace LibarayData.DataDelegates
         private readonly string phonenumber;
 
         public GetUserDataDelegate(string phonenumber)
-           : base("Library.GetUser")
+           : base("Library.GetUserData")
         {
             this.phonenumber = phonenumber;
         }
@@ -32,8 +32,8 @@ namespace LibarayData.DataDelegates
                reader.GetInt32("PersonId"),
                reader.GetString("FirstName"),
                reader.GetString("LastName"),
-               reader.GetString("phonenumber"),
-               reader.GetDateTime("LastCheckOutDate")
+               phonenumber,
+               reader.GetDateTime("LastCheckOutDate"),
                reader.GetInt32("IsDeleted"));
         }
     }
