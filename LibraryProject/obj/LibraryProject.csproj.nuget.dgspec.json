@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj": {}
+    "C:\\Users\\bever\\source\\repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj": {
+    "C:\\Users\\bever\\source\\repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj",
+        "projectUniqueName": "C:\\Users\\bever\\source\\repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj",
         "projectName": "LibraryProject",
-        "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj",
+        "projectPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj",
         "packagesPath": "C:\\Users\\bever\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryProject\\obj\\",
+        "outputPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5Project\\LibraryProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bever\\AppData\\Roaming\\NuGet\\NuGet.Config",

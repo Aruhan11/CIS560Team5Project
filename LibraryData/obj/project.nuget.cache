@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e3qRBQtqkUgHVdulqSYNAJwdJehTSmz0m7HEKoyNEKehS1jdlU5QwZMggoy+T9TPLj1gmbV7sBfLn1UtZUe+3A==",
+  "dgSpecHash": "Rf0GxiYVON5EGg9mohNtgD+7fadojQV4WJ7YYbgr5Yk4hQMe+k8HvMPieNmH+YqlFLRW4l5+FOW6q0ZP7iVh/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5Project\\LibraryData\\LibraryData.csproj",
+  "projectFilePath": "C:\\Users\\bever\\source\\repos\\CIS560Team5Project\\LibraryData\\LibraryData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bever\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\bever\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
