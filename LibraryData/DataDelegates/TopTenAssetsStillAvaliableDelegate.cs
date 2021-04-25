@@ -6,34 +6,38 @@ using System;
 
 namespace LibarayData.DataDelegates
 {
-    internal class TopTenAssetsStillAvaliableDelegate : DataReaderDelegate<User>
+    internal class TopTenAssetsStillAvaliableDelegate : DataReaderDelegate<IReadOnlyList<TopTenAsset>>
     {
         private readonly string phonenumber;
 
-        public TopTenAssetsStillAvaliableDelegate(string phonenumber)
-           : base("Library.GetPerson")
+        public TopTenAssetsStillAvaliableDelegate(string assetName)
+           : base("Library.TopTenAsset")
         {
-            this.phonenumber = phonenumber;
+            this.assetName = assetName;
         }
 
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("PhoneNumber", phonenumber);
+            command.Parameters.AddWithValue("AssetName", assetName);
         }
 
-        public override User Translate(SqlCommand command, IDataRowReader reader)
+        public override IReadOnlyList<TopTenAsset> Translate(SqlCommand command, IDataRowReader reader)
         {
-            if (!reader.Read())
-                return null;
+            var assetList = new List<TopTenAsset>();
 
-            return new User(
-               reader.GetInt32("PersonId"),
-               reader.GetString("FirstName"),
-               reader.GetString("LastName"),
-               phonenumber,
-               reader.GetDateTime("LastCheckOutDate"));
+            while (reader.Read()) {
+                assetList.Add(new TopTenAsset(
+                    reader.GetInt32("RowNumber"),
+                    reader.GetString("AssetName"),
+                    reader.GetString("AssetTypeName"),
+                    reader.GetString("CreatorName"),
+                    reader.GetString("CompanyName"),
+                    reader.GetInt32("BorrowedTimes")))
+            }
+
+            return assetList;
         }
     }
 }

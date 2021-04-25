@@ -6,34 +6,37 @@ using System;
 
 namespace LibarayData.DataDelegates
 {
-    internal class RankingAssetByAssetTypeDelegate : DataReaderDelegate<User>
+    internal class RankingAssetByAssetTypeDelegate : DataReaderDelegate<IReadOnlyList<AssetByAssetType>>
     {
-        private readonly string phonenumber;
+        private readonly string assetTypeName;
 
-        public RankingAssetByAssetTypeDelegate(string phonenumber)
-           : base("Library.GetPerson")
+        public RankingAssetByAssetTypeDelegate(string assetTypeName)
+           : base("Library.RankingAssetByAssetType")
         {
-            this.phonenumber = phonenumber;
+            this.assetTypeName = assetTypeName;
         }
 
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("PhoneNumber", phonenumber);
+            command.Parameters.AddWithValue("AssetTypeName", assetTypeName);
         }
 
-        public override User Translate(SqlCommand command, IDataRowReader reader)
+        public override IReadOnlyList<AssetByAssetType> Translate(SqlCommand command, IDataRowReader reader)
         {
-            if (!reader.Read())
-                return null;
+            var assetTypeList = new List<AssetByAssetType>();
 
-            return new User(
-               reader.GetInt32("PersonId"),
-               reader.GetString("FirstName"),
-               reader.GetString("LastName"),
-               phonenumber,
-               reader.GetDateTime("LastCheckOutDate"));
+            while(reader.Read()){
+                assetsList.Add(new AssetByAssetType(
+                    reader.GetInt32("RowNumber"),
+                    reader.GetString("AssetTypeName"),
+                    //reader.GetInt32("CheckOutRank"),
+                    reader.GetString("AssetName"),
+                    reader.GetInt32("CheckOutCount")))
+            }
+
+            return assetTypeList;
         }
     }
 }

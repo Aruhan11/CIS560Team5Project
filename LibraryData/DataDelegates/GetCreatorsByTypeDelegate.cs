@@ -11,32 +11,37 @@ namespace LibarayData.DataDelegates
     internal class GetCreatorsByTypeDelegate : DataReaderDelegate<CreatorsByType>
     {
 
-        private readonly int userID;
+        private readonly string creatorType;
 
-        public GetCreatorsByTypeDelegate(int userID)
-           : base("Library.FetchUser")
+        public GetCreatorsByTypeDelegate(string creatorType)
+           : base("Library.GetCreatorsByType")
         {
-            this.userID = userID;
+            this.creatorType = creatorType;
         }
 
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
 
-            var p = command.Parameters.Add("UserID", SqlDbType.Int);
-            p.Value = userID;
+            var p = command.Parameters.Add("CreatorTypeName", SqlDbType.NVarChar);
+            p.Value = creatorType;
         }
 
-        public override CreatorByType Translate(SqlCommand command, IDataRowReader reader)
+        public override CreatorsByType Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
-                throw new RecordNotFoundException(userID.ToString());
+                return null;
 
-            return new User(userID,
-               reader.GetString("FirstName"),
-               reader.GetString("LastName"),
-               reader.GetString("PhoneNumber"), 
-               reader.GetDateTime("LastCheckOutDate"));
+            return new CreatorsByType(
+               reader.GetString("CreatorTypeName"),
+               reader.GetInt32("RowNumber"),
+               creatorType,
+               reader.GetString("CreatorName"),
+               reader.GetString("CompanyName"),
+               reader.GetInt32("Stock"),
+               reader.GetDateTime("CheckOutDate"),
+               reader.GetDateTime("ReturnByDate"),
+               reader.GetInt32("InBorrowingTotal"));
         }
 
     }

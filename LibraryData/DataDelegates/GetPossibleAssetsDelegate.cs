@@ -8,35 +8,38 @@ using System;
 namespace LibarayData.DataDelegates
 {
 
-    internal class GetPossibleAssetsDelegate : DataReaderDelegate<User>
+    internal class GetPossibleAssetsDelegate : DataReaderDelegate<PossibleAssets>
     {
 
-        private readonly int userID;
+        private readonly string assetName;
 
-        public GetPossibleAssetsDelegate(int userID)
-           : base("Library.FetchUser")
+        public GetPossibleAssetsDelegate(string assetName)
+           : base("Library.GetPossibleAssets")
         {
-            this.userID = userID;
+            this.assetName = assetName;
         }
 
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
 
-            var p = command.Parameters.Add("UserID", SqlDbType.Int);
-            p.Value = userID;
+            var p = command.Parameters.Add("AssetName", SqlDbType.NVarChar);
+            p.Value = assetName;
         }
 
-        public override User Translate(SqlCommand command, IDataRowReader reader)
+        public override PossibleAssets Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
-                throw new RecordNotFoundException(userID.ToString());
+                return null;
 
-            return new User(userID,
-               reader.GetString("FirstName"),
-               reader.GetString("LastName"),
-               reader.GetString("PhoneNumber"), 
-               reader.GetDateTime("LastCheckOutDate"));
+            return new PossibleAssets(
+               reader.GetInt32("RowNumber"),
+               assetName,
+               reader.GetString("TypeName"),
+               reader.GetString("CreatorName"),
+               reader.GetString("CompanyName"),
+               reader.GetDateTime("ReleaseDate"),
+               reader.GetInt32("Stock"));
         }
 
     }

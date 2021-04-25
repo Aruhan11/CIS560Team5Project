@@ -6,34 +6,39 @@ using System;
 
 namespace LibarayData.DataDelegates
 {
-    internal class RankingCreatorByAssetTypeDelegate : DataReaderDelegate<User>
+    internal class RankingCreatorByAssetTypeDelegate : DataReaderDelegate<IReadOnlyList<CreatorByAssetType>>
     {
-        private readonly string phonenumber;
+        private readonly string assetTypeName;
 
-        public RankingCreatorByAssetTypeDelegate(string phonenumber)
-           : base("Library.GetPerson")
+        public RankingAssetByAssetTypeDelegate(string assetTypeName)
+           : base("Library.RankingAssetByAssetType")
         {
-            this.phonenumber = phonenumber;
+            this.assetTypeName = assetTypeName;
         }
 
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("PhoneNumber", phonenumber);
+            command.Parameters.AddWithValue("AssetTypeName", assetTypeName);
         }
 
-        public override User Translate(SqlCommand command, IDataRowReader reader)
+        public override IReadOnlyList<CreatorByAssetType> Translate(SqlCommand command, IDataRowReader reader)
         {
-            if (!reader.Read())
-                return null;
+            var creatorList = new List<CreatorByAssetType>();
 
-            return new User(
-               reader.GetInt32("PersonId"),
-               reader.GetString("FirstName"),
-               reader.GetString("LastName"),
-               phonenumber,
-               reader.GetDateTime("LastCheckOutDate"));
+            while(reader.Read()){
+                creatorList.Add(new CreatorByAssetType(
+                    reader.GetInt32("RowNumber"),
+                    reader.GetString("CreatorName"),
+                    reader.GetString("CompanyName"),
+                    reader.GetString("AssetTypeName"),
+                    reader.GetInt32("CheckOutRank"),
+                    reader.GetString("AssetName"),
+                    reader.GetInt32("CheckOutCount")))
+            }
+
+            return creatorList;
         }
     }
 }
