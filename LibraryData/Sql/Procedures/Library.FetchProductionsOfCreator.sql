@@ -5,7 +5,7 @@ CREATE OR ALTER PROCEDURE [Library].FetchProductionOfCreator
    @CreatorID INT
 AS
 
-SELECT ROW_NUMBER() OVER(ORDER BY A.AssetTypeID ASC),
+SELECT ROW_NUMBER() OVER(ORDER BY A.AssetTypeID ASC) AS [RowNumber],
 	   (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, A.[Name], [AT].TypeName,  
 	   A.Stock
 FROM [Library].Creator C

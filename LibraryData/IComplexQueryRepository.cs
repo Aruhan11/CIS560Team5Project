@@ -5,9 +5,20 @@ namespace LibraryData
 {
     public interface IComplexQueryRepository
     {
-       
-       
+        IReadOnlyList<AssetByAssetType> RankingAssetByAssetType();
 
-        
+        IReadOnlyList<CreatorByAssetType> RankingCreatorByAssetType();
+
+
+        IReadOnlyList<CreatorsByUser> RankingCreatorByUser();
+
+
+        IReadOnlyList<TopTenAsset> TopTenAssetsStillAvaliable();
+
+
+
+
+
+
     }
 }

@@ -19,7 +19,7 @@ namespace LibarayData.Model
 
         public DateTime ReturnByDate { get;}
 
-        public bool IsReturned { get; }
+        public int IsReturned { get; }
 
         public CheckedOutAssets(int CheckOutID, int AssetID, int UserID, int LibrarianID, DateTime CheckOutDate, DateTime ReturnByDate, bool IsReturned)
         {
