@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\LibraryData",
+    "\\LibraryData\\DataDelegates"
   ],
+  "SelectedNode": "\\LibraryProject.sln",
   "PreviewInSolutionExplorer": false
 }

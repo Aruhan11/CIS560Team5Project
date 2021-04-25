@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace LibraryProject
 {
-    public partial class DeleteUser : Form
+    public partial class Asset : Form
     {
-        public DeleteUser()
+        public Asset()
         {
             InitializeComponent();
         }

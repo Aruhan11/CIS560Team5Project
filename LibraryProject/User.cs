@@ -8,12 +8,11 @@ using System.Windows.Forms;
 
 namespace LibraryProject
 {
-    public partial class UpdateUser : Form
+    public partial class User : Form
     {
-        public UpdateUser()
+        public User()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace LibraryProject
 {
-    partial class AddAsset
+    partial class Asset
     {
         /// <summary>
         /// Required designer variable.
@@ -61,14 +61,30 @@ namespace LibraryProject
             this.uxAddAction = new System.Windows.Forms.CheckBox();
             this.uxAddAdventure = new System.Windows.Forms.CheckBox();
             this.uxAddChildren = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.uxLine4 = new System.Windows.Forms.Label();
+            this.uxLine5 = new System.Windows.Forms.Label();
+            this.uxAssetAssetIDLabel = new System.Windows.Forms.Label();
+            this.uxAssetAssetIDTextBox = new System.Windows.Forms.TextBox();
+            this.uxFetchSituationOfAssetButton = new System.Windows.Forms.Button();
+            this.uxGetPossibleAssetsButton = new System.Windows.Forms.Button();
+            this.uxAssetAssetNameLabel = new System.Windows.Forms.Label();
+            this.uxAssetAssetNameTextBox = new System.Windows.Forms.TextBox();
+            this.uxFetchCheckoutHistoryButton = new System.Windows.Forms.Button();
+            this.uxAssetUserIDLabel = new System.Windows.Forms.Label();
+            this.uxAssetUserIDTextBox = new System.Windows.Forms.TextBox();
+            this.uxFetchCheckoutHistoryGridView = new System.Windows.Forms.DataGridView();
+            this.uxFetchSituationOfAssetGridView = new System.Windows.Forms.DataGridView();
+            this.uxGetPossibleAssetsGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.uxFetchCheckoutHistoryGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxFetchSituationOfAssetGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxGetPossibleAssetsGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // uxTypeLabel
             // 
             this.uxTypeLabel.AutoSize = true;
             this.uxTypeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxTypeLabel.Location = new System.Drawing.Point(127, 176);
+            this.uxTypeLabel.Location = new System.Drawing.Point(97, 78);
             this.uxTypeLabel.Name = "uxTypeLabel";
             this.uxTypeLabel.Size = new System.Drawing.Size(70, 32);
             this.uxTypeLabel.TabIndex = 13;
@@ -78,7 +94,7 @@ namespace LibraryProject
             // 
             this.uxAddRelDateLabel.AutoSize = true;
             this.uxAddRelDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddRelDateLabel.Location = new System.Drawing.Point(55, 293);
+            this.uxAddRelDateLabel.Location = new System.Drawing.Point(24, 145);
             this.uxAddRelDateLabel.Name = "uxAddRelDateLabel";
             this.uxAddRelDateLabel.Size = new System.Drawing.Size(156, 32);
             this.uxAddRelDateLabel.TabIndex = 10;
@@ -86,18 +102,18 @@ namespace LibraryProject
             // 
             // uxAddAssetButton
             // 
-            this.uxAddAssetButton.Location = new System.Drawing.Point(285, 922);
+            this.uxAddAssetButton.Location = new System.Drawing.Point(294, 578);
             this.uxAddAssetButton.Name = "uxAddAssetButton";
             this.uxAddAssetButton.Size = new System.Drawing.Size(254, 85);
             this.uxAddAssetButton.TabIndex = 9;
-            this.uxAddAssetButton.Text = "Add New Asset";
+            this.uxAddAssetButton.Text = "Insert Asset";
             this.uxAddAssetButton.UseVisualStyleBackColor = true;
             // 
             // uxAddNameLabel
             // 
             this.uxAddNameLabel.AutoSize = true;
             this.uxAddNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddNameLabel.Location = new System.Drawing.Point(114, 54);
+            this.uxAddNameLabel.Location = new System.Drawing.Point(81, 20);
             this.uxAddNameLabel.Name = "uxAddNameLabel";
             this.uxAddNameLabel.Size = new System.Drawing.Size(83, 32);
             this.uxAddNameLabel.TabIndex = 8;
@@ -106,16 +122,16 @@ namespace LibraryProject
             // uxAddNameTextBox
             // 
             this.uxAddNameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddNameTextBox.Location = new System.Drawing.Point(270, 54);
+            this.uxAddNameTextBox.Location = new System.Drawing.Point(239, 20);
             this.uxAddNameTextBox.Name = "uxAddNameTextBox";
-            this.uxAddNameTextBox.Size = new System.Drawing.Size(433, 39);
+            this.uxAddNameTextBox.Size = new System.Drawing.Size(431, 39);
             this.uxAddNameTextBox.TabIndex = 7;
             // 
             // uxAddCreatorLabel
             // 
             this.uxAddCreatorLabel.AutoSize = true;
             this.uxAddCreatorLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddCreatorLabel.Location = new System.Drawing.Point(100, 410);
+            this.uxAddCreatorLabel.Location = new System.Drawing.Point(67, 191);
             this.uxAddCreatorLabel.Name = "uxAddCreatorLabel";
             this.uxAddCreatorLabel.Size = new System.Drawing.Size(97, 32);
             this.uxAddCreatorLabel.TabIndex = 14;
@@ -125,7 +141,7 @@ namespace LibraryProject
             // 
             this.uxAddCategoriesLabel.AutoSize = true;
             this.uxAddCategoriesLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddCategoriesLabel.Location = new System.Drawing.Point(79, 660);
+            this.uxAddCategoriesLabel.Location = new System.Drawing.Point(42, 390);
             this.uxAddCategoriesLabel.Name = "uxAddCategoriesLabel";
             this.uxAddCategoriesLabel.Size = new System.Drawing.Size(132, 32);
             this.uxAddCategoriesLabel.TabIndex = 15;
@@ -135,7 +151,7 @@ namespace LibraryProject
             // 
             this.uxAddTypeDDL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.uxAddTypeDDL.FormattingEnabled = true;
-            this.uxAddTypeDDL.Location = new System.Drawing.Point(270, 176);
+            this.uxAddTypeDDL.Location = new System.Drawing.Point(240, 78);
             this.uxAddTypeDDL.Name = "uxAddTypeDDL";
             this.uxAddTypeDDL.Size = new System.Drawing.Size(433, 40);
             this.uxAddTypeDDL.TabIndex = 16;
@@ -143,7 +159,7 @@ namespace LibraryProject
             // uxAddDate
             // 
             this.uxAddDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddDate.Location = new System.Drawing.Point(270, 293);
+            this.uxAddDate.Location = new System.Drawing.Point(239, 145);
             this.uxAddDate.Name = "uxAddDate";
             this.uxAddDate.Size = new System.Drawing.Size(433, 39);
             this.uxAddDate.TabIndex = 17;
@@ -152,7 +168,7 @@ namespace LibraryProject
             // 
             this.uxAddFNameLabel.AutoSize = true;
             this.uxAddFNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddFNameLabel.Location = new System.Drawing.Point(187, 469);
+            this.uxAddFNameLabel.Location = new System.Drawing.Point(154, 228);
             this.uxAddFNameLabel.Name = "uxAddFNameLabel";
             this.uxAddFNameLabel.Size = new System.Drawing.Size(134, 32);
             this.uxAddFNameLabel.TabIndex = 18;
@@ -162,7 +178,7 @@ namespace LibraryProject
             // 
             this.uxAddLNameLabel.AutoSize = true;
             this.uxAddLNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddLNameLabel.Location = new System.Drawing.Point(190, 523);
+            this.uxAddLNameLabel.Location = new System.Drawing.Point(157, 282);
             this.uxAddLNameLabel.Name = "uxAddLNameLabel";
             this.uxAddLNameLabel.Size = new System.Drawing.Size(131, 32);
             this.uxAddLNameLabel.TabIndex = 19;
@@ -172,7 +188,7 @@ namespace LibraryProject
             // 
             this.uxAddCompanyLabel.AutoSize = true;
             this.uxAddCompanyLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddCompanyLabel.Location = new System.Drawing.Point(200, 575);
+            this.uxAddCompanyLabel.Location = new System.Drawing.Point(167, 334);
             this.uxAddCompanyLabel.Name = "uxAddCompanyLabel";
             this.uxAddCompanyLabel.Size = new System.Drawing.Size(121, 32);
             this.uxAddCompanyLabel.TabIndex = 20;
@@ -181,7 +197,7 @@ namespace LibraryProject
             // uxAddFNameTextBox
             // 
             this.uxAddFNameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddFNameTextBox.Location = new System.Drawing.Point(327, 466);
+            this.uxAddFNameTextBox.Location = new System.Drawing.Point(294, 225);
             this.uxAddFNameTextBox.Name = "uxAddFNameTextBox";
             this.uxAddFNameTextBox.Size = new System.Drawing.Size(376, 39);
             this.uxAddFNameTextBox.TabIndex = 21;
@@ -189,7 +205,7 @@ namespace LibraryProject
             // uxAddLNameTextBox
             // 
             this.uxAddLNameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddLNameTextBox.Location = new System.Drawing.Point(327, 523);
+            this.uxAddLNameTextBox.Location = new System.Drawing.Point(294, 282);
             this.uxAddLNameTextBox.Name = "uxAddLNameTextBox";
             this.uxAddLNameTextBox.Size = new System.Drawing.Size(376, 39);
             this.uxAddLNameTextBox.TabIndex = 22;
@@ -198,7 +214,7 @@ namespace LibraryProject
             // 
             this.uxAddCompanyTextBox.Enabled = false;
             this.uxAddCompanyTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddCompanyTextBox.Location = new System.Drawing.Point(327, 575);
+            this.uxAddCompanyTextBox.Location = new System.Drawing.Point(294, 334);
             this.uxAddCompanyTextBox.Name = "uxAddCompanyTextBox";
             this.uxAddCompanyTextBox.Size = new System.Drawing.Size(376, 39);
             this.uxAddCompanyTextBox.TabIndex = 23;
@@ -206,7 +222,7 @@ namespace LibraryProject
             // uxAddFantasy
             // 
             this.uxAddFantasy.AutoSize = true;
-            this.uxAddFantasy.Location = new System.Drawing.Point(258, 665);
+            this.uxAddFantasy.Location = new System.Drawing.Point(221, 395);
             this.uxAddFantasy.Name = "uxAddFantasy";
             this.uxAddFantasy.Size = new System.Drawing.Size(97, 29);
             this.uxAddFantasy.TabIndex = 24;
@@ -216,7 +232,7 @@ namespace LibraryProject
             // uxAddRomance
             // 
             this.uxAddRomance.AutoSize = true;
-            this.uxAddRomance.Location = new System.Drawing.Point(373, 665);
+            this.uxAddRomance.Location = new System.Drawing.Point(336, 395);
             this.uxAddRomance.Name = "uxAddRomance";
             this.uxAddRomance.Size = new System.Drawing.Size(111, 29);
             this.uxAddRomance.TabIndex = 25;
@@ -226,7 +242,7 @@ namespace LibraryProject
             // uxAddMystery
             // 
             this.uxAddMystery.AutoSize = true;
-            this.uxAddMystery.Location = new System.Drawing.Point(503, 663);
+            this.uxAddMystery.Location = new System.Drawing.Point(466, 395);
             this.uxAddMystery.Name = "uxAddMystery";
             this.uxAddMystery.Size = new System.Drawing.Size(101, 29);
             this.uxAddMystery.TabIndex = 26;
@@ -236,7 +252,7 @@ namespace LibraryProject
             // uxAddHorror
             // 
             this.uxAddHorror.AutoSize = true;
-            this.uxAddHorror.Location = new System.Drawing.Point(622, 660);
+            this.uxAddHorror.Location = new System.Drawing.Point(581, 395);
             this.uxAddHorror.Name = "uxAddHorror";
             this.uxAddHorror.Size = new System.Drawing.Size(91, 29);
             this.uxAddHorror.TabIndex = 27;
@@ -246,7 +262,7 @@ namespace LibraryProject
             // uxAddMemoir
             // 
             this.uxAddMemoir.AutoSize = true;
-            this.uxAddMemoir.Location = new System.Drawing.Point(258, 713);
+            this.uxAddMemoir.Location = new System.Drawing.Point(221, 428);
             this.uxAddMemoir.Name = "uxAddMemoir";
             this.uxAddMemoir.Size = new System.Drawing.Size(100, 29);
             this.uxAddMemoir.TabIndex = 28;
@@ -256,7 +272,7 @@ namespace LibraryProject
             // uxAddCooking
             // 
             this.uxAddCooking.AutoSize = true;
-            this.uxAddCooking.Location = new System.Drawing.Point(373, 713);
+            this.uxAddCooking.Location = new System.Drawing.Point(336, 428);
             this.uxAddCooking.Name = "uxAddCooking";
             this.uxAddCooking.Size = new System.Drawing.Size(105, 29);
             this.uxAddCooking.TabIndex = 29;
@@ -266,7 +282,7 @@ namespace LibraryProject
             // uxAddHealth
             // 
             this.uxAddHealth.AutoSize = true;
-            this.uxAddHealth.Location = new System.Drawing.Point(503, 713);
+            this.uxAddHealth.Location = new System.Drawing.Point(466, 428);
             this.uxAddHealth.Name = "uxAddHealth";
             this.uxAddHealth.Size = new System.Drawing.Size(89, 29);
             this.uxAddHealth.TabIndex = 30;
@@ -276,7 +292,7 @@ namespace LibraryProject
             // uxAddHistory
             // 
             this.uxAddHistory.AutoSize = true;
-            this.uxAddHistory.Location = new System.Drawing.Point(618, 713);
+            this.uxAddHistory.Location = new System.Drawing.Point(581, 428);
             this.uxAddHistory.Name = "uxAddHistory";
             this.uxAddHistory.Size = new System.Drawing.Size(95, 29);
             this.uxAddHistory.TabIndex = 31;
@@ -286,7 +302,7 @@ namespace LibraryProject
             // uxAddTravel
             // 
             this.uxAddTravel.AutoSize = true;
-            this.uxAddTravel.Location = new System.Drawing.Point(258, 763);
+            this.uxAddTravel.Location = new System.Drawing.Point(221, 463);
             this.uxAddTravel.Name = "uxAddTravel";
             this.uxAddTravel.Size = new System.Drawing.Size(82, 29);
             this.uxAddTravel.TabIndex = 32;
@@ -296,7 +312,7 @@ namespace LibraryProject
             // uxAddHumor
             // 
             this.uxAddHumor.AutoSize = true;
-            this.uxAddHumor.Location = new System.Drawing.Point(373, 763);
+            this.uxAddHumor.Location = new System.Drawing.Point(336, 463);
             this.uxAddHumor.Name = "uxAddHumor";
             this.uxAddHumor.Size = new System.Drawing.Size(94, 29);
             this.uxAddHumor.TabIndex = 33;
@@ -306,7 +322,7 @@ namespace LibraryProject
             // uxAddMMO
             // 
             this.uxAddMMO.AutoSize = true;
-            this.uxAddMMO.Location = new System.Drawing.Point(416, 861);
+            this.uxAddMMO.Location = new System.Drawing.Point(381, 533);
             this.uxAddMMO.Name = "uxAddMMO";
             this.uxAddMMO.Size = new System.Drawing.Size(84, 29);
             this.uxAddMMO.TabIndex = 34;
@@ -316,7 +332,7 @@ namespace LibraryProject
             // uxAddSport
             // 
             this.uxAddSport.AutoSize = true;
-            this.uxAddSport.Location = new System.Drawing.Point(503, 812);
+            this.uxAddSport.Location = new System.Drawing.Point(466, 498);
             this.uxAddSport.Name = "uxAddSport";
             this.uxAddSport.Size = new System.Drawing.Size(82, 29);
             this.uxAddSport.TabIndex = 35;
@@ -326,7 +342,7 @@ namespace LibraryProject
             // uxAddSimulation
             // 
             this.uxAddSimulation.AutoSize = true;
-            this.uxAddSimulation.Location = new System.Drawing.Point(618, 812);
+            this.uxAddSimulation.Location = new System.Drawing.Point(581, 498);
             this.uxAddSimulation.Name = "uxAddSimulation";
             this.uxAddSimulation.Size = new System.Drawing.Size(122, 29);
             this.uxAddSimulation.TabIndex = 36;
@@ -336,7 +352,7 @@ namespace LibraryProject
             // uxAddRPG
             // 
             this.uxAddRPG.AutoSize = true;
-            this.uxAddRPG.Location = new System.Drawing.Point(373, 812);
+            this.uxAddRPG.Location = new System.Drawing.Point(336, 498);
             this.uxAddRPG.Name = "uxAddRPG";
             this.uxAddRPG.Size = new System.Drawing.Size(71, 29);
             this.uxAddRPG.TabIndex = 37;
@@ -346,7 +362,7 @@ namespace LibraryProject
             // uxAddAction
             // 
             this.uxAddAction.AutoSize = true;
-            this.uxAddAction.Location = new System.Drawing.Point(258, 812);
+            this.uxAddAction.Location = new System.Drawing.Point(221, 498);
             this.uxAddAction.Name = "uxAddAction";
             this.uxAddAction.Size = new System.Drawing.Size(89, 29);
             this.uxAddAction.TabIndex = 38;
@@ -356,7 +372,7 @@ namespace LibraryProject
             // uxAddAdventure
             // 
             this.uxAddAdventure.AutoSize = true;
-            this.uxAddAdventure.Location = new System.Drawing.Point(618, 763);
+            this.uxAddAdventure.Location = new System.Drawing.Point(581, 463);
             this.uxAddAdventure.Name = "uxAddAdventure";
             this.uxAddAdventure.Size = new System.Drawing.Size(120, 29);
             this.uxAddAdventure.TabIndex = 39;
@@ -366,30 +382,161 @@ namespace LibraryProject
             // uxAddChildren
             // 
             this.uxAddChildren.AutoSize = true;
-            this.uxAddChildren.Location = new System.Drawing.Point(503, 763);
+            this.uxAddChildren.Location = new System.Drawing.Point(466, 463);
             this.uxAddChildren.Name = "uxAddChildren";
             this.uxAddChildren.Size = new System.Drawing.Size(103, 29);
             this.uxAddChildren.TabIndex = 40;
             this.uxAddChildren.Text = "Children";
             this.uxAddChildren.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // uxLine4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(2, 376);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(859, 25);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Austin and Aruhan: The Creator textboxes that are not needed will be nulled out b" +
-    "ased on the type selected";
+            this.uxLine4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.uxLine4.Location = new System.Drawing.Point(80, 689);
+            this.uxLine4.Name = "uxLine4";
+            this.uxLine4.Size = new System.Drawing.Size(1424, 2);
+            this.uxLine4.TabIndex = 41;
+            this.uxLine4.Text = "                             ";
             // 
-            // AddAsset
+            // uxLine5
+            // 
+            this.uxLine5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.uxLine5.Location = new System.Drawing.Point(783, 47);
+            this.uxLine5.Name = "uxLine5";
+            this.uxLine5.Size = new System.Drawing.Size(2, 1300);
+            this.uxLine5.TabIndex = 42;
+            this.uxLine5.Text = "                             ";
+            // 
+            // uxAssetAssetIDLabel
+            // 
+            this.uxAssetAssetIDLabel.AutoSize = true;
+            this.uxAssetAssetIDLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uxAssetAssetIDLabel.Location = new System.Drawing.Point(107, 747);
+            this.uxAssetAssetIDLabel.Name = "uxAssetAssetIDLabel";
+            this.uxAssetAssetIDLabel.Size = new System.Drawing.Size(98, 32);
+            this.uxAssetAssetIDLabel.TabIndex = 44;
+            this.uxAssetAssetIDLabel.Text = "AssetID:";
+            // 
+            // uxAssetAssetIDTextBox
+            // 
+            this.uxAssetAssetIDTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uxAssetAssetIDTextBox.Location = new System.Drawing.Point(232, 747);
+            this.uxAssetAssetIDTextBox.Name = "uxAssetAssetIDTextBox";
+            this.uxAssetAssetIDTextBox.Size = new System.Drawing.Size(433, 39);
+            this.uxAssetAssetIDTextBox.TabIndex = 43;
+            // 
+            // uxFetchSituationOfAssetButton
+            // 
+            this.uxFetchSituationOfAssetButton.Location = new System.Drawing.Point(294, 807);
+            this.uxFetchSituationOfAssetButton.Name = "uxFetchSituationOfAssetButton";
+            this.uxFetchSituationOfAssetButton.Size = new System.Drawing.Size(254, 85);
+            this.uxFetchSituationOfAssetButton.TabIndex = 45;
+            this.uxFetchSituationOfAssetButton.Text = "Fetch Situation of Asset";
+            this.uxFetchSituationOfAssetButton.UseVisualStyleBackColor = true;
+            // 
+            // uxGetPossibleAssetsButton
+            // 
+            this.uxGetPossibleAssetsButton.Location = new System.Drawing.Point(1062, 807);
+            this.uxGetPossibleAssetsButton.Name = "uxGetPossibleAssetsButton";
+            this.uxGetPossibleAssetsButton.Size = new System.Drawing.Size(254, 85);
+            this.uxGetPossibleAssetsButton.TabIndex = 48;
+            this.uxGetPossibleAssetsButton.Text = "Get Possible Assets";
+            this.uxGetPossibleAssetsButton.UseVisualStyleBackColor = true;
+            // 
+            // uxAssetAssetNameLabel
+            // 
+            this.uxAssetAssetNameLabel.AutoSize = true;
+            this.uxAssetAssetNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uxAssetAssetNameLabel.Location = new System.Drawing.Point(868, 747);
+            this.uxAssetAssetNameLabel.Name = "uxAssetAssetNameLabel";
+            this.uxAssetAssetNameLabel.Size = new System.Drawing.Size(146, 32);
+            this.uxAssetAssetNameLabel.TabIndex = 47;
+            this.uxAssetAssetNameLabel.Text = "Asset Name:";
+            // 
+            // uxAssetAssetNameTextBox
+            // 
+            this.uxAssetAssetNameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uxAssetAssetNameTextBox.Location = new System.Drawing.Point(1024, 747);
+            this.uxAssetAssetNameTextBox.Name = "uxAssetAssetNameTextBox";
+            this.uxAssetAssetNameTextBox.Size = new System.Drawing.Size(433, 39);
+            this.uxAssetAssetNameTextBox.TabIndex = 46;
+            // 
+            // uxFetchCheckoutHistoryButton
+            // 
+            this.uxFetchCheckoutHistoryButton.Location = new System.Drawing.Point(1062, 113);
+            this.uxFetchCheckoutHistoryButton.Name = "uxFetchCheckoutHistoryButton";
+            this.uxFetchCheckoutHistoryButton.Size = new System.Drawing.Size(254, 85);
+            this.uxFetchCheckoutHistoryButton.TabIndex = 51;
+            this.uxFetchCheckoutHistoryButton.Text = "Fetch Checkout History";
+            this.uxFetchCheckoutHistoryButton.UseVisualStyleBackColor = true;
+            // 
+            // uxAssetUserIDLabel
+            // 
+            this.uxAssetUserIDLabel.AutoSize = true;
+            this.uxAssetUserIDLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uxAssetUserIDLabel.Location = new System.Drawing.Point(891, 47);
+            this.uxAssetUserIDLabel.Name = "uxAssetUserIDLabel";
+            this.uxAssetUserIDLabel.Size = new System.Drawing.Size(89, 32);
+            this.uxAssetUserIDLabel.TabIndex = 50;
+            this.uxAssetUserIDLabel.Text = "UserID:";
+            // 
+            // uxAssetUserIDTextBox
+            // 
+            this.uxAssetUserIDTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uxAssetUserIDTextBox.Location = new System.Drawing.Point(1024, 47);
+            this.uxAssetUserIDTextBox.Name = "uxAssetUserIDTextBox";
+            this.uxAssetUserIDTextBox.Size = new System.Drawing.Size(433, 39);
+            this.uxAssetUserIDTextBox.TabIndex = 49;
+            // 
+            // uxFetchCheckoutHistoryGridView
+            // 
+            this.uxFetchCheckoutHistoryGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxFetchCheckoutHistoryGridView.Location = new System.Drawing.Point(809, 219);
+            this.uxFetchCheckoutHistoryGridView.Name = "uxFetchCheckoutHistoryGridView";
+            this.uxFetchCheckoutHistoryGridView.RowHeadersWidth = 62;
+            this.uxFetchCheckoutHistoryGridView.RowTemplate.Height = 33;
+            this.uxFetchCheckoutHistoryGridView.Size = new System.Drawing.Size(751, 444);
+            this.uxFetchCheckoutHistoryGridView.TabIndex = 52;
+            // 
+            // uxFetchSituationOfAssetGridView
+            // 
+            this.uxFetchSituationOfAssetGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxFetchSituationOfAssetGridView.Location = new System.Drawing.Point(12, 917);
+            this.uxFetchSituationOfAssetGridView.Name = "uxFetchSituationOfAssetGridView";
+            this.uxFetchSituationOfAssetGridView.RowHeadersWidth = 62;
+            this.uxFetchSituationOfAssetGridView.RowTemplate.Height = 33;
+            this.uxFetchSituationOfAssetGridView.Size = new System.Drawing.Size(751, 444);
+            this.uxFetchSituationOfAssetGridView.TabIndex = 77;
+            // 
+            // uxGetPossibleAssetsGridView
+            // 
+            this.uxGetPossibleAssetsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxGetPossibleAssetsGridView.Location = new System.Drawing.Point(809, 917);
+            this.uxGetPossibleAssetsGridView.Name = "uxGetPossibleAssetsGridView";
+            this.uxGetPossibleAssetsGridView.RowHeadersWidth = 62;
+            this.uxGetPossibleAssetsGridView.RowTemplate.Height = 33;
+            this.uxGetPossibleAssetsGridView.Size = new System.Drawing.Size(751, 444);
+            this.uxGetPossibleAssetsGridView.TabIndex = 78;
+            // 
+            // Asset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 1054);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1590, 1390);
+            this.Controls.Add(this.uxGetPossibleAssetsGridView);
+            this.Controls.Add(this.uxFetchSituationOfAssetGridView);
+            this.Controls.Add(this.uxFetchCheckoutHistoryGridView);
+            this.Controls.Add(this.uxFetchCheckoutHistoryButton);
+            this.Controls.Add(this.uxAssetUserIDLabel);
+            this.Controls.Add(this.uxAssetUserIDTextBox);
+            this.Controls.Add(this.uxGetPossibleAssetsButton);
+            this.Controls.Add(this.uxAssetAssetNameLabel);
+            this.Controls.Add(this.uxAssetAssetNameTextBox);
+            this.Controls.Add(this.uxFetchSituationOfAssetButton);
+            this.Controls.Add(this.uxAssetAssetIDLabel);
+            this.Controls.Add(this.uxAssetAssetIDTextBox);
+            this.Controls.Add(this.uxLine5);
+            this.Controls.Add(this.uxLine4);
             this.Controls.Add(this.uxAddChildren);
             this.Controls.Add(this.uxAddAdventure);
             this.Controls.Add(this.uxAddAction);
@@ -422,8 +569,11 @@ namespace LibraryProject
             this.Controls.Add(this.uxAddAssetButton);
             this.Controls.Add(this.uxAddNameLabel);
             this.Controls.Add(this.uxAddNameTextBox);
-            this.Name = "AddAsset";
-            this.Text = "AddAsset";
+            this.Name = "Asset";
+            this.Text = "Asset";
+            ((System.ComponentModel.ISupportInitialize)(this.uxFetchCheckoutHistoryGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxFetchSituationOfAssetGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxGetPossibleAssetsGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,6 +613,19 @@ namespace LibraryProject
         private System.Windows.Forms.CheckBox uxAddAction;
         private System.Windows.Forms.CheckBox uxAddAdventure;
         private System.Windows.Forms.CheckBox uxAddChildren;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label uxLine4;
+        private System.Windows.Forms.Label uxLine5;
+        private System.Windows.Forms.Label uxAssetAssetIDLabel;
+        private System.Windows.Forms.TextBox uxAssetAssetIDTextBox;
+        private System.Windows.Forms.Button uxFetchSituationOfAssetButton;
+        private System.Windows.Forms.Button uxGetPossibleAssetsButton;
+        private System.Windows.Forms.Label uxAssetAssetNameLabel;
+        private System.Windows.Forms.TextBox uxAssetAssetNameTextBox;
+        private System.Windows.Forms.Button uxFetchCheckoutHistoryButton;
+        private System.Windows.Forms.Label uxAssetUserIDLabel;
+        private System.Windows.Forms.TextBox uxAssetUserIDTextBox;
+        private System.Windows.Forms.DataGridView uxFetchCheckoutHistoryGridView;
+        private System.Windows.Forms.DataGridView uxFetchSituationOfAssetGridView;
+        private System.Windows.Forms.DataGridView uxGetPossibleAssetsGridView;
     }
 }
