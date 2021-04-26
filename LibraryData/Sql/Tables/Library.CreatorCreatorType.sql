@@ -3,14 +3,14 @@ BEGIN
 
    CREATE TABLE [Library].CreatorCreatorType 
     (
-        CreatorCreatorType INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
+        CreatorCreatorTypeID INT NOT NULL IDENTITY(1, 1),
         CreatorID INT NOT NULL,
         CreatorTypeID TINYINT NOT NULL,
 
 
-        CONSTRAINT PK_Library_Producer_CreatorID PRIMARY KEY CLUSTERED
+        CONSTRAINT PK_Library_CreatorCreatorType_CreatorCreatorTypeID PRIMARY KEY CLUSTERED
         (
-             CreatorCreatorType ASC
+             CreatorCreatorTypeID ASC
         ),
 
         CONSTRAINT [FK_Library_CreatorCreatorType_Library_Creator] FOREIGN KEY(CreatorID)
@@ -32,7 +32,7 @@ IF NOT EXISTS
       SELECT *
       FROM sys.key_constraints kc
       WHERE kc.parent_object_id = OBJECT_ID(N'Library.CreatorCreatorType')
-         AND kc.[name] = N'UK_Library__CreatorCreatorType_CreatorID_CreatorTypeID'
+         AND kc.[Name] = N'UK_Library__CreatorCreatorType_CreatorID_CreatorTypeID'
    )
 BEGIN
    ALTER TABLE [Library].CreatorCreatorType
@@ -53,7 +53,7 @@ IF NOT EXISTS
       FROM sys.foreign_keys fk
       WHERE fk.parent_object_id = OBJECT_ID(N'Library.CreatorCreatorType')
          AND fk.referenced_object_id = OBJECT_ID(N'Library.Creator')
-         AND fk.[name] = N'FK_Library_CreatorCreatorType_Library_Creator'
+         AND fk.[Name] = N'FK_Library_CreatorCreatorType_Library_Creator'
    )
 BEGIN
    ALTER TABLE [Library].CreatorCreatorType 
@@ -73,7 +73,7 @@ IF NOT EXISTS
       FROM sys.foreign_keys fk
       WHERE fk.parent_object_id = OBJECT_ID(N'Library.CreatorCreatorType')
          AND fk.referenced_object_id = OBJECT_ID(N'Library.CreatorType')
-         AND fk.[name] = N'FK_Library_CreatorCreatorType_Library_CreatorType'
+         AND fk.[Name] = N'FK_Library_CreatorCreatorType_Library_CreatorType'
    )
 BEGIN
    ALTER TABLE [Library].CreatorCreatorType 

@@ -5,9 +5,9 @@ CREATE OR ALTER PROCEDURE [Library].RankingAssetByAssetType
 
 AS
 
-WITH SourseCTE(AssetID, AssetName, AssetTypeID, CheckOutAssetsCount) AS
+WITH SourceCTE(AssetID, [Name], AssetTypeID, CheckOutAssetsCount) AS
 (
-    SELECT COA.AssetID, A.AssetName, A.AssetTypeID, COUNT(*)
+    SELECT COA.AssetID, A.[Name], A.AssetTypeID, COUNT(*)
     FROM [Library].CheckedOutAsset COA
     INNER JOIN [Library].[Asset] A ON A.AssetID = COA.AssetID
     GROUP BY COA.AssetID, A.[Name], A.AssetTypeID
@@ -15,11 +15,11 @@ WITH SourseCTE(AssetID, AssetName, AssetTypeID, CheckOutAssetsCount) AS
 
 SELECT 
       ROW_NUMBER() OVER(ORDER BY S.AssetTypeID ASC, S.CheckOutAssetsCount DESC) AS [RowNumber],
-      [AT].TypeName,
+      [AT].[Name],
       RANK() OVER( PARTITION BY S.AssetTypeID ORDER BY S.CheckOutAssetsCount DESC) AS CheckOutRank,
-      S.AssetName,  
+      S.[Name],  
       S.CheckOutAssetsCount AS CheckOutCount
-FROM SourseCTE S
+FROM SourceCTE S
 INNER JOIN [Library].[AssetType] [AT] ON [AT].AssetTypeID = S.AssetTypeID
 ORDER BY S.AssetTypeID ASC
 

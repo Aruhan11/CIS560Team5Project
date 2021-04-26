@@ -3,7 +3,7 @@ BEGIN
 
    CREATE TABLE [Library].Creator 
     (
-        CreatorID INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
+        CreatorID INT NOT NULL IDENTITY(1, 1),
         FirstName NVARCHAR(32) NOT NULL,
         LastName NVARCHAR(32) NOT NULL,
         Company NVARCHAR(32) NOT NULL,
@@ -26,12 +26,12 @@ IF NOT EXISTS
    (
       SELECT *
       FROM sys.check_constraints cc
-      WHERE cc.parent_object_id = OBJECT_ID(N'Library.Producer')
-         AND cc.[name] = N'CK_Library_Producer_FirstName_LastName_Company'
+      WHERE cc.parent_object_id = OBJECT_ID(N'Library.Creator')
+         AND cc.[Name] = N'CK_Library_Producer_FirstName_LastName_Company'
    )
 BEGIN
-   ALTER TABLE [Library].Producer
-   ADD CONSTRAINT [CK_Library_Producer_FirstName_LastName_Company] CHECK
+   ALTER TABLE [Library].Creator
+   ADD CONSTRAINT [CK_Library_Creator_FirstName_LastName_Company] CHECK
    (
       FirstName > N'' OR LastName > N'' OR Company > N''
    )

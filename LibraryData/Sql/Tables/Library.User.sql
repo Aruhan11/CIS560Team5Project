@@ -2,10 +2,10 @@ IF OBJECT_ID(N'Library.User') IS NULL
 BEGIN
 
    CREATE TABLE [Library].[User] (
-    UserID INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
-    FirstName NVARCHAR(64) NOT NULL,
-    LastName NVARCHAR(64) NOT NULL,
-    PhoneNumber NVARCHAR(20) NOT NULL,
+    UserID INT NOT NULL IDENTITY(1, 1),
+    FirstName NVARCHAR(8) NOT NULL,
+    LastName NVARCHAR(8) NOT NULL,
+    PhoneNumber NVARCHAR(13) NOT NULL,
     CreatedOn DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
     UpdatedOn DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
     LastCheckoutDate DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
@@ -28,7 +28,7 @@ IF NOT EXISTS
       SELECT *
       FROM sys.key_constraints kc
       WHERE kc.parent_object_id = OBJECT_ID(N'Library.User')
-         AND kc.[name] = N'UK_Library_User_FirstName_LastName'
+         AND kc.[Name] = N'UK_Library_User_FirstName_LastName'
    )
 BEGIN
    ALTER TABLE [Library].[User]
@@ -44,7 +44,7 @@ IF NOT EXISTS
       SELECT *
       FROM sys.key_constraints kc
       WHERE kc.parent_object_id = OBJECT_ID(N'Library.User')
-         AND kc.[name] = N'UK_Library_User_PhoneNumber'
+         AND kc.[Name] = N'UK_Library_User_PhoneNumber'
    )
 BEGIN
    ALTER TABLE [Library].[User]
@@ -63,7 +63,7 @@ IF NOT EXISTS
       SELECT *
       FROM sys.check_constraints cc
       WHERE cc.parent_object_id = OBJECT_ID(N'Library.User')
-         AND cc.[name] = N'CK_Library_User_LastName_FirstName'
+         AND cc.[Name] = N'CK_Library_User_LastName_FirstName'
    )
 BEGIN
    ALTER TABLE [Library].[User]

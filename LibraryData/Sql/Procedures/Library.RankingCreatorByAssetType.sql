@@ -17,7 +17,7 @@ WITH SourseCTE(CreatorID,AssetID,AssetName,AssetTypeID,CheckOutAssetsCount) AS
 SELECT 
       ROW_NUMBER() OVER(ORDER BY S.AssetTypeID ASC, S.CheckOutAssetsCount DESC) AS [RowNumber],
       (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, 
-      [AT].TypeName,
+      [AT].[Name],
       RANK() OVER( PARTITION BY S.AssetTypeID ORDER BY S.CheckOutAssetsCount DESC) AS CheckOutRank,
       S.AssetName,  
       S.CheckOutAssetsCount AS CheckOutCount

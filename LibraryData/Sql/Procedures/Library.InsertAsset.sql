@@ -4,7 +4,7 @@ CREATE OR ALTER PROCEDURE [Library].InsertAsset
    @FirstName NVARCHAR(10),
    @LastName NVARCHAR(10),
    @Company NVARCHAR(10),
-   @ReleaseDate DATETIME(2),
+   @ReleaseDate DATETIME2,
    @CategoryID INT,
    @AssetID INT OUTPUT
 AS
@@ -17,23 +17,23 @@ AS
 MERGE [Library].Creator T
 USING 
     (
-        VALUES(@FirstName, @LastName, @CompanyName)
-    )S(FirstName, LastName, CompanyName) ON T.FirstName = S.FirstName
-WHEN NOT MATCHED AND T.LastName <> S.LastName AND T.Company <> S.Company THEN
-    INSERT(FirstName, LastName, CompanyName)
-    VALUES(S.FirstName, S.LastName, S.CompanyName);
+        VALUES(@FirstName, @LastName, @Company)
+    )S(FirstName, LastName, Company) ON T.FirstName = S.FirstName AND T.LastName <> S.LastName AND T.Company <> S.Company
+WHEN NOT MATCHED 
+ THEN
+    INSERT(FirstName, LastName, Company)
+    VALUES(S.FirstName, S.LastName, S.Company);
 
 
 
 /*
 * merge Asset second
 */
-
-DECLARE @CreatorID INT = 
+DECLARE @CreatorID INT= 
 (
     SELECT C.CreatorID
     FROM [Library].Creator C
-    WHERE C.FirstName = @FirstName AND C.LastName = @LastName AND C.CompanyName = @CompanyName
+    WHERE C.FirstName = @FirstName AND C.LastName = @LastName AND C.Company = @Company
 )
 
 MERGE [Library].Asset T
@@ -86,8 +86,8 @@ MERGE [Library].AssetCategory AC
 USING 
 (
     VALUES(@AssetID, @CategoryID)
-) S(AssetID, CategoryID) ON S.AssetID = AC.AssetID
-WHEN NOT MATCHED AND (S.CategoryID <> AC.AssetID) THEN
+) S(AssetID, CategoryID) ON S.AssetID = AC.AssetID AND (S.CategoryID <> AC.AssetID)
+WHEN NOT MATCHED THEN
 INSERT(AssetID, CategoryID)
 VALUES( S.AssetID, S.CategoryID);
 

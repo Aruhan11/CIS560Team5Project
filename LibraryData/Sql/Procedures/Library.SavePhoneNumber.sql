@@ -22,8 +22,8 @@ WHEN MATCHED AND NOT EXISTS
       PhoneNumber = S.PhoneNumber,
       UpdatedOn = SYSDATETIMEOFFSET()
 WHEN NOT MATCHED THEN
-   INSERT(UserID,PhoneNumbe)
-   VALUES(S.UserID, S.PhoneNumbe);
+   INSERT(UserID,PhoneNumber)
+   VALUES(S.UserID, S.PhoneNumber);
 
 
 

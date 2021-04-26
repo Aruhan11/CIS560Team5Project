@@ -3,10 +3,10 @@ BEGIN
 
    CREATE TABLE [Library].CheckedOutAsset
    (
-        CheckOutID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+        CheckOutID INT NOT NULL IDENTITY(1,1) ,
         AssetID INT NOT NULL,
         UserID INT NOT NULL,
-        LibraianID INT NOT NULL,
+        LibrarianID INT NOT NULL,
         CheckOutDate DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
         ReturnByDate DATETIMEOFFSET NOT NULL DEFAULT(DATEADD(month, 3, SYSDATETIMEOFFSET())),
         IsReturned TINYINT NOT NULL DEFAULT(0),
@@ -22,8 +22,8 @@ BEGIN
         CONSTRAINT [FK_Library_CheckedOutAsset_Library_User] FOREIGN KEY(UserID)
         REFERENCES [Library].[User](UserID),
 
-        CONSTRAINT [FK_Library_CheckedOutAsset_Library_Libraian] FOREIGN KEY(LibraianID)
-        REFERENCES [Library].Author(LibraianID)
+        CONSTRAINT [FK_Library_CheckedOutAsset_Library_Libraian] FOREIGN KEY(LibrarianID)
+        REFERENCES [Library].Librarian(LibrarianID)
 
    );
 
@@ -39,7 +39,7 @@ IF NOT EXISTS
       FROM sys.foreign_keys fk
       WHERE fk.parent_object_id = OBJECT_ID(N'Library.CheckedOutAsset')
          AND fk.referenced_object_id = OBJECT_ID(N'Library.Asset')
-         AND fk.[name] = N'FK_Library_CheckedOutAsset_Library_Asset'
+         AND fk.[Name] = N'FK_Library_CheckedOutAsset_Library_Asset'
    )
 BEGIN
    ALTER TABLE [Library].CheckedOutAsset 
@@ -62,7 +62,7 @@ IF NOT EXISTS
       FROM sys.foreign_keys fk
       WHERE fk.parent_object_id = OBJECT_ID(N'Library.CheckedOutAsset')
          AND fk.referenced_object_id = OBJECT_ID(N'Library.User')
-         AND fk.[name] = N'FK_Library_CheckedOutAsset_Library_User'
+         AND fk.[Name] = N'FK_Library_CheckedOutAsset_Library_User'
    )
 BEGIN
    ALTER TABLE [Library].CheckedOutAsset 
@@ -83,18 +83,18 @@ IF NOT EXISTS
       SELECT *
       FROM sys.foreign_keys fk
       WHERE fk.parent_object_id = OBJECT_ID(N'Library.CheckedOutAsset')
-         AND fk.referenced_object_id = OBJECT_ID(N'Library.Libraian')
-         AND fk.[name] = N'FK_Library_CheckedOutAsset_Library_Libraian'
+         AND fk.referenced_object_id = OBJECT_ID(N'Library.Librarian')
+         AND fk.[Name] = N'FK_Library_CheckedOutAsset_Library_Librarian'
    )
 BEGIN
    ALTER TABLE [Library].CheckedOutAsset 
-   ADD CONSTRAINT [FK_Library_CheckedOutAsset_Library_Libraian] FOREIGN KEY
+   ADD CONSTRAINT [FK_Library_CheckedOutAsset_Library_Librarian] FOREIGN KEY
    (
-      LibraianID
+      LibrarianID
    )
-   REFERENCES [Library].Libraian
+   REFERENCES [Library].Librarian
    (
-      LibraianID
+      LibrarianID
    );
 END;
 

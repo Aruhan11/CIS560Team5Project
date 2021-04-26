@@ -10,7 +10,7 @@ BEGIN
         CONSTRAINT [FK_Library_AssetCategory_Asset] FOREIGN KEY(AssetID)
         REFERENCES Library.Asset(AssetID),
         CONSTRAINT [FK_Library_AssetCategory_Category] FOREIGN KEY(CategoryID)
-        REFERENCES Library.Category(CategoryID)
+        REFERENCES Library.Category(CategoryID) 
     );
 END;
 
@@ -24,7 +24,7 @@ IF NOT EXISTS
       SELECT *
       FROM sys.key_constraints kc
       WHERE kc.parent_object_id = OBJECT_ID(N'Library.AssetCategory')
-         AND kc.[name] = N'UK_Library_AssetCategory_AssetID_CategoryID'
+         AND kc.[Name] = N'UK_Library_AssetCategory_AssetID_CategoryID'
    )
 BEGIN
    ALTER TABLE [Library].AssetCategory
@@ -45,7 +45,7 @@ IF NOT EXISTS
       FROM sys.foreign_keys fk
       WHERE fk.parent_object_id = OBJECT_ID(N'Library.AssetCategory')
          AND fk.referenced_object_id = OBJECT_ID(N'Library.Asset')
-         AND fk.[name] = N'FK_Library_AssetCategory_Asset'
+         AND fk.[Name] = N'FK_Library_AssetCategory_Asset'
    )
 BEGIN
    ALTER TABLE [Library].AssetCategory 
@@ -66,7 +66,7 @@ IF NOT EXISTS
       FROM sys.foreign_keys fk
       WHERE fk.parent_object_id = OBJECT_ID(N'Library.AssetCategory')
          AND fk.referenced_object_id = OBJECT_ID(N'Library.Category')
-         AND fk.[name] = N'FK_Library_AssetCategory_Category'
+         AND fk.[Name] = N'FK_Library_AssetCategory_Category'
    )
 BEGIN
    ALTER TABLE [Library].AssetCategory 

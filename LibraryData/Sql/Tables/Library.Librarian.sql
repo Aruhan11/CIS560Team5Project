@@ -3,7 +3,7 @@ BEGIN
 
    CREATE TABLE [Library].Librarian 
    (
-        LibrarianID INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
+        LibrarianID INT NOT NULL IDENTITY(1, 1),
         UserID INT NOT NULL,
 
         CONSTRAINT PK_Library_Librarian_LibrarianID PRIMARY KEY CLUSTERED
@@ -27,7 +27,7 @@ IF NOT EXISTS
       FROM sys.foreign_keys fk
       WHERE fk.parent_object_id = OBJECT_ID(N'Library.Librarian')
          AND fk.referenced_object_id = OBJECT_ID(N'Library.User')
-         AND fk.[name] = N'FK_Library_Librarian_Library_User'
+         AND fk.[Name] = N'FK_Library_Librarian_Library_User'
    )
 BEGIN
    ALTER TABLE [Library].Librarian 

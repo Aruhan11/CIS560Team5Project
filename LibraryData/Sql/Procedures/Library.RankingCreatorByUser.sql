@@ -7,13 +7,13 @@ AS
 
 WITH SourseCTE(UserID, CreatorID, AssetCount) AS
 (
-    SELECT COA.UserID, C.CreatorID, COUNT(*) OVER(PARTITION BY C.CreatorID)
+    SELECT COA.UserID, A.CreatorID, COUNT(*) OVER(PARTITION BY A.CreatorID)
     FROM [Library].[Asset] A
     INNER JOIN [Library].CheckedOutAsset COA ON COA.AssetID = A.AssetID
 )
 
 SELECT 
-      ROW_NUMBER() OVER(ORDER BY S.AssetTypeID ASC, S.CheckOutAssetsCount DESC) AS [RowNumber],
+      ROW_NUMBER() OVER(ORDER BY S.UserID ASC, S.AssetCount DESC) AS [RowNumber],
       S.UserID, (U.FirstName + N' '+ U.LastName) AS UserName,
       RANK() OVER( PARTITION BY S.UserID ORDER BY S.AssetCount DESC) AS AssetCounRank,
       (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company,      

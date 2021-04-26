@@ -5,7 +5,7 @@ Param(
 )
 
 $CurrentDrive = (Get-Location).Drive.Name + ":"
-$CreateDatabaseScript = $PSScriptRoot + "\CreateDatabase.sql"
+$CreateDatabaseScript = $PSScriptRoot + ".\CreateDatabase.sql"
 
 Write-Host
 Write-Host "Creating database [$Database] if it does not exist..."

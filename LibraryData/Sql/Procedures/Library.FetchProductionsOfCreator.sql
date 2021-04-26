@@ -6,10 +6,10 @@ CREATE OR ALTER PROCEDURE [Library].FetchProductionOfCreator
 AS
 
 SELECT ROW_NUMBER() OVER(ORDER BY A.AssetTypeID ASC) AS [RowNumber],
-	   (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, A.[Name], [AT].TypeName,  
+	   (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, A.[Name], [AT].[Name],  
 	   A.Stock
 FROM [Library].Creator C
-INNER JOIN [Library].Asset A ON A.CreatorID = S.CreatorID
+INNER JOIN [Library].Asset A ON A.CreatorID = C.CreatorID
 INNER JOIN [Library].AssetType [AT] ON [AT].AssetTypeID = A.AssetTypeID
 GO
 

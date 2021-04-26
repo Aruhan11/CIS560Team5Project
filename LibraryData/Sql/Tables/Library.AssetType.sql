@@ -21,7 +21,7 @@ IF NOT EXISTS
       SELECT *
       FROM sys.key_constraints kc
       WHERE kc.parent_object_id = OBJECT_ID(N'Library.AssetType')
-         AND kc.[name] = N'UK_Library_AssetType_Name'
+         AND kc.[Name] = N'UK_Library_AssetType_Name'
    )
 BEGIN
    ALTER TABLE [Library].AssetType

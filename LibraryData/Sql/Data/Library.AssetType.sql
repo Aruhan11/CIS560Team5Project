@@ -9,7 +9,7 @@ DECLARE @AssetTypeStaging TABLE
 INSERT @AssetTypeStaging(AssetTypeID, TypeName)
 VALUES
    (1, 'Book'),
-   (2, 'Aduio Book'),
+   (2, 'Audio Book'),
    (3, 'Movie'),
    (4, 'Game');
 

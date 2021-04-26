@@ -20,30 +20,36 @@ Write-Host "Rebuilding database $Database on $Server..."
 <#
    If on your local machine, you can drop and re-create the database.
 #>
-& ".\Scripts\DropDatabase.ps1" -Database $Database
-& ".\Scripts\CreateDatabase.ps1" -Database $Database
+& ".\DropDatabase.ps1" -Database $Database
+& ".\CreateDatabase.ps1" -Database $Database
 
 <#
    If on the department's server, you don't have permissions to drop or create databases.
    In this case, maintain a script to drop all tables.
 #>
 #Write-Host "Dropping tables..."
-#Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\DropTables.sql"DO THIS
+#Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\DropTables.sql"
 
 Write-Host "Creating schema..."
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Schemas\Library.sql"
 
 Write-Host "Creating tables..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.Asset.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.AssetCategory.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.CreatorType.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.AssetType.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.Category.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.CheckedOutAsset.sql"
+
+
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.Creator.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.CreatorCreatorType.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.CreatorType.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.Lirarian.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.User.sql"
+
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.CreatorCreatorType.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.Librarian.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.Asset.sql"
+
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.AssetCategory.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Tables\Library.CheckedOutAsset.sql"
+
+
 
 Write-Host "Stored procedures..."
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Procedures\Library.CreateUser.sql"
