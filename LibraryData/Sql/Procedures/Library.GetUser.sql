@@ -3,7 +3,7 @@
 */
 
 CREATE OR ALTER PROCEDURE [Library].GetUser
-   @PhoneNumber NVARCHAR(10)
+   @PhoneNumber NVARCHAR(14)
 AS
 
 SELECT U.UserID, U.FirstName, U.LastName, U.LastCheckOutDate, U.IsDeleted

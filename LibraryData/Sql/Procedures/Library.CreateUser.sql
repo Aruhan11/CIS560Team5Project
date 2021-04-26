@@ -1,7 +1,7 @@
 CREATE OR ALTER PROCEDURE [Library].CreateUser
-   @FirstName NVARCHAR(32),
-   @LastName NVARCHAR(32),
-   @PhoneNumber NVARCHAR(10),
+   @FirstName NVARCHAR(34),
+   @LastName NVARCHAR(34),
+   @PhoneNumber NVARCHAR(14),
    @LastCheckoutDate DATETIME2,
    @IsDeleted INT,
    @UserID INT OUTPUT

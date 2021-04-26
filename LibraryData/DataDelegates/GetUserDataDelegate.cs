@@ -11,7 +11,7 @@ namespace LibarayData.DataDelegates
         private readonly string phonenumber;
 
         public GetUserDataDelegate(string phonenumber)
-           : base("Library.GetUserData")
+           : base("Library.GetUser")
         {
             this.phonenumber = phonenumber;
         }
