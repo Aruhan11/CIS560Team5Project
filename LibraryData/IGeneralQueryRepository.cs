@@ -5,7 +5,7 @@ namespace LibraryData
 {
     public interface IGeneralQueryRepository
     {
-        User CreateUser(string firstname, string lastname, string phonenumber);
+        User CreateUser(string firstname, string lastname, string phonenumber, DateTime lastcheckoutdate, int isdeleted);
 
         void DeleteUser(int userID);
 

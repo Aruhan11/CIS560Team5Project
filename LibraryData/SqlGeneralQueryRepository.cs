@@ -15,7 +15,7 @@ namespace LibraryData
             executor = new SqlCommandExecutor(connectionString);
         }
 
-        public User CreateUser(string firstname, string lastname, string phonenumber)
+        public User CreateUser(string firstname, string lastname, string phonenumber, DateTime lastcheckoutdate, int isdeleted)
         {
             if (string.IsNullOrWhiteSpace(firstname))
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(firstname));
@@ -25,8 +25,14 @@ namespace LibraryData
 
             if (string.IsNullOrWhiteSpace(phonenumber))
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(phonenumber));
+            
+            if (string.IsNullOrWhiteSpace(lastcheckoutdate.ToString()))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(lastcheckoutdate));
+            
+            if (string.IsNullOrWhiteSpace(isdeleted.ToString()))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(isdeleted));
 
-            var d = new CreateUserDataDelegate(firstname, lastname, phonenumber);
+            var d = new CreateUserDataDelegate(firstname, lastname, phonenumber, lastcheckoutdate, isdeleted);
             return executor.ExecuteNonQuery(d);
         }
 

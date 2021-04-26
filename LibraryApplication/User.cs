@@ -15,6 +15,8 @@ namespace LibraryProject
         const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;";
         private IGeneralQueryRepository general;
         private IQuestionQueryRepository question;
+
+
         private TransactionScope transaction;
 
 
@@ -28,7 +30,7 @@ namespace LibraryProject
 
         private void uxCreateUserButton_Click(object sender, EventArgs e)
         {
-            var user = general.CreateUser(uxAddFirstNameTextBox.Text, uxAddLastNameTextBox.Text, uxAddPhoneTextBox.Text);
+            var user = general.CreateUser(uxAddFirstNameTextBox.Text, uxAddLastNameTextBox.Text, uxAddPhoneTextBox.Text, default(DateTime), 0 );
             if  (user != null) MessageBox.Show(user.FirstName + user.LastName + " have been added!", "User Added");
         }
 

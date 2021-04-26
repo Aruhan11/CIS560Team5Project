@@ -12,14 +12,18 @@ namespace LibarayData.DataDelegates
         public readonly string firstname;
         public readonly string lastname;
         public readonly string phonenumber;
+        public readonly DateTime lastcheckoutdate;
+        public readonly int isdeleted;
 
-        public CreateUserDataDelegate(string firstname, string lastname, string phonenumber)
+        public CreateUserDataDelegate(string firstname, string lastname, string phonenumber, DateTime lastcheckoutdate, int isdeleted)
             : base("Library.CreateUser")
         {
 
             this.firstname = firstname;
             this.lastname = lastname;
             this.phonenumber = phonenumber;
+            this.lastcheckoutdate = lastcheckoutdate;
+            this.isdeleted = isdeleted;
         }
 
         public override void PrepareCommand(SqlCommand command)
@@ -35,13 +39,19 @@ namespace LibarayData.DataDelegates
             p = command.Parameters.Add("PhoneNumber", SqlDbType.NVarChar);
             p.Value = phonenumber;
 
+            p = command.Parameters.Add("LastCheckOutDate", SqlDbType.DateTime2);
+            p.Value = lastcheckoutdate;
+
+            p = command.Parameters.Add("IsDeleted", SqlDbType.Int);
+            p.Value = isdeleted;
+
             p = command.Parameters.Add("UserID", SqlDbType.Int);
             p.Direction = ParameterDirection.Output;
         }
 
         public override User Translate(SqlCommand command)
         {
-            return new User((int)command.Parameters["UserID"].Value, firstname, lastname, phonenumber, DateTime.Now, 0);
+            return new User((int)command.Parameters["UserID"].Value, firstname, lastname, phonenumber, lastcheckoutdate, isdeleted);
 
         }
 
