@@ -7,9 +7,9 @@ namespace LibraryData
     {
         User CreateUser(string firstname, string lastname, string phonenumber);
 
-        void DeleteUser(string userID);
+        void DeleteUser(int userID);
 
-        Asset InsertAssetDelegate(int assettypeID, string firstname, string lastname, string companyname, DateTime releasedate, int categoryID);
+        Asset InsertAssetDelegate(string assetname, int assettypeID, string firstname, string lastname, string companyname, DateTime releasedate, int categoryID);
 
         void SavePhoneNumber(string phonenumber, int userID);
     }
