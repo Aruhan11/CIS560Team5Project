@@ -8,23 +8,24 @@ DECLARE @CategoryStaging TABLE
 
 INSERT @CategoryStaging(CategoryID, [Name])
 VALUES
-   (1, 'Fantasy'),
-   (2, 'Romance'),
-   (3, 'Mystery'),
-   (4, 'Horror'),
-   (5, 'Memoir'),
-   (6, 'Cooking'),
-   (7, 'Health'),
-   (8, 'History'),
-   (9, 'Travel'),
-   (10, 'Humor'),
-   (11, 'Children'),
-   (12, 'Adventure'),
-   (13, 'Action'),
-   (14, 'RPG'),
-   (15, 'Simulation'),
-   (16, 'Sport'),
-   (17, 'MMO');
+    (1,N'Fantasy'),
+    (2,N'Romance'),
+    (3,N'Mystery'),
+    (4,N'Horror'),
+    (5,N'Memoir'),
+    (6,N'Cooking'),
+    (7,N'Health'),
+    (8,N'History'),
+    (9,N'Travel'),
+    (10,N'Humor'),
+    (11,N'Children'),
+    (12,N'Adventure'),
+    (13,N'Action'),
+    (14,N'RPG'),
+    (15,N'Simulation'),
+    (16,N'Sport'),
+    (17,N'MMO');
+
    
 
 /******************************************************************************/

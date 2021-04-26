@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <None Remove="DataDelegates\NewFile1.txt" />
+    <None Remove="Sql\Data\NewFile1.txt" />
+    <None Remove="Sql\Tables\NewFile1.txt" />
   </ItemGroup>
 
   <ItemGroup>

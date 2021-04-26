@@ -60,6 +60,7 @@ namespace LibraryProject
             this.uxDeleteButton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // uxAddFirstNameTextBox
@@ -339,11 +340,22 @@ namespace LibraryProject
             this.textBox9.Size = new System.Drawing.Size(433, 61);
             this.textBox9.TabIndex = 29;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(98, 902);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(161, 54);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "UserID :";
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 54F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1572, 1340);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.uxDeleteButton);
@@ -416,5 +428,6 @@ namespace LibraryProject
         private System.Windows.Forms.Button uxDeleteButton;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label12;
     }
 }
