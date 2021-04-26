@@ -31,7 +31,7 @@ namespace LibraryData
 
         public User FetchUser(int userID)
         {
-            var d = new FetchUserDataDelegate(userID);
+            var d = new FetchUserDelegate(userID);
             return executor.ExecuteReader(d);
         }
 

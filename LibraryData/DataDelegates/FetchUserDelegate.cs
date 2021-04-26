@@ -8,13 +8,13 @@ using System.Collections.Generic;
 namespace LibarayData.DataDelegates
 {
 
-    internal class FetchUserDataDelegate : DataReaderDelegate<User>
+    internal class FetchUserDelegate : DataReaderDelegate<User>
     {
 
         private readonly int userID;
 
-        public FetchUserDataDelegate(int userID)
-           : base("Library.FetchUserData")
+        public FetchUserDelegate(int userID)
+           : base("Library.FetchUser")
         {
             this.userID = userID;
         }
