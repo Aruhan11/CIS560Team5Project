@@ -498,11 +498,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\Spring21\\CIS560\\NewCleanRepo\\LibraryApplication\\LibraryApplication.csproj",
+      "projectUniqueName": "D:\\Study\\Spring21\\CIS560\\TempBranchRepo\\LibraryApplication\\LibraryApplication.csproj",
       "projectName": "LibraryApplication",
-      "projectPath": "D:\\Study\\Spring21\\CIS560\\NewCleanRepo\\LibraryApplication\\LibraryApplication.csproj",
+      "projectPath": "D:\\Study\\Spring21\\CIS560\\TempBranchRepo\\LibraryApplication\\LibraryApplication.csproj",
       "packagesPath": "C:\\Users\\86975\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\Spring21\\CIS560\\NewCleanRepo\\LibraryApplication\\obj\\",
+      "outputPath": "D:\\Study\\Spring21\\CIS560\\TempBranchRepo\\LibraryApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -523,11 +523,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Study\\Spring21\\CIS560\\NewCleanRepo\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "D:\\Study\\Spring21\\CIS560\\NewCleanRepo\\DataAccess\\DataAccess.csproj"
+            "D:\\Study\\Spring21\\CIS560\\TempBranchRepo\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\Study\\Spring21\\CIS560\\TempBranchRepo\\DataAccess\\DataAccess.csproj"
             },
-            "D:\\Study\\Spring21\\CIS560\\NewCleanRepo\\LibraryData\\LibraryData.csproj": {
-              "projectPath": "D:\\Study\\Spring21\\CIS560\\NewCleanRepo\\LibraryData\\LibraryData.csproj"
+            "D:\\Study\\Spring21\\CIS560\\TempBranchRepo\\LibraryData\\LibraryData.csproj": {
+              "projectPath": "D:\\Study\\Spring21\\CIS560\\TempBranchRepo\\LibraryData\\LibraryData.csproj"
             }
           }
         }

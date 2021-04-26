@@ -29,9 +29,13 @@ namespace DataAccess
                 {
                     using (var command = new SqlCommand(dataDelegate.ProcedureName, connection))
                     {
+                       
+
                         dataDelegate.PrepareCommand(command);
 
                         connection.Open();
+
+
 
                         command.ExecuteNonQuery();
 

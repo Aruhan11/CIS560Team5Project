@@ -21,9 +21,7 @@ namespace LibarayData.DataDelegates
 
         public override void PrepareCommand(SqlCommand command)
         {
-            base.PrepareCommand(command);
-
-            
+            base.PrepareCommand(command);        
 
             command.Parameters.AddWithValue("UserID", userID);
             command.Parameters.AddWithValue("IsDeleted", 1);

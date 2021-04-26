@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dKqX2fQPAeBYBxDGonOyM+x+nY7pl1NjKpOhbZwbeh+lhBYuA/ih5vsyErIVGn52JtXoUXYiOD8TghBummP/QA==",
+  "dgSpecHash": "c/OChmmknTFzb5Fig+WNyicTkr6IvM7J6QtM3wK1BcSb3aELqWTnaMGy+r3qlR6J4kRc84fjRiT3g0echwCybw==",
   "success": true,
-  "projectFilePath": "D:\\Study\\Spring21\\CIS560\\NewCleanRepo\\LibraryApplication\\LibraryApplication.csproj",
+  "projectFilePath": "D:\\Study\\Spring21\\CIS560\\TempBranchRepo\\LibraryApplication\\LibraryApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\86975\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\86975\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -30,12 +30,12 @@ namespace LibarayData.DataDelegates
             p.Value = firstname;
 
             p = command.Parameters.Add("LastName", SqlDbType.NVarChar);
-            p.Value = firstname;
+            p.Value = lastname;
 
             p = command.Parameters.Add("PhoneNumber", SqlDbType.NVarChar);
             p.Value = phonenumber;
 
-            p = command.Parameters.Add("UserID", SqlDbType.NVarChar);
+            p = command.Parameters.Add("UserID", SqlDbType.Int);
             p.Direction = ParameterDirection.Output;
         }
 

@@ -18,7 +18,7 @@ MERGE [Library].Creator T
 USING 
     (
         VALUES(@FirstName, @LastName, @Company)
-    )S(FirstName, LastName, Company) ON T.FirstName = S.FirstName AND T.LastName <> S.LastName AND T.Company <> S.Company
+    )S(FirstName, LastName, Company) ON T.FirstName = S.FirstName AND T.LastName = S.LastName AND T.Company = S.Company
 WHEN NOT MATCHED 
  THEN
     INSERT(FirstName, LastName, Company)
@@ -60,7 +60,11 @@ WHEN NOT MATCHED THEN
    VALUES(S.[Name], S.AssetTypeID, S.CreatorID, S.ReleaseDate, 1);
 
 
-SET @AssetID = SCOPE_IDENTITY();
+SET @AssetID = (
+    SELECT A.AssetID
+    FROM [Library].Asset A
+    WHERE A.[Name] = @Name AND A.AssetTypeID = @AssetTypeID AND A.CreatorID = @CreatorID AND A.ReleaseDate = @ReleaseDate
+)
 
 /*
 WITH SourceCte(AssetID, CategoryID) AS
