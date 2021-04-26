@@ -72,8 +72,5 @@ namespace LibraryData
             return executor.ExecuteReader(new GetCreatorsByTypeDelegate(CreatorTypeName));
         }
 
-
-
-
     }
 }

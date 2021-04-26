@@ -11,7 +11,7 @@ namespace LibarayData.DataDelegates
     internal class FetchSituationOfAssetDelegate : DataReaderDelegate<IReadOnlyList<SituationOfAsset>>
     {
 
-        public readonly int assetId;
+        private readonly int assetId;
 
         public FetchSituationOfAssetDelegate(int assetId)
             : base("Library.FetchSituationOfAsset")

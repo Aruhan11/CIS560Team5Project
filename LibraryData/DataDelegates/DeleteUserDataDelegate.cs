@@ -10,7 +10,7 @@ namespace LibarayData.DataDelegates
 
     internal class DeleteUserDataDelegate : DataDelegate
     {
-        public readonly int userID;
+        private readonly int userID;
 
 
         public DeleteUserDataDelegate(int userID)

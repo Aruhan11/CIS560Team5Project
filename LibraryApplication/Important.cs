@@ -15,5 +15,24 @@ namespace LibraryProject
             InitializeComponent();
         }
 
+        private void uxTopTenButtons_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uxRankAssetByTypeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uxRankCreatorByTypeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uxRankCreatorByUserButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

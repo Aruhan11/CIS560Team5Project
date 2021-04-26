@@ -14,5 +14,15 @@ namespace LibraryProject
         {
             InitializeComponent();
         }
+
+        private void uxAddAssetButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uxFetchCheckoutHistoryButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

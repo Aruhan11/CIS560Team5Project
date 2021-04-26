@@ -15,5 +15,14 @@ namespace LibraryProject
             InitializeComponent();
         }
 
+        private void uxGetCreatorByTypeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uxFetchProductionsByCreatorButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

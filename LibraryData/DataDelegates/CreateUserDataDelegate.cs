@@ -9,16 +9,15 @@ namespace LibarayData.DataDelegates
 
     internal class CreateUserDataDelegate : NonQueryDataDelegate<User>
     {
-        public readonly string firstname;
-        public readonly string lastname;
-        public readonly string phonenumber;
-        public readonly DateTime lastcheckoutdate;
-        public readonly int isdeleted;
+        private readonly string firstname;
+        private readonly string lastname;
+        private readonly string phonenumber;
+        private readonly DateTime lastcheckoutdate;
+        private readonly int isdeleted;
 
         public CreateUserDataDelegate(string firstname, string lastname, string phonenumber, DateTime lastcheckoutdate, int isdeleted)
             : base("Library.CreateUser")
         {
-
             this.firstname = firstname;
             this.lastname = lastname;
             this.phonenumber = phonenumber;

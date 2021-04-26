@@ -16,9 +16,7 @@ namespace LibraryProject
         private IGeneralQueryRepository general;
         private IQuestionQueryRepository question;
 
-
         private TransactionScope transaction;
-
 
         public User()
         {

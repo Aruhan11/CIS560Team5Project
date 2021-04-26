@@ -11,7 +11,7 @@ namespace LibarayData.DataDelegates
     internal class FetchCheckOutHistoryDelegate : DataReaderDelegate<IReadOnlyList<CheckOutHistory>>
     {
 
-        public readonly int userId;
+        private readonly int userId;
 
         public FetchCheckOutHistoryDelegate(int userId)
             : base("Library.FetchCheckOutHistory")

@@ -18,14 +18,17 @@ namespace LibarayData.DataDelegates
 
         public override void PrepareCommand(SqlCommand command)
         {
-            base.PrepareCommand(command);
+          //using (var command = new SqlCommand(dataDelegate.ProcedureName, connection))
+                base.PrepareCommand(command);
 
             command.Parameters.AddWithValue("PhoneNumber", phonenumber);
+
         }
 
         public override User Translate(SqlCommand command, IDataRowReader reader)
+        
         {
-            if (!reader.Read())
+                if (!reader.Read())
                 return null;
 
             return new User(

@@ -11,7 +11,7 @@ namespace LibarayData.DataDelegates
     internal class FetchProductionsOfCreatorDelegate : DataReaderDelegate<IReadOnlyList<ProductionOfCreator>>
     {
 
-        public readonly int creatorId;
+        private readonly int creatorId;
 
         public FetchProductionsOfCreatorDelegate(int creatorId)
             : base("Library.FetchProductionsOfCreator")
