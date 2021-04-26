@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryData", "LibraryData\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{4D66EE29-06AC-48CD-87EF-978756FD73A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryApplication", "LibraryApplication\LibraryApplication.csproj", "{EA1D7C33-A912-4952-98B3-BA19EFCFBB1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryApplication", "LibraryApplication\LibraryApplication.csproj", "{EA1D7C33-A912-4952-98B3-BA19EFCFBB1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AE5B1096-97E3-44D6-8119-A194CCA87101}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{DE930815-B233-40F3-8D90-D093A400A0A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +34,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DE930815-B233-40F3-8D90-D093A400A0A7} = {AE5B1096-97E3-44D6-8119-A194CCA87101}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF175A72-C5E7-4A84-85E6-B1B599E0F2F6}
