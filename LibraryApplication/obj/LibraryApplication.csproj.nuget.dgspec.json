@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\LibraryApplication\\LibraryApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\LibraryApplication\\LibraryApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\DataAccess\\DataAccess.csproj",
-        "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\LibraryApplication\\LibraryApplication.csproj",
+        "projectName": "LibraryApplication",
+        "projectPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\LibraryApplication\\LibraryApplication.csproj",
         "packagesPath": "C:\\Users\\bever\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\LibraryApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bever\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,12 +40,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.2, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -59,6 +53,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"

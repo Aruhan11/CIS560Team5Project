@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\bever\\source\\repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\bever\\source\\repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\DataAccess\\DataAccess.csproj",
-        "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\bever\\source\\repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj",
+        "projectName": "LibraryProject",
+        "projectPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5Project\\LibraryProject\\LibraryProject.csproj",
         "packagesPath": "C:\\Users\\bever\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectTEMP\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5Project\\LibraryProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bever\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,6 +59,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
