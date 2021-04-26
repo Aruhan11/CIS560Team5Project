@@ -9,7 +9,7 @@ namespace LibarayData.Model
         //SELECT ROW_NUMBER() OVER(ORDER BY A.ReleaseDate ASC) AS [RowNumber],
         //A.[Name], [AT].TypeName, C.FirstName + N' '+ C.LastName, C.Company, A.ReleaseDate, A.Stock
 
-        public int RowNumber { get; }
+       // public int RowNumber { get; }
 
         public string AssetName { get; }
 
@@ -24,9 +24,9 @@ namespace LibarayData.Model
         public int Stock { get; }
 
         
-        public PossibleAssets(int RowNumber, string AssetName, string TypeName, string CreatorName, string CompanyName, DateTime ReleaseDate, int Stock)
+        public PossibleAssets(string AssetName, string TypeName, string CreatorName, string CompanyName, DateTime ReleaseDate, int Stock)
         {
-            this.RowNumber = RowNumber;
+           // this.RowNumber = RowNumber;
             this.AssetName = AssetName;
             this.TypeName = TypeName;
             this.CreatorName = CreatorName;

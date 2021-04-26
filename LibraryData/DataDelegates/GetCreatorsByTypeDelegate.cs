@@ -3,11 +3,12 @@ using LibarayData.Model;
 using System.Data;
 using System.Data.SqlClient;
 using System;
+using System.Collections.Generic;
 
 namespace LibarayData.DataDelegates
 {
 
-    internal class GetCreatorsByTypeDelegate : DataReaderDelegate<CreatorByType>
+    internal class GetCreatorsByTypeDelegate : DataReaderDelegate<IReadOnlyList<CreatorByType>>
     {
 
         private readonly string creatorType;
@@ -26,21 +27,24 @@ namespace LibarayData.DataDelegates
             p.Value = creatorType;
         }
 
-        public override CreatorByType Translate(SqlCommand command, IDataRowReader reader)
+        public override IReadOnlyList<CreatorByType> Translate(SqlCommand command, IDataRowReader reader)
         {
-            if (!reader.Read())
-                return null;
+            var creators = new List<CreatorByType>();
 
-            return new CreatorByType(
-               reader.GetString("CreatorTypeName"),
-               reader.GetInt32("RowNumber"),
-               creatorType,
+
+            while (reader.Read())
+            {
+                creators.Add(new CreatorByType(
+               reader.GetString("CreatorName"),
                reader.GetString("CreatorName"),
                reader.GetString("CompanyName"),
                reader.GetInt32("Stock"),
                reader.GetDateTime("CheckOutDate"),
                reader.GetDateTime("ReturnByDate"),
-               reader.GetInt32("InBorrowingTotal"));
+               reader.GetInt32("InBorrowingTotal")));
+            }
+
+            return creators;
         }
 
     }

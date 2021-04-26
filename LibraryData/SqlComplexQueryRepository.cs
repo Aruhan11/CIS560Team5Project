@@ -21,7 +21,7 @@ namespace LibraryData
         }
 
 
-        public IReadOnlyList<CreatorsByUser> RankingCreatorByUser()
+        public IReadOnlyList<CreatorByUser> RankingCreatorByUser()
         {
             return executor.ExecuteReader(new RankingCreatorByUserDelegate());
         }
@@ -29,7 +29,7 @@ namespace LibraryData
 
         public IReadOnlyList<TopTenAsset> TopTenAssetsStillAvaliable()
         {
-            return executor.ExecuteReader(new FetchCheckOutHistoryDelegate(userID));
+            return executor.ExecuteReader(new TopTenAssetsStillAvaliableDelegate());
         }
 
 

@@ -6,14 +6,16 @@ using System;
 
 namespace LibarayData.DataDelegates
 {
-    internal class SavePhoneNumberDelegate : DataReaderDelegate<User>
+    internal class SavePhoneNumberDelegate : DataDelegate
     {
         private readonly string phonenumber;
+        private readonly int userID;
 
-        public SavePhoneNumberDelegate(string phonenumber)
-           : base("Library.GetPerson")
+        public SavePhoneNumberDelegate(string phonenumber, int userID)
+           : base("Library.SavePhoneNumber")
         {
             this.phonenumber = phonenumber;
+            this.userID  = userID;
         }
 
         public override void PrepareCommand(SqlCommand command)
@@ -21,19 +23,7 @@ namespace LibarayData.DataDelegates
             base.PrepareCommand(command);
 
             command.Parameters.AddWithValue("PhoneNumber", phonenumber);
-        }
-
-        public override User Translate(SqlCommand command, IDataRowReader reader)
-        {
-            if (!reader.Read())
-                return null;
-
-            return new User(
-               reader.GetInt32("PersonId"),
-               reader.GetString("FirstName"),
-               reader.GetString("LastName"),
-               phonenumber,
-               reader.GetDateTime("LastCheckOutDate"));
+            command.Parameters.AddWithValue("UserID", userID);
         }
     }
 }

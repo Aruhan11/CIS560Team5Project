@@ -3,11 +3,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System;
 using LibarayData.Model;
+using System.Collections.Generic;
 
 namespace LibarayData.DataDelegates
 {
 
-    internal class FetchSituationOfAssetDelegate : DataReaderDelegate<SituationOfAsset>
+    internal class FetchSituationOfAssetDelegate : DataReaderDelegate<IReadOnlyList<SituationOfAsset>>
     {
 
         public readonly int assetId;
@@ -27,20 +28,24 @@ namespace LibarayData.DataDelegates
 
         }
 
-        public override SituationOfAsset Translate(SqlCommand command, IDataRowReader reader)
+        public override IReadOnlyList<SituationOfAsset> Translate(SqlCommand command, IDataRowReader reader)
         {
-            if (!reader.Read())
-                throw new RecordNotFoundException(assetId.ToString());
+            var assets = new List<SituationOfAsset>();
 
-            return new SituationOfAsset(assetId,
-                reader.GetInt32("RowNumber"),
+
+            while (reader.Read())
+            {
+                assets.Add(new SituationOfAsset(
+                reader.GetInt32("AssetID"),
                 reader.GetString("Name"),
                 reader.GetString("TypeName"),
                 reader.GetString("CreatorName"),
                 reader.GetString("CompanyName"),
                 reader.GetDateTime("CheckOutDate"),
                 reader.GetDateTime("ReturnByDate"),
-                reader.GetInt32("Stock"));
+                reader.GetInt32("Stock")));
+            }
+            return assets;
         }
 
     }

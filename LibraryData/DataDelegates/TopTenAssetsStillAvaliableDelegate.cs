@@ -9,20 +9,12 @@ namespace LibarayData.DataDelegates
 {
     internal class TopTenAssetsStillAvaliableDelegate : DataReaderDelegate<IReadOnlyList<TopTenAsset>>
     {
-        private readonly string phonenumber;
 
-        public TopTenAssetsStillAvaliableDelegate(string assetName)
+        public TopTenAssetsStillAvaliableDelegate()
            : base("Library.TopTenAsset")
         {
-            this.assetName = assetName;
         }
 
-        public override void PrepareCommand(SqlCommand command)
-        {
-            base.PrepareCommand(command);
-
-            command.Parameters.AddWithValue("AssetName", assetName);
-        }
 
         public override IReadOnlyList<TopTenAsset> Translate(SqlCommand command, IDataRowReader reader)
         {
@@ -31,7 +23,6 @@ namespace LibarayData.DataDelegates
             while (reader.Read())
             {
                 assetList.Add(new TopTenAsset(
-                    reader.GetInt32("RowNumber"),
                     reader.GetString("AssetName"),
                     reader.GetString("AssetTypeName"),
                     reader.GetString("CreatorName"),

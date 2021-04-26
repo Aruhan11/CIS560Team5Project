@@ -1,13 +1,16 @@
 ﻿using DataAccess;
 using LibarayData.Model;
+using DataAccess;
+using LibarayData.Model;
 using System.Data;
 using System.Data.SqlClient;
 using System;
+using System.Collections.Generic;
 
 namespace LibarayData.DataDelegates
 {
 
-    internal class GetPossibleAssetsDelegate : DataReaderDelegate<PossibleAssets>
+    internal class GetPossibleAssetsDelegate : DataReaderDelegate<IReadOnlyList<PossibleAssets>>
     {
 
         private readonly string assetName;
@@ -26,19 +29,25 @@ namespace LibarayData.DataDelegates
             p.Value = assetName;
         }
 
-        public override PossibleAssets Translate(SqlCommand command, IDataRowReader reader)
+        public override IReadOnlyList<PossibleAssets> Translate(SqlCommand command, IDataRowReader reader)
         {
-            if (!reader.Read())
-                return null;
 
-            return new PossibleAssets(
-               reader.GetInt32("RowNumber"),
-               assetName,
+            var assets = new List<PossibleAssets>();
+
+
+            while (reader.Read())
+            {
+                assets.Add(new PossibleAssets(
+               reader.GetString("AssetName"),
                reader.GetString("TypeName"),
                reader.GetString("CreatorName"),
                reader.GetString("CompanyName"),
                reader.GetDateTime("ReleaseDate"),
-               reader.GetInt32("Stock"));
+               reader.GetInt32("Stock")));
+            }
+
+            return assets;
+
         }
 
     }

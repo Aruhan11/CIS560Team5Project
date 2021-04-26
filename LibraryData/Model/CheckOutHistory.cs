@@ -12,7 +12,7 @@ namespace LibarayData.Model
 
         public int UserID { get; }
 
-        public int RowNumber { get; }
+       // public int RowNumber { get; }
 
         public string AssetName { get; }
 
@@ -31,11 +31,11 @@ namespace LibarayData.Model
 
 
 
-        public CheckOutHistory(int UserID, int RowNumber, string AssetName, string TypeName, string CreatorName, string CompanyName,
+        public CheckOutHistory(int UserID, string AssetName, string TypeName, string CreatorName, string CompanyName,
                                DateTime CheckOutDate, DateTime ReturnByDate, int IsReturned)
         {
             this.UserID = UserID;
-            this.RowNumber = RowNumber;
+          //  this.RowNumber = RowNumber;
             this.AssetName = AssetName;
             this.TypeName = TypeName;
             this.CreatorName = CreatorName;

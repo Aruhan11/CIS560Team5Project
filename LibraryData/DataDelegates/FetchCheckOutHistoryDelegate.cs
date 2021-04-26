@@ -8,7 +8,7 @@ using System.Collections.Generic;
 namespace LibarayData.DataDelegates
 {
 
-    internal class FetchCheckOutHistoryDelegate : DataReaderDelegate<CheckOutHistory>
+    internal class FetchCheckOutHistoryDelegate : DataReaderDelegate<IReadOnlyList<CheckOutHistory>>
     {
 
         public readonly int userId;
@@ -36,7 +36,6 @@ namespace LibarayData.DataDelegates
             {
                 checkOutAssets.Add(new CheckOutHistory(
                reader.GetInt32("UserID"),
-               reader.GetInt32("RowNumber"),
                reader.GetString("AssetName"),
                reader.GetString("TypeName"),
                reader.GetString("CreatorName"),

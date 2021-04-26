@@ -7,7 +7,7 @@ namespace LibarayData.Model
     public class CreatorByAssetType
     {
         // CheckedOutAssets(CheckOutID, AssetID, UserID, LibrarianID, CheckOutDate, ReturnByDate, Returned)
-        public int RowNumber { get; }
+       // public int RowNumber { get; }
 
         public string CreatorName { get; }
 
@@ -22,10 +22,10 @@ namespace LibarayData.Model
         public int CheckOutCount { get; }
  
 
-        public CreatorByAssetType(int RowNumber, string CreatorName, string CompanyName, 
+        public CreatorByAssetType( string CreatorName, string CompanyName, 
                                  string AssetTypeName, int CheckOutRank, string AssetName, int CheckOutCount)
         {
-            this.RowNumber = RowNumber;
+           // this.RowNumber = RowNumber;
             this.CreatorName = CreatorName;
             this.CompanyName = CompanyName;
             this.AssetTypeName = AssetTypeName;

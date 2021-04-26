@@ -1,5 +1,6 @@
 CREATE OR ALTER PROCEDURE [Library].DeleteUser
-	@UserID
+@UserID INT
+
 AS
 
 UPDATE [Library].[User]

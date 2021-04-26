@@ -3,11 +3,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System;
 using LibarayData.Model;
+using System.Collections.Generic;
 
 namespace LibarayData.DataDelegates
 {
 
-    internal class FetchProductionsOfCreatorDelegate : DataReaderDelegate<ProductionOfCreator>
+    internal class FetchProductionsOfCreatorDelegate : DataReaderDelegate<IReadOnlyList<ProductionOfCreator>>
     {
 
         public readonly int creatorId;
@@ -26,19 +27,25 @@ namespace LibarayData.DataDelegates
             p.Value = creatorId;
 
         }
-
-        public override ProductionOfCreator Translate(SqlCommand command, IDataRowReader reader)
+        public override IReadOnlyList<ProductionOfCreator> Translate(SqlCommand command, IDataRowReader reader)
         {
-            if (!reader.Read())
-                throw new RecordNotFoundException(creatorId.ToString());
+            var assets = new List<ProductionOfCreator>();
 
-            return new ProductionOfCreator(creatorId,
-               reader.GetInt32("RowNumber"),
-               reader.GetString("CreatorName"),
-               reader.GetString("CompanyName"),
-               reader.GetString("AssetName"),
-               reader.GetString("AssetTypeName"),
-               reader.GetInt32("Stock"));
+            while (reader.Read())
+            {
+                assets.Add(new ProductionOfCreator(
+                   reader.GetInt32("CreatorID"),
+                   // reader.GetInt32("RowNumber"),
+                   reader.GetString("CreatorName"),
+                   reader.GetString("CompanyName"),
+                   reader.GetString("AssetName"),
+                   reader.GetString("AssetTypeName"),
+                   reader.GetInt32("Stock")));
+            }
+
+            return assets;
+
+
         }
 
     }

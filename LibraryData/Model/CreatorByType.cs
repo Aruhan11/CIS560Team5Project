@@ -10,9 +10,8 @@ namespace LibarayData.Model
 	   //CT.[Name], (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, 
 	   //A.Stock, COA.CheckOutDate, COA.ReturnByDate, S.InBorrowingTotal
 
-        public string CreatorTypeName { get; }
 
-        public int RowNumber { get; }
+       // public int RowNumber { get; }
 
         public string CreatorType { get; }
 
@@ -29,11 +28,11 @@ namespace LibarayData.Model
         public int InBorrowingTotal { get; }
 
 
-        public CreatorByType(string CreatorTypeName, int RowNumber, string CreatorType, string CreatorName, string CompanyName, 
+        public CreatorByType(string CreatorType, string CreatorName, string CompanyName, 
                               int Stock, DateTime CheckOutDate, DateTime ReturnByDate, int InBorrowingTotal)
         {
-            this.CreatorTypeName = CreatorTypeName;
-            this.RowNumber = RowNumber;
+            //this.CreatorTypeName = CreatorTypeName;
+           // this.RowNumber = RowNumber;
             this.CreatorType = CreatorType;
             this.CreatorName = CreatorName;
             this.CompanyName = CompanyName;

@@ -10,10 +10,11 @@ namespace LibarayData.DataDelegates
     internal class RankingAssetByAssetTypeDelegate : DataReaderDelegate<IReadOnlyList<AssetByAssetType>>
     {
 
+
+
         public RankingAssetByAssetTypeDelegate()
            : base("Library.RankingAssetByAssetType")
         {
-           
         }
 
 
@@ -24,9 +25,7 @@ namespace LibarayData.DataDelegates
             while (reader.Read())
             {
                 assetsList.Add(new AssetByAssetType(
-                    reader.GetInt32("RowNumber"),
                     reader.GetString("AssetTypeName"),
-                    //reader.GetInt32("CheckOutRank"),
                     reader.GetString("AssetName"),
                     reader.GetInt32("CheckOutCount")));
             }

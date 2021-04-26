@@ -8,7 +8,7 @@ namespace DataAccess
            : base(procedureName)
         {
         }
-
         public abstract T Translate(SqlCommand command, IDataRowReader reader);
     }
+  
 }

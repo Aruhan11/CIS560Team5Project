@@ -23,7 +23,6 @@ namespace LibarayData.DataDelegates
             while (reader.Read())
             {
                 creatorList.Add(new CreatorByUser(
-                    reader.GetInt32("RowNumber"),
                     reader.GetString("UserName"),
                     reader.GetInt32("AssetCountRank"),
                     reader.GetString("CreatorName"),

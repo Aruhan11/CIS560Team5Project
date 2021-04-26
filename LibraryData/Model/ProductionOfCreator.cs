@@ -11,7 +11,7 @@ namespace LibarayData.Model
         // A.Stock
         public int CreatorID { get; }
         
-        public int RowNumber { get; }
+      //  public int RowNumber { get; }
 
         public string CreatorName { get; }
 
@@ -23,10 +23,10 @@ namespace LibarayData.Model
 
         public int Stock { get; }
 
-        public ProductionOfCreator(int CreatorID, int RowNumber, string CreatorName, string CompanyName, string AssetName, string AssetTypeName, int Stock)
+        public ProductionOfCreator(int CreatorID, string CreatorName, string CompanyName, string AssetName, string AssetTypeName, int Stock)
         {
             this.CreatorID = CreatorID;
-            this.RowNumber = RowNumber;
+           // this.RowNumber = RowNumber;
             this.CreatorName = CreatorName;
             this.CompanyName = CompanyName;
             this.AssetName = AssetName;

@@ -11,7 +11,7 @@ namespace LibarayData.Model
 
         public int AssetID { get; }
 
-        public int RowNumber { get; }
+       // public int RowNumber { get; }
 
         public string Name { get; }
 
@@ -30,10 +30,10 @@ namespace LibarayData.Model
         public int InBorrowingTotal { get; }
 
 
-        public SituationOfAsset(int AssetID, int RowNumber, string Name, string TypeName, string CreatorName, string CompanyName, DateTime CheckOutDate, DateTime ReturnByDate, int Stock)
+        public SituationOfAsset(int AssetID, string Name, string TypeName, string CreatorName, string CompanyName, DateTime CheckOutDate, DateTime ReturnByDate, int Stock)
         {
             this.AssetID = AssetID;
-            this.RowNumber = RowNumber;
+           // this.RowNumber = RowNumber;
             this.Name = Name;
             this.TypeName = TypeName;
             this.CreatorName = CreatorName;

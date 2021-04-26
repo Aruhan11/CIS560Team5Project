@@ -7,7 +7,7 @@ namespace LibarayData.Model
     public class AssetByAssetType
     {
         // CheckedOutAssets(CheckOutID, AssetID, UserID, LibrarianID, CheckOutDate, ReturnByDate, Returned)
-        public int RowNumber { get; }
+       // public int RowNumber { get; }
 
         public string AssetTypeName { get; }
 
@@ -18,9 +18,9 @@ namespace LibarayData.Model
         public int CheckOutCount { get; }
  
 
-        public AssetByAssetType(int RowNumber, string AssetTypeName, string AssetName, int CheckOutCount)
+        public AssetByAssetType(string AssetTypeName, string AssetName, int CheckOutCount)
         {
-            this.RowNumber = RowNumber;
+           // this.RowNumber = RowNumber;
             this.AssetTypeName = AssetTypeName;
             this.AssetName = AssetName;
             this.CheckOutCount = CheckOutCount;

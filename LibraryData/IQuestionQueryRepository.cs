@@ -22,7 +22,6 @@ namespace LibraryData
 
         IReadOnlyList<SituationOfAsset> FetchSituationOfAsset(int assetID);
 
-
         IReadOnlyList<CreatorByType> GetCreatorsByType(string CreatorTypeName);
 
 

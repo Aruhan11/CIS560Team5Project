@@ -5,7 +5,7 @@ CREATE OR ALTER PROCEDURE [Library].FetchLibrarian
    @LibrarianID INT
 AS
 
-SELECT U.UserID, U.FirstName, U.LastName, U.PhoneNumber, U.LastCheckOutDate, U.IsDeleted
+SELECT U.UserID
 FROM [Library].Librarian L
 INNER JOIN [Library].[User] U ON U.UserID = L.UserID
 WHERE U.LibrarianID = @LibrarianID;
