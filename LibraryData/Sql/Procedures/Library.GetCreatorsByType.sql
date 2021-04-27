@@ -3,19 +3,23 @@
 */
 
 CREATE OR ALTER PROCEDURE [Library].GetCreatorsByType
-   @CreatorTypeName VARCHAR(10)
+   @creatorType VARCHAR(10)
 AS
 
 
-SELECT ROW_NUMBER() OVER(ORDER BY C.CreatorID ASC) AS [RowNumber],
-	   CT.[Name], (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company
+
+SELECT
+	    (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, A.Stock AS Stock, COA.CheckOutDate, COA.ReturnByDate, COUNT(COA.CheckOutID) AS InBorrowingTotal
 	   
-FROM  CreatorType CT 
+FROM  [Library].CreatorType CT 
 INNER JOIN [Library].CreatorCreatorType CCT ON CCT.CreatorTypeID = CT.CreatorTypeID
 INNER JOIN [Library].Creator C ON C.CreatorID = CCT.CreatorID
-
-WHERE CT.[Name] = @CreatorTypeName
+INNER JOIN Library.Asset A ON A.CreatorID = C.CreatorID
+INNER JOIN Library.CheckedOutAsset COA ON COA.AssetID = A.AssetID
+WHERE CT.[Name] = @creatorType
+GROUP BY FirstName, LastName, Company, Stock, CheckOutDate, ReturnByDate
 GO
+
 
 
 

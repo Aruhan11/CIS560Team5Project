@@ -46,29 +46,58 @@ namespace LibraryData
             executor.ExecuteNonQuery(d);
         }
 
-        public Asset InsertAssetDelegate(string assetname, int assettypeID, string firstname, string lastname, string companyname, DateTime releasedate, int categoryID)
+        public Asset InsertAsset(string assetname, int assettypeID, int creatorID, DateTime releasedate, int stock)
         {
-            string tempName = firstname + lastname;
-            string tempFullName = firstname + lastname + companyname;
+           
 
             if (string.IsNullOrWhiteSpace(assetname))
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(assetname));
 
-            if (assettypeID == 1 & (string.IsNullOrWhiteSpace(firstname) | string.IsNullOrWhiteSpace(lastname)))
-                throw new ArgumentException("The paramaters cannot be null or empty.", nameof(tempName));
+            if (string.IsNullOrWhiteSpace(assettypeID.ToString()))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(assettypeID));
 
-            if (assettypeID == 2 & (string.IsNullOrWhiteSpace(firstname) | string.IsNullOrWhiteSpace(lastname) | string.IsNullOrWhiteSpace(companyname)))
-                throw new ArgumentException("The paramaters cannot be null or empty.", nameof(tempFullName));
+            if (string.IsNullOrWhiteSpace(creatorID.ToString()))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(creatorID));
+            if (string.IsNullOrWhiteSpace(releasedate.ToString()))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(releasedate));
+            if (string.IsNullOrWhiteSpace(stock.ToString()))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(stock));
 
-            if (assettypeID == 3 &  string.IsNullOrWhiteSpace(companyname))
-                throw new ArgumentException("The parameter cannot be null or empty.", nameof(lastname));
-
-            if (string.IsNullOrWhiteSpace(companyname))
-                throw new ArgumentException("The parameter cannot be null or empty.", nameof(companyname));
-
-            var d = new InsertAssetDelegate(assetname, assettypeID, firstname, lastname, companyname, releasedate, categoryID);
+            var d = new InsertAssetDelegate( assetname,  assettypeID,  creatorID,  releasedate,  stock);
             return executor.ExecuteNonQuery(d);
         }
+
+
+        public Creator InsertCreator(string firstname, string lastname, string company)
+        {
+            if (string.IsNullOrWhiteSpace(firstname))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(firstname));
+
+            if (string.IsNullOrWhiteSpace(lastname))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(lastname));
+
+            if (string.IsNullOrWhiteSpace(company))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(company));
+
+            var d = new InsertCreatorDelegate(firstname, lastname, company );
+            return executor.ExecuteNonQuery(d);
+
+        }
+
+        public AssetCategory InsertAssetCategory(int assetID, int categoryID)
+        {
+            if (string.IsNullOrWhiteSpace(assetID.ToString()))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(assetID));
+
+            if (string.IsNullOrWhiteSpace(categoryID.ToString()))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(categoryID));
+
+     
+
+            var d = new InsertAssetCategoryDelegate(assetID, categoryID);
+            return executor.ExecuteNonQuery(d);
+        }
+
 
         public void SavePhoneNumber(string phonenumber, int userID)
         {

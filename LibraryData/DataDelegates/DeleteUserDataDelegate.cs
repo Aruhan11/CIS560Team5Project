@@ -24,7 +24,7 @@ namespace LibarayData.DataDelegates
             base.PrepareCommand(command);        
 
             command.Parameters.AddWithValue("UserID", userID);
-            command.Parameters.AddWithValue("IsDeleted", 1);
+            
         }
 
 

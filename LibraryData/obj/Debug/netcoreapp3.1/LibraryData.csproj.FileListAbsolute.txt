@@ -34,3 +34,15 @@ C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcor
 C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csproj.CopyComplete
 C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.dll
 C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.pdb
+D:\Study\Spring21\CIS560\DumnBranchRepo\LibraryData\bin\Debug\netcoreapp3.1\LibraryData.deps.json
+D:\Study\Spring21\CIS560\DumnBranchRepo\LibraryData\bin\Debug\netcoreapp3.1\LibraryData.dll
+D:\Study\Spring21\CIS560\DumnBranchRepo\LibraryData\bin\Debug\netcoreapp3.1\LibraryData.pdb
+D:\Study\Spring21\CIS560\DumnBranchRepo\LibraryData\bin\Debug\netcoreapp3.1\DataAccess.dll
+D:\Study\Spring21\CIS560\DumnBranchRepo\LibraryData\bin\Debug\netcoreapp3.1\DataAccess.pdb
+D:\Study\Spring21\CIS560\DumnBranchRepo\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csprojAssemblyReference.cache
+D:\Study\Spring21\CIS560\DumnBranchRepo\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.AssemblyInfoInputs.cache
+D:\Study\Spring21\CIS560\DumnBranchRepo\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.AssemblyInfo.cs
+D:\Study\Spring21\CIS560\DumnBranchRepo\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csproj.CoreCompileInputs.cache
+D:\Study\Spring21\CIS560\DumnBranchRepo\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csproj.CopyComplete
+D:\Study\Spring21\CIS560\DumnBranchRepo\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.dll
+D:\Study\Spring21\CIS560\DumnBranchRepo\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.pdb

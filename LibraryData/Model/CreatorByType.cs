@@ -25,11 +25,11 @@ namespace LibarayData.Model
 
         public DateTime ReturnByDate { get; }
 
-        public int InBorrowingTotal { get; }
+        public int CheckOutCount { get; }
 
 
         public CreatorByType(string CreatorType, string CreatorName, string CompanyName, 
-                              int Stock, DateTime CheckOutDate, DateTime ReturnByDate, int InBorrowingTotal)
+                              int Stock, DateTime CheckOutDate, DateTime ReturnByDate, int CheckOutCount)
         {
             //this.CreatorTypeName = CreatorTypeName;
            // this.RowNumber = RowNumber;
@@ -39,7 +39,7 @@ namespace LibarayData.Model
             this.Stock = Stock;
             this.CheckOutDate = CheckOutDate;
             this.ReturnByDate = ReturnByDate;
-            this.InBorrowingTotal = InBorrowingTotal;
+            this.CheckOutCount = CheckOutCount;
 
 
         }

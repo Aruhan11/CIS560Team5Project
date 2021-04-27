@@ -28,9 +28,9 @@ namespace LibarayData.DataDelegates
             if (!reader.Read())
                 return null;
 
-            return new User(
-               reader.GetInt32("PersonId"),
-               reader.GetString("FirstName"),
+               return new User(
+               reader.GetInt32("UserID"),
+               reader.GetString("FirstName"),  
                reader.GetString("LastName"),
                phonenumber,
                reader.GetDateTime("LastCheckOutDate"),
