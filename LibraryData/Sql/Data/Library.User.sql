@@ -126,4 +126,3 @@ WHEN MATCHED AND S.FirstName <> T.FirstName AND  S.LastName <> T.LastName THEN
 WHEN NOT MATCHED THEN
    INSERT(FirstName,LastName,PhoneNumber,CreatedOn,UpdatedOn, LastCheckOutDate,IsDeleted)
    VALUES(S.FirstName,S.LastName,S.PhoneNumber,S.CreatedOn,S.UpdatedOn, S.LastCheckOutDate,S.IsDeleted);
-

@@ -127,3 +127,4 @@ WHEN MATCHED AND S.AssetID <> T.AssetID AND  S.UserID <> T.UserID AND  S.Librari
 WHEN NOT MATCHED THEN
    INSERT(AssetID,UserID, LibrarianID, CheckOutDate, ReturnByDate,IsReturned)
    VALUES(S.AssetID,S.UserID,S.LibrarianID,S.CheckOutDate,S.ReturnByDate,S.IsReturned);
+  

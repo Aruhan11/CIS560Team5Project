@@ -69,7 +69,23 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryDat
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Procedures\Library.TopTenAssetsStillAvaliable.sql"
 
 Write-Host "Inserting data..."
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Data\Library.CreatorType.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Data\Library.AssetType.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Data\Library.Category.sql"
+
+
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Data\Library.Creator.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Data\Library.User.sql"
+
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Data\Library.CreatorCreatorType.sql"
+
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Data\Library.Librarian.sql"
+
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Data\Library.Asset.sql"
+
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Data\Library.AssetCategory.sql"
+
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Data\Library.CheckedOutAsset.sql"
 
 
 Write-Host "Rebuild completed."

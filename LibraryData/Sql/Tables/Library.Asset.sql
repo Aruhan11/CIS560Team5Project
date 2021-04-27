@@ -5,7 +5,6 @@ BEGIN
     (
         AssetID INT NOT NULL IDENTITY(1,1),
         [Name] NVARCHAR(64) NOT NULL,
-        AssetCategoryID INT NOT NULL,
         AssetTypeID TINYINT NOT NULL,
         CreatorID INT NOT NULL,
         ReleaseDate DATETIME2 NOT NULL DEFAULT('0000-00-00'),

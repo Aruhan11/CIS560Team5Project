@@ -40,9 +40,9 @@ namespace LibarayData.DataDelegates
                 reader.GetString("Name"),
                 reader.GetString("TypeName"),
                 reader.GetString("CreatorName"),
-                reader.GetString("CompanyName"),
-                reader.GetDateTime("CheckOutDate"),
-                reader.GetDateTime("ReturnByDate"),
+                reader.GetString("Company"),
+                reader.GetDateTimeOffset("CheckOutDate"),
+                reader.GetDateTimeOffset("ReturnByDate"),
                 reader.GetInt32("Stock")));
             }
             return assets;

@@ -46,6 +46,12 @@ namespace DataAccess
             return GetValue(name, reader.GetDateTime);
         }
 
+        public DateTime GetDateTimeOffset(string name)
+        {
+            DateTimeOffset dt = GetValue(name, reader.GetDateTimeOffset);
+            return dt.DateTime;
+        }
+
         public T GetValue<T>(string name)
         {
             return (T)reader.GetValue(reader.GetOrdinal(name));

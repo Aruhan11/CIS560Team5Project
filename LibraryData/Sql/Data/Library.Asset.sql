@@ -224,3 +224,6 @@ WHEN MATCHED AND S.AssetTypeID <> T.AssetTypeID AND  S.CreatorID <> T.CreatorID 
 WHEN NOT MATCHED THEN
    INSERT([Name],AssetTypeID,CreatorID,ReleaseDate,Stock)
    VALUES(S.[Name], S.AssetTypeID,S.CreatorID,S.ReleaseDate,S.Stock);
+
+
+	
