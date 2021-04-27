@@ -79,7 +79,7 @@ namespace DataAccess
 
                     SqlDataReader reader = command.ExecuteReader();
 
-                    return dataDelegate.Translate(command, new DataRowReader(command.ExecuteReader()));
+                    return dataDelegate.Translate(command, new DataRowReader(reader));
                 }
             }
         }
