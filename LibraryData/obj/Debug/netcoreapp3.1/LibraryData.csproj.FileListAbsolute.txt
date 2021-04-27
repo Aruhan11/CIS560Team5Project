@@ -22,3 +22,15 @@ D:\Study\Spring21\CIS560\TempBranchRepo\LibraryData\obj\Debug\netcoreapp3.1\Libr
 D:\Study\Spring21\CIS560\TempBranchRepo\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csproj.CopyComplete
 D:\Study\Spring21\CIS560\TempBranchRepo\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.dll
 D:\Study\Spring21\CIS560\TempBranchRepo\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.pdb
+C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\bin\Debug\netcoreapp3.1\LibraryData.deps.json
+C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\bin\Debug\netcoreapp3.1\LibraryData.dll
+C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\bin\Debug\netcoreapp3.1\LibraryData.pdb
+C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csprojAssemblyReference.cache
+C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.AssemblyInfoInputs.cache
+C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.AssemblyInfo.cs
+C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csproj.CoreCompileInputs.cache
+C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csproj.CopyComplete
+C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.dll
+C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.pdb

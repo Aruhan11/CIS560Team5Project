@@ -72,12 +72,9 @@ namespace LibraryProject
             this.uxFetchCheckoutHistoryButton = new System.Windows.Forms.Button();
             this.uxAssetUserIDLabel = new System.Windows.Forms.Label();
             this.uxAssetUserIDTextBox = new System.Windows.Forms.TextBox();
-            this.uxFetchCheckoutHistoryGridView = new System.Windows.Forms.DataGridView();
-            this.uxFetchSituationOfAssetGridView = new System.Windows.Forms.DataGridView();
-            this.uxGetPossibleAssetsGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.uxFetchCheckoutHistoryGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uxFetchSituationOfAssetGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uxGetPossibleAssetsGridView)).BeginInit();
+            this.uxFetchCheckoutHistoryListBox = new System.Windows.Forms.ListBox();
+            this.uxFetchSituationOfAssetListBox = new System.Windows.Forms.ListBox();
+            this.uxGetPossibleAssetsListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // uxTypeLabel
@@ -433,6 +430,7 @@ namespace LibraryProject
             this.uxFetchSituationOfAssetButton.TabIndex = 45;
             this.uxFetchSituationOfAssetButton.Text = "Fetch Situation of Asset";
             this.uxFetchSituationOfAssetButton.UseVisualStyleBackColor = true;
+            this.uxFetchSituationOfAssetButton.Click += new System.EventHandler(this.uxFetchSituationOfAssetButton_Click);
             // 
             // uxGetPossibleAssetsButton
             // 
@@ -442,6 +440,7 @@ namespace LibraryProject
             this.uxGetPossibleAssetsButton.TabIndex = 48;
             this.uxGetPossibleAssetsButton.Text = "Get Possible Assets";
             this.uxGetPossibleAssetsButton.UseVisualStyleBackColor = true;
+            this.uxGetPossibleAssetsButton.Click += new System.EventHandler(this.uxGetPossibleAssetsButton_Click);
             // 
             // uxAssetAssetNameLabel
             // 
@@ -469,6 +468,7 @@ namespace LibraryProject
             this.uxFetchCheckoutHistoryButton.TabIndex = 51;
             this.uxFetchCheckoutHistoryButton.Text = "Fetch Checkout History";
             this.uxFetchCheckoutHistoryButton.UseVisualStyleBackColor = true;
+            this.uxFetchCheckoutHistoryButton.Click += new System.EventHandler(this.uxFetchCheckoutHistoryButton_Click);
             // 
             // uxAssetUserIDLabel
             // 
@@ -488,44 +488,41 @@ namespace LibraryProject
             this.uxAssetUserIDTextBox.Size = new System.Drawing.Size(433, 39);
             this.uxAssetUserIDTextBox.TabIndex = 49;
             // 
-            // uxFetchCheckoutHistoryGridView
+            // uxFetchCheckoutHistoryListBox
             // 
-            this.uxFetchCheckoutHistoryGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uxFetchCheckoutHistoryGridView.Location = new System.Drawing.Point(809, 219);
-            this.uxFetchCheckoutHistoryGridView.Name = "uxFetchCheckoutHistoryGridView";
-            this.uxFetchCheckoutHistoryGridView.RowHeadersWidth = 62;
-            this.uxFetchCheckoutHistoryGridView.RowTemplate.Height = 33;
-            this.uxFetchCheckoutHistoryGridView.Size = new System.Drawing.Size(751, 444);
-            this.uxFetchCheckoutHistoryGridView.TabIndex = 52;
+            this.uxFetchCheckoutHistoryListBox.FormattingEnabled = true;
+            this.uxFetchCheckoutHistoryListBox.ItemHeight = 25;
+            this.uxFetchCheckoutHistoryListBox.Location = new System.Drawing.Point(809, 262);
+            this.uxFetchCheckoutHistoryListBox.Name = "uxFetchCheckoutHistoryListBox";
+            this.uxFetchCheckoutHistoryListBox.Size = new System.Drawing.Size(751, 404);
+            this.uxFetchCheckoutHistoryListBox.TabIndex = 79;
             // 
-            // uxFetchSituationOfAssetGridView
+            // uxFetchSituationOfAssetListBox
             // 
-            this.uxFetchSituationOfAssetGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uxFetchSituationOfAssetGridView.Location = new System.Drawing.Point(12, 917);
-            this.uxFetchSituationOfAssetGridView.Name = "uxFetchSituationOfAssetGridView";
-            this.uxFetchSituationOfAssetGridView.RowHeadersWidth = 62;
-            this.uxFetchSituationOfAssetGridView.RowTemplate.Height = 33;
-            this.uxFetchSituationOfAssetGridView.Size = new System.Drawing.Size(751, 444);
-            this.uxFetchSituationOfAssetGridView.TabIndex = 77;
+            this.uxFetchSituationOfAssetListBox.FormattingEnabled = true;
+            this.uxFetchSituationOfAssetListBox.ItemHeight = 25;
+            this.uxFetchSituationOfAssetListBox.Location = new System.Drawing.Point(24, 964);
+            this.uxFetchSituationOfAssetListBox.Name = "uxFetchSituationOfAssetListBox";
+            this.uxFetchSituationOfAssetListBox.Size = new System.Drawing.Size(735, 404);
+            this.uxFetchSituationOfAssetListBox.TabIndex = 80;
             // 
-            // uxGetPossibleAssetsGridView
+            // uxGetPossibleAssetsListBox
             // 
-            this.uxGetPossibleAssetsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uxGetPossibleAssetsGridView.Location = new System.Drawing.Point(809, 917);
-            this.uxGetPossibleAssetsGridView.Name = "uxGetPossibleAssetsGridView";
-            this.uxGetPossibleAssetsGridView.RowHeadersWidth = 62;
-            this.uxGetPossibleAssetsGridView.RowTemplate.Height = 33;
-            this.uxGetPossibleAssetsGridView.Size = new System.Drawing.Size(751, 444);
-            this.uxGetPossibleAssetsGridView.TabIndex = 78;
+            this.uxGetPossibleAssetsListBox.FormattingEnabled = true;
+            this.uxGetPossibleAssetsListBox.ItemHeight = 25;
+            this.uxGetPossibleAssetsListBox.Location = new System.Drawing.Point(809, 965);
+            this.uxGetPossibleAssetsListBox.Name = "uxGetPossibleAssetsListBox";
+            this.uxGetPossibleAssetsListBox.Size = new System.Drawing.Size(751, 404);
+            this.uxGetPossibleAssetsListBox.TabIndex = 81;
             // 
             // Asset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1590, 1390);
-            this.Controls.Add(this.uxGetPossibleAssetsGridView);
-            this.Controls.Add(this.uxFetchSituationOfAssetGridView);
-            this.Controls.Add(this.uxFetchCheckoutHistoryGridView);
+            this.Controls.Add(this.uxGetPossibleAssetsListBox);
+            this.Controls.Add(this.uxFetchSituationOfAssetListBox);
+            this.Controls.Add(this.uxFetchCheckoutHistoryListBox);
             this.Controls.Add(this.uxFetchCheckoutHistoryButton);
             this.Controls.Add(this.uxAssetUserIDLabel);
             this.Controls.Add(this.uxAssetUserIDTextBox);
@@ -571,9 +568,6 @@ namespace LibraryProject
             this.Controls.Add(this.uxAddNameTextBox);
             this.Name = "Asset";
             this.Text = "Asset";
-            ((System.ComponentModel.ISupportInitialize)(this.uxFetchCheckoutHistoryGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uxFetchSituationOfAssetGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uxGetPossibleAssetsGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -624,8 +618,8 @@ namespace LibraryProject
         private System.Windows.Forms.Button uxFetchCheckoutHistoryButton;
         private System.Windows.Forms.Label uxAssetUserIDLabel;
         private System.Windows.Forms.TextBox uxAssetUserIDTextBox;
-        private System.Windows.Forms.DataGridView uxFetchCheckoutHistoryGridView;
-        private System.Windows.Forms.DataGridView uxFetchSituationOfAssetGridView;
-        private System.Windows.Forms.DataGridView uxGetPossibleAssetsGridView;
+        private System.Windows.Forms.ListBox uxFetchCheckoutHistoryListBox;
+        private System.Windows.Forms.ListBox uxFetchSituationOfAssetListBox;
+        private System.Windows.Forms.ListBox uxGetPossibleAssetsListBox;
     }
 }

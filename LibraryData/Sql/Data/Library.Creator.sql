@@ -1,40 +1,125 @@
 DECLARE @CreatorStaging TABLE
 (
-   CreatorID TINYINT NOT NULL PRIMARY KEY,
-   FirstName VARCHAR(10) NOT NULL,
-   LastName VARCHAR(10) NOT NULL,
-   Company VARCHAR(10) NOT NULL
+  
+   FirstName VARCHAR(32) NOT NULL,
+   LastName VARCHAR(32) NOT NULL,
+   Company VARCHAR(32) NOT NULL
 
 );
 
 /***************************** Modify values here *****************************/
 
-INSERT @CreatorStaging(CreatorID, FirstName, LastName, Company)
+INSERT @CreatorStaging(FirstName,LastName, Company)
 VALUES
-   (1, 'Kate', 'Smith', 'N/A'),
-   (2, 'Anna', 'Anderson', 'N/A'),
-   (3,  'Tom', 'Brown', 'N/A'),
-   (4, 'Taylor', 'White', 'N/A'),
-   (5, 'Josh', 'Derby', 'N/A'),
-   (6, 'Tom', 'Smith', 'DHX Media'),
-   (7, 'Lisa', 'Anderson', '20th Century Pictures'),
-   (8, 'Jack', 'Brown', 'Fox Searchlight Pictures'),
-   (9, 'Jean', 'White', 'Filmways'),
-   (10, 'Zac', 'Derby', 'DreamWorks'),
-   (11, 'N/A', 'N/A','miHoYo'),
-   (12, 'N/A', 'N/A','Tencent'),
-   (13, 'N/A', 'N/A','Sony Interactive Entertainment'),
-   (14, 'N/A', 'N/A','Ubisoft'),
-   (15, 'N/A', 'N/A','CD Projekt Red');
+ (N'Deborah', N'Eadington', N'Blick-Crona'),
+ (N'Britta', N'Ivakhnov', N'Gaylord, Olson and Kuhn'),
+ (N'Joby', N'Corringham', N'Gusikowski-Carroll'),
+ (N'Felicle', N'Dods', N'Hudson, Lynch and Dibbert'),
+ (N'Grete', N'Mulvaney', N'Ruecker-Schinner'),
+ (N'Annnora', N'OSharkey', N'Kuvalis LLC'),
+ (N'Jacinta', N'Giabucci', N'Trantow, Jakubowski and Olson'),
+ (N'Karoline', N'Mycroft', N'Mosciski Inc'),
+ (N'Kelly', N'Muehle', N'Ritchie, Casper and Powlowski'),
+ (N'Peyton', N'Skillman', N'Schamberger-Parisian'),
+ (N'Hewie', N'Ferschke', N'Shields, Brown and Gorczany'),
+ (N'Morry', N'Tofpik', N'Muller-Gorczany'),
+ (N'Hailee', N'Rogan', N'Turcotte, Kessler and Dietrich'),
+ (N'Elbert', N'Niland', N'Leffler Inc'),
+ (N'Layla', N'Rodder', N'Goodwin-Marquardt'),
+ (N'Ronica', N'Saltsberger', N'Auer, Schneider and Mante'),
+ (N'Kania', N'Booton', N'Walsh LLC'),
+ (N'Jennee', N'Cyples', N'Bogisich, Rodriguez and Watsica'),
+ (N'Tobe', N'Ipgrave', N'Stoltenberg-Reilly'),
+ (N'Catina', N'Shearme', N'Rath, Zieme and Buckridge'),
+ (N'Rene', N'Coles', N'Hills Group'),
+ (N'Melba', N'Barrie', N'Fay LLC'),
+ (N'Bartholomeo', N'Smorthit', N'Hilpert-Thompson'),
+ (N'Rustie', N'Duffett', N'Mertz, Upton and McLaughlin'),
+ (N'Chickie', N'Dunbar', N'Howe Inc'),
+ (N'Bartolomeo', N'McDuall', N'Kilback, Weissnat and Prosacco'),
+ (N'Howie', N'Von Brook', N'Cartwright, Wiza and Kemmer'),
+ (N'Godard', N'Olyet', N'Casper and Sons'),
+ (N'Jessamyn', N'Wardle', N'Schuster, Brown and Muller'),
+ (N'Bordie', N'Plaide', N'Mills, Rau and Swift'),
+ (N'Roi', N'McGebenay', N'Legros-Rau'),
+ (N'Ferdinanda', N'Munning', N'Mohr and Sons'),
+ (N'Georgetta', N'Dowsey', N'Steuber and Sons'),
+ (N'Carolan', N'Kohrt', N'Schumm, Shields and Jakubowski'),
+ (N'Dickie', N'Burras', N'Emmerich, Terry and Legros'),
+ (N'Curr', N'Guerreiro', N'Erdman, Bednar and Koepp'),
+ (N'Kerri', N'Syncke', N'Durgan, Buckridge and Gusikowski'),
+ (N'Caren', N'Richarson', N'Gutmann-Watsica'),
+ (N'Ashlen', N'Rawdales', N'Bosco LLC'),
+ (N'Maxwell', N'Dur', N'Rau LLC'),
+ (N'Way', N'Bithell', N'Koepp-Jones'),
+ (N'Farr', N'Langham', N'Osinski and Sons'),
+ (N'Mignon', N'Cainey', N'Rohan-Hirthe'),
+ (N'Bernadette', N'Roscoe', N'Klocko, Lubowitz and Sporer'),
+ (N'Abraham', N'Snoxill', N'Fay and Sons'),
+ (N'Lars', N'Powell', N'Schultz LLC'),
+ (N'Ailyn', N'Uwins', N'Sawayn-Labadie'),
+ (N'Geno', N'McSporrin', N'Zboncak Group'),
+ (N'Ajay', N'Jankiewicz', N'Glover Group'),
+ (N'Lewes', N'Gee', N'Rath-Boyer'),
+ (N'Buddy', N'Seath', N'Johnston, Effertz and Abshire'),
+ (N'Jasmine', N'Packwood', N'Lang Inc'),
+ (N'Natassia', N'Kippax', N'Wiegand Inc'),
+ (N'Isabel', N'Gretton', N'Schinner Group'),
+ (N'Thalia', N'St Quenin', N'Koepp LLC'),
+ (N'Shani', N'Ree', N'Daugherty, Leuschke and Quitzon'),
+ (N'Gillian', N'Chaman', N'King-Dickens'),
+ (N'Theo', N'Wasteney', N'Torp, Lemke and Heaney'),
+ (N'Cortney', N'Perigoe', N'Towne Group'),
+ (N'Genevra', N'Gleed', N'Kuvalis, Hartmann and Leuschke'),
+ (N'Daria', N'Wisam', N'Zulauf, Williamson and Tillman'),
+ (N'Ranice', N'Levis', N'Yost, Hammes and Bartell'),
+ (N'Evan', N'Glastonbury', N'Brakus-Reinger'),
+ (N'Jarib', N'Maudson', N'Jacobson, Corwin and Corwin'),
+ (N'Alfie', N'Izkovitch', N'Murazik, Bahringer and Littel'),
+ (N'Sid', N'Huton', N'Koepp-Bogan'),
+ (N'Harbert', N'Serjeantson', N'Cummerata, Walter and Kunze'),
+ (N'Elbertina', N'Chatters', N'Keebler LLC'),
+ (N'Arnaldo', N'Pauwel', N'Walker-Kozey'),
+ (N'Nevin', N'Mitcheson', N'Reichert-Hyatt'),
+ (N'Gennie', N'Rosewarne', N'Corwin-Collins'),
+ (N'Rosalind', N'Fiddymont', N'Stark-Blick'),
+ (N'Lira', N'Stolte', N'Abbott, Schmitt and Brekke'),
+ (N'Elonore', N'Meenehan', N'Kilback, Kling and Boyle'),
+ (N'Jeffy', N'Matejovsky', N'Turcotte-Kshlerin'),
+ (N'De witt', N'Dionisii', N'Barrows, Parker and Blick'),
+ (N'Julietta', N'Morse', N'Collier Inc'),
+ (N'Derward', N'Scranny', N'Murphy, Hettinger and OConner'),
+ (N'Gordon', N'Bottinelli', N'Christiansen-OReilly'),
+ (N'Jenine', N'Clarkin', N'OkunevaSons'),
+ (N'Tibold', N'Devennie', N'Heidenreich and Sons'),
+ (N'Ingar', N'Engel', N'Okuneva LLC'),
+ (N'Melva', N'Kief', N'Barton-Denesik'),
+ (N'Todd', N'Scotsbrook', N'Fisher and Sons'),
+ (N'Davis', N'Fettis', N'Gibson, Lakin and Rempel'),
+ (N'Heall', N'Featherstonhaugh', N'Mraz Group'),
+ (N'Lexie', N'Tungay', N'Walter-Schoen'),
+ (N'Perren', N'Anscott', N'Steuber-Haley'),
+ (N'Clair', N'Turnbull', N'Thiel-Bauch'),
+ (N'Gerrilee', N'Hallgate', N'Graham Inc'),
+ (N'Candice', N'OScollain', N'Toy Inc'),
+ (N'Mariele', N'Blazdell', N'Block-Pfeffer'),
+ (N'Garrot', N'Adamsky', N'Gibson, Bosco and Thiel'),
+ (N'Chrystal', N'Springett', N'Frami, Hammes and Wuckert'),
+ (N'Carri', N'McIlhagga', N'Jakubowski-Connelly'),
+ (N'Shelagh', N'Cregg', N'Kling, Mohr and Hamill'),
+ (N'Lotte', N'Slessar', N'Jast-Hansen'),
+ (N'Kirstyn', N'Killough', N'Stroman, Gerhold and Murazik'),
+ (N'Tandie', N'Gurry', N'Larkin, Hessel and Sanford'),
+ (N'Rozalie', N'Friedman', N'Gaylord, Osinski and Rau');
 
 
 /******************************************************************************/
 
 MERGE [Library].Creator T
-USING @CreatorStaging S ON S.CreatorID = T.CreatorID
-WHEN MATCHED AND S.FirstName <> T.FirstName AND S.LastName <> T.LastName AND S.Company <> T.Company THEN
+USING @CreatorStaging S ON S.Company = T.Company
+WHEN MATCHED AND S.FirstName <> T.FirstName AND S.LastName <> T.LastName THEN
    UPDATE
    SET FirstName = S.FirstName, LastName = S.LastName, Company = S.Company
 WHEN NOT MATCHED THEN
-   INSERT(CreatorID, FirstName, LastName, Company)
-   VALUES(S.CreatorID, S.FirstName, S.LastName, S.Company);
+   INSERT(FirstName, LastName, Company)
+   VALUES(S.FirstName, S.LastName, S.Company);

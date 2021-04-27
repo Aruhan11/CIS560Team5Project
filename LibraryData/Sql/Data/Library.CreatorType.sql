@@ -1,7 +1,7 @@
 DECLARE @CreatorTypeStaging TABLE
 (
    CreatorTypeID TINYINT NOT NULL PRIMARY KEY,
-   [Name] VARCHAR(8) NOT NULL UNIQUE
+   [Name] VARCHAR(32) NOT NULL UNIQUE
 );
 
 /***************************** Modify values here *****************************/

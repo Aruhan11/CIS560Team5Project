@@ -3,7 +3,7 @@ BEGIN
    CREATE TABLE [Library].AssetType
    (
       AssetTypeID TINYINT NOT NULL,
-      [Name] VARCHAR(8) NOT NULL,
+      [Name] VARCHAR(32) NOT NULL,
 
       CONSTRAINT PK_Library_AssetType_AssetTypeID PRIMARY KEY CLUSTERED
       (
@@ -30,3 +30,4 @@ BEGIN
       [Name] ASC
    )
 END;
+

@@ -3,7 +3,7 @@ BEGIN
    CREATE TABLE [Library].CreatorType
    (
       CreatorTypeID TINYINT NOT NULL,
-      [Name] VARCHAR(8) NOT NULL,
+      [Name] VARCHAR(32) NOT NULL,
 
       CONSTRAINT PK_Library_CreatorType_CreatorTypeID PRIMARY KEY CLUSTERED
       (

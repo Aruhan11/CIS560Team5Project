@@ -1,40 +1,40 @@
 DECLARE @CategoryStaging TABLE
 (
-   CategoryID TINYINT NOT NULL PRIMARY KEY,
-   [Name] VARCHAR(8) NOT NULL UNIQUE
+  
+   [Name] VARCHAR(32) NOT NULL UNIQUE
 );
 
 /***************************** Modify values here *****************************/
 
-INSERT @CategoryStaging(CategoryID, [Name])
+INSERT @CategoryStaging([Name])
 VALUES
-    (1,N'Fantasy'),
-    (2,N'Romance'),
-    (3,N'Mystery'),
-    (4,N'Horror'),
-    (5,N'Memoir'),
-    (6,N'Cooking'),
-    (7,N'Health'),
-    (8,N'History'),
-    (9,N'Travel'),
-    (10,N'Humor'),
-    (11,N'Children'),
-    (12,N'Adventure'),
-    (13,N'Action'),
-    (14,N'RPG'),
-    (15,N'Simulation'),
-    (16,N'Sport'),
-    (17,N'MMO');
+    (N'Fantasy'),
+    (N'Romance'),
+    (N'Mystery'),
+    (N'Horror'),
+    (N'Memoir'),
+    (N'Cooking'),
+    (N'Health'),
+    (N'History'),
+    (N'Travel'),
+    (N'Humor'),
+    (N'Children'),
+    (N'Adventure'),
+    (N'Action'),
+    (N'RPG'),
+    (N'Simulation'),
+    (N'Sport'),
+    (N'MMO');
 
    
 
 /******************************************************************************/
 
 MERGE [Library].Category T
-USING @CategoryStaging S ON S.CategoryID = T.CategoryID
+USING @CategoryStaging S ON S.[Name]  = T.[Name] 
 WHEN MATCHED AND S.[Name] <> T.[Name] THEN
    UPDATE
    SET [Name] = S.[Name]
 WHEN NOT MATCHED THEN
-   INSERT(CategoryID, [Name])
-   VALUES(S.CategoryID, S.[Name]);
+   INSERT([Name])
+   VALUES(S.[Name]);

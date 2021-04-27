@@ -38,8 +38,8 @@ namespace LibraryData
 
         public IReadOnlyList<CheckOutHistory> FetchCheckOutHistory(int userID)
         {
-
-            return executor.ExecuteReader(new FetchCheckOutHistoryDelegate(userID));
+            var d = new FetchCheckOutHistoryDelegate(userID);
+            return executor.ExecuteReader(d);
         }
 
 
@@ -51,25 +51,29 @@ namespace LibraryData
 
         public IReadOnlyList<PossibleAssets> GetPossibleAssets(string assetName)
         {
-            return executor.ExecuteReader(new GetPossibleAssetsDelegate(assetName));
+            var d = new GetPossibleAssetsDelegate(assetName);
+            return executor.ExecuteReader(d);
         }
 
         public IReadOnlyList<ProductionOfCreator> FetchProductionOfCreator(int creatorID)
         {
-            return executor.ExecuteReader(new FetchProductionsOfCreatorDelegate(creatorID));
+            var d = new FetchProductionsOfCreatorDelegate(creatorID);
+            return executor.ExecuteReader(d);
 
 
         }
 
         public IReadOnlyList<SituationOfAsset> FetchSituationOfAsset(int assetID)
         {
-            return executor.ExecuteReader(new FetchSituationOfAssetDelegate(assetID));
+            var d = new FetchSituationOfAssetDelegate(assetID);
+            return executor.ExecuteReader(d);
         }
 
 
         public IReadOnlyList<CreatorByType> GetCreatorsByType(string CreatorTypeName)
         {
-            return executor.ExecuteReader(new GetCreatorsByTypeDelegate(CreatorTypeName));
+            var d = new GetCreatorsByTypeDelegate(CreatorTypeName);
+            return executor.ExecuteReader(d);
         }
 
 
