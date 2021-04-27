@@ -36,5 +36,17 @@ namespace LibarayData.Model
 
 
         }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Asset Name: " + AssetName);
+            sb.Append("  Type Name: " + TypeName);
+            sb.Append("  Creator Name: " + CreatorName);
+            sb.Append("  Company Name: " + CompanyName);
+            sb.Append("  Release Date: " + ReleaseDate.ToShortDateString());
+            sb.Append("  Stock: " + Stock.ToString());
+            return sb.ToString();
+        }
     }
 }

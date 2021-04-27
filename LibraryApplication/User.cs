@@ -16,15 +16,10 @@ namespace LibraryProject
         private IGeneralQueryRepository general;
         private IQuestionQueryRepository question;
 
-
-        private TransactionScope transaction;
-
-
         public User()
         {
             general = new SqlGeneralQueryRepository(connectionString);
             question = new SqlQuestionQueryRepository(connectionString);
-            transaction = new TransactionScope();
             InitializeComponent();
         }
 

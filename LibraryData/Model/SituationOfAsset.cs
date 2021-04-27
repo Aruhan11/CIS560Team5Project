@@ -11,7 +11,7 @@ namespace LibarayData.Model
 
         public int AssetID { get; }
 
-       // public int RowNumber { get; }
+        // public int RowNumber { get; }
 
         public string Name { get; }
 
@@ -33,7 +33,7 @@ namespace LibarayData.Model
         public SituationOfAsset(int AssetID, string Name, string TypeName, string CreatorName, string CompanyName, DateTime CheckOutDate, DateTime ReturnByDate, int Stock)
         {
             this.AssetID = AssetID;
-           // this.RowNumber = RowNumber;
+            // this.RowNumber = RowNumber;
             this.Name = Name;
             this.TypeName = TypeName;
             this.CreatorName = CreatorName;
@@ -43,6 +43,21 @@ namespace LibarayData.Model
             this.Stock = Stock;
 
 
+        }
+
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("AssetID: " + AssetID);
+            sb.Append("  Name: " + Name);
+            sb.Append("  Type Name: " + TypeName);
+            sb.Append("  Creator Name: " + CreatorName);
+            sb.Append("  Company Name: " + CompanyName);
+            sb.Append("  Check Out Date: " + CheckOutDate.ToShortDateString());
+            sb.Append("  Return By Date: " + ReturnByDate.ToShortDateString());
+            sb.Append("  Stock: " + Stock.ToString());
+            return sb.ToString();
         }
     }
 }

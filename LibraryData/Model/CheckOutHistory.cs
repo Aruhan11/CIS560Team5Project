@@ -46,5 +46,25 @@ namespace LibarayData.Model
 
 
         }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("UserID: " + UserID);
+            sb.Append("  Type Name: " + TypeName);
+            sb.Append("  Creator Name: " + CreatorName);
+            sb.Append("  Company Name: " + CompanyName);
+            sb.Append("  Check Out Date: " + CheckOutDate.ToShortDateString());
+            sb.Append("  Return By Date: " + ReturnByDate.ToShortDateString());
+            if(IsReturned == 1)
+            {
+                sb.Append("  Asset has been returned");
+            }
+            else
+            {
+                sb.Append("  Asset is still with user");
+            }
+            return sb.ToString();
+        }
     }
 }
