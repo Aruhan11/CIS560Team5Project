@@ -11,9 +11,10 @@ SELECT ROW_NUMBER() OVER(ORDER BY C.CreatorID ASC) AS [RowNumber],
 	   CT.[Name], (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company
 	   
 FROM  CreatorType CT 
-INNER JOIN [Library].Creators C ON C.CreatorID = CCT.AssetID
-INNER JOIN [Library].CreatorCreatorType CCT ON CCT.CreatorTypeID = C.CreatorTypeID
-WHERE C.[Name] = @CreatorTypeName
+INNER JOIN [Library].CreatorCreatorType CCT ON CCT.CreatorTypeID = CT.CreatorTypeID
+INNER JOIN [Library].Creator C ON C.CreatorID = CCT.CreatorID
+
+WHERE CT.[Name] = @CreatorTypeName
 GO
 
 

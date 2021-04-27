@@ -20,7 +20,12 @@ namespace LibarayData.DataDelegates
 
         public override IReadOnlyList<AssetByAssetType> Translate(SqlCommand command, IDataRowReader reader)
         {
-            var assetsList = new List<AssetByAssetType>();
+            var 
+                
+                
+                
+                
+                assetsList = new List<AssetByAssetType>();
 
             while (reader.Read())
             {

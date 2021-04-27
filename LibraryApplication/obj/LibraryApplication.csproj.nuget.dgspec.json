@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\LibraryApplication\\LibraryApplication.csproj": {}
+    "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\LibraryApplication\\LibraryApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\bever\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bever\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\LibraryApplication\\LibraryApplication.csproj": {
+    "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\LibraryApplication\\LibraryApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\LibraryApplication\\LibraryApplication.csproj",
+        "projectUniqueName": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\LibraryApplication\\LibraryApplication.csproj",
         "projectName": "LibraryApplication",
-        "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\LibraryApplication\\LibraryApplication.csproj",
+        "projectPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\LibraryApplication\\LibraryApplication.csproj",
         "packagesPath": "C:\\Users\\bever\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\LibraryApplication\\obj\\",
+        "outputPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\LibraryApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bever\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,11 +90,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\LibraryData\\LibraryData.csproj": {
-                "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\LibraryData\\LibraryData.csproj"
+              "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\LibraryData\\LibraryData.csproj": {
+                "projectPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\LibraryData\\LibraryData.csproj"
               }
             }
           }
@@ -130,14 +130,14 @@
         }
       }
     },
-    "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\LibraryData\\LibraryData.csproj": {
+    "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\LibraryData\\LibraryData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\LibraryData\\LibraryData.csproj",
+        "projectUniqueName": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\LibraryData\\LibraryData.csproj",
         "projectName": "LibraryData",
-        "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\LibraryData\\LibraryData.csproj",
+        "projectPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\LibraryData\\LibraryData.csproj",
         "packagesPath": "C:\\Users\\bever\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\LibraryData\\obj\\",
+        "outputPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\LibraryData\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bever\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -155,8 +155,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj"
               }
             }
           }

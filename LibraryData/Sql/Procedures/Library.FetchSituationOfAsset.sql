@@ -12,14 +12,15 @@ WITH SourceCTE(RowNumber,AssetID,CheckOutDate, ReturnByDate, InBorrowingTotal) A
 		   SUM(IIF(COA.IsReturned = 0,1,0))
 	FROM [Library].CheckedOutAsset COA
 	WHERE COA.AssetID = @AssetID
+	GROUP BY COA.AssetID, COA.CheckOutDate, COA.ReturnByDate
 )
 
-SELECT S.RowNumber, A.[Name], [AT].TypeName, (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, 
-	   A.Stock, COA.CheckOutDate, COA.ReturnByDate, S.InBorrowingTotal
+SELECT S.RowNumber, A.[Name], [AT].[Name], (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, 
+	   A.Stock, S.CheckOutDate, S.ReturnByDate, S.InBorrowingTotal
 FROM SourceCTE S
 INNER JOIN [Library].Asset A ON A.AssetID = S.AssetID
 INNER JOIN [Library].AssetType [AT] ON [AT].AssetTypeID = A.AssetTypeID
-INNER JOIN [Library].Creators C ON C.CreatorID = A.AssetID
+INNER JOIN [Library].Creator C ON C.CreatorID = A.AssetID
 GO
 
 

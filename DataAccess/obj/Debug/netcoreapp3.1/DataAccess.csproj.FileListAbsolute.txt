@@ -19,7 +19,6 @@ D:\Study\Spring21\CIS560\TempBranchRepo\DataAccess\obj\Debug\netcoreapp3.1\DataA
 C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
 C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
 C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
-C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csprojAssemblyReference.cache
 C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfoInputs.cache
 C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfo.cs
 C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache

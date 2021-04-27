@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\bever\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bever\\Source\\Repos\\CIS560Team5ProjectClose\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\bever\\source\\repos\\CIS560Team5ProjectClose\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bever\\AppData\\Roaming\\NuGet\\NuGet.Config",
