@@ -10,7 +10,7 @@ WITH SourceCTE(RowNumber,AssetID,CheckOutDate, ReturnByDate, InBorrowingTotal) A
 	SELECT ROW_NUMBER() OVER(ORDER BY COA.CheckOutDate ASC),
 		   COA.AssetID, COA.CheckOutDate, COA.ReturnByDate, 
 		   SUM(IIF(COA.IsReturned = 0,1,0))
-	FROM [Library].CheckedOutAssets COA
+	FROM [Library].CheckedOutAsset COA
 	WHERE COA.AssetID = @AssetID
 )
 
