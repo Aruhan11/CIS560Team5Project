@@ -15,7 +15,7 @@ namespace LibarayData.Model
 
         public string AssetTypeName { get; }
 
-        public int CheckOutRank { get; }
+        public long CheckOutRank { get; }
 
         public string AssetName { get; }
 
@@ -23,7 +23,7 @@ namespace LibarayData.Model
  
 
         public CreatorByAssetType( string CreatorName, string CompanyName, 
-                                 string AssetTypeName, int CheckOutRank, string AssetName, int CheckOutCount)
+                                 string AssetTypeName, long CheckOutRank, string AssetName, int CheckOutCount)
         {
            // this.RowNumber = RowNumber;
             this.CreatorName = CreatorName;

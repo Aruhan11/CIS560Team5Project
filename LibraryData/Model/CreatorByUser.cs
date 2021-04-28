@@ -14,7 +14,7 @@ namespace LibarayData.Model
 
         public string UserName { get; }
 
-        public int AssetCounRank { get; }
+        public long AssetCounRank { get; }
 
         public string CreatorName { get; }
 
@@ -23,7 +23,7 @@ namespace LibarayData.Model
         public int AssetCount { get; }
 
 
-        public CreatorByUser(string UserName, int AssetCounRank, string CreatorName, string CompanyName,
+        public CreatorByUser(string UserName, long AssetCounRank, string CreatorName, string CompanyName,
                                   int AssetCount)
         {
             //this.RowNumber = RowNumber;

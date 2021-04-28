@@ -41,6 +41,11 @@ namespace DataAccess
             return GetValue(name, reader.GetString);
         }
 
+        public long GetInt64(string name)
+        {
+            return GetValue(name, reader.GetInt64);
+        }
+
         public DateTime GetDateTime(string name)
         {
             return GetValue(name, reader.GetDateTime);

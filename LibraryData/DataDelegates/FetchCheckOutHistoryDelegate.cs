@@ -35,14 +35,14 @@ namespace LibarayData.DataDelegates
             while (reader.Read())
             {
                 checkOutAssets.Add(new CheckOutHistory(
-               reader.GetInt32("UserID"),
+               userId,
                reader.GetString("AssetName"),
                reader.GetString("TypeName"),
                reader.GetString("CreatorName"),
-               reader.GetString("CompanyName"),
-               reader.GetDateTime("CheckOutDate"),
-               reader.GetDateTime("ReturnByDate"),
-               reader.GetInt32("IsReturned")));
+               reader.GetString("Company"),
+               reader.GetDateTimeOffset("CheckOutDate"),
+               reader.GetDateTimeOffset("ReturnByDate"),
+               reader.GetByte("IsReturned")));
             }
 
             return checkOutAssets;

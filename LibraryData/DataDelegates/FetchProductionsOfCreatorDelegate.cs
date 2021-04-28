@@ -34,12 +34,11 @@ namespace LibarayData.DataDelegates
             while (reader.Read())
             {
                 assets.Add(new ProductionOfCreator(
-                   reader.GetInt32("CreatorID"),
-                   // reader.GetInt32("RowNumber"),
+                   creatorId,
                    reader.GetString("CreatorName"),
-                   reader.GetString("CompanyName"),
+                   reader.GetString("Company"),
                    reader.GetString("AssetName"),
-                   reader.GetString("AssetTypeName"),
+                   reader.GetString("AssetType"),
                    reader.GetInt32("Stock")));
             }
 

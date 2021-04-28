@@ -34,3 +34,15 @@ C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcor
 C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csproj.CopyComplete
 C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.dll
 C:\Users\bever\Source\Repos\CIS560Team5ProjectClose\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.pdb
+C:\Users\amb10\Source\Repos\CIS560Team5Project\LibraryData\bin\Debug\netcoreapp3.1\LibraryData.deps.json
+C:\Users\amb10\Source\Repos\CIS560Team5Project\LibraryData\bin\Debug\netcoreapp3.1\LibraryData.dll
+C:\Users\amb10\Source\Repos\CIS560Team5Project\LibraryData\bin\Debug\netcoreapp3.1\LibraryData.pdb
+C:\Users\amb10\Source\Repos\CIS560Team5Project\LibraryData\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\amb10\Source\Repos\CIS560Team5Project\LibraryData\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\amb10\Source\Repos\CIS560Team5Project\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csprojAssemblyReference.cache
+C:\Users\amb10\Source\Repos\CIS560Team5Project\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.AssemblyInfoInputs.cache
+C:\Users\amb10\Source\Repos\CIS560Team5Project\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.AssemblyInfo.cs
+C:\Users\amb10\Source\Repos\CIS560Team5Project\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csproj.CoreCompileInputs.cache
+C:\Users\amb10\Source\Repos\CIS560Team5Project\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.csproj.CopyComplete
+C:\Users\amb10\Source\Repos\CIS560Team5Project\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.dll
+C:\Users\amb10\Source\Repos\CIS560Team5Project\LibraryData\obj\Debug\netcoreapp3.1\LibraryData.pdb

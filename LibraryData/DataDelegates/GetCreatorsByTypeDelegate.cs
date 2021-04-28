@@ -23,7 +23,7 @@ namespace LibarayData.DataDelegates
         {
             base.PrepareCommand(command);
 
-            var p = command.Parameters.Add("CreatorTypeName", SqlDbType.NVarChar);
+            var p = command.Parameters.Add("creatorType", SqlDbType.NVarChar);
             p.Value = creatorType;
         }
 
@@ -35,12 +35,12 @@ namespace LibarayData.DataDelegates
             while (reader.Read())
             {
                 creators.Add(new CreatorByType(
+               creatorType,
                reader.GetString("CreatorName"),
-               reader.GetString("CreatorName"),
-               reader.GetString("CompanyName"),
+               reader.GetString("Company"),
                reader.GetInt32("Stock"),
-               reader.GetDateTime("CheckOutDate"),
-               reader.GetDateTime("ReturnByDate"),
+               reader.GetDateTimeOffset("CheckOutDate"), 
+               reader.GetDateTimeOffset("ReturnByDate"),
                reader.GetInt32("InBorrowingTotal")));
             }
 

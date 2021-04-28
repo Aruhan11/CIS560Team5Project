@@ -30,7 +30,8 @@ namespace LibarayData.DataDelegates
             while (reader.Read())
             {
                 assetsList.Add(new AssetByAssetType(
-                    reader.GetString("AssetTypeName"),
+                    reader.GetString("AssetType"),
+                    reader.GetInt64("CheckOutRank"),
                     reader.GetString("AssetName"),
                     reader.GetInt32("CheckOutCount")));
             }

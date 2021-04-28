@@ -55,7 +55,7 @@ namespace LibraryData
             return executor.ExecuteReader(d);
         }
 
-        public IReadOnlyList<ProductionOfCreator> FetchProductionOfCreator(int creatorID)
+        public IReadOnlyList<ProductionOfCreator> FetchProductionsOfCreator(int creatorID)
         {
             var d = new FetchProductionsOfCreatorDelegate(creatorID);
             return executor.ExecuteReader(d);

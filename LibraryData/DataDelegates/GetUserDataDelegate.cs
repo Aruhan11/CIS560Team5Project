@@ -29,7 +29,7 @@ namespace LibarayData.DataDelegates
                 return null;
 
             return new User(
-               reader.GetInt32("PersonId"),
+               reader.GetInt32("UserID"),
                reader.GetString("FirstName"),
                reader.GetString("LastName"),
                phonenumber,

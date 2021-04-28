@@ -11,7 +11,7 @@ namespace LibarayData.DataDelegates
     {
 
         public TopTenAssetsStillAvaliableDelegate()
-           : base("Library.TopTenAsset")
+           : base("Library.TopTenAssetsStillAvaliable")
         {
         }
 
@@ -24,9 +24,9 @@ namespace LibarayData.DataDelegates
             {
                 assetList.Add(new TopTenAsset(
                     reader.GetString("AssetName"),
-                    reader.GetString("AssetTypeName"),
+                    reader.GetString("AssetType"),
                     reader.GetString("CreatorName"),
-                    reader.GetString("CompanyName"),
+                    reader.GetString("Company"),
                     reader.GetInt32("BorrowedTimes")));
 
 

@@ -14,10 +14,10 @@ WITH SourceCTE(AssetID, [Name], AssetTypeID, CheckOutAssetsCount) AS
 )
 
 SELECT 
-      ROW_NUMBER() OVER(ORDER BY S.AssetTypeID ASC, S.CheckOutAssetsCount DESC) AS [RowNumber],
-      [AT].[Name],
+      
+      [AT].[Name] AssetType,
       RANK() OVER( PARTITION BY S.AssetTypeID ORDER BY S.CheckOutAssetsCount DESC) AS CheckOutRank,
-      S.[Name],  
+      S.[Name] as AssetName,  
       S.CheckOutAssetsCount AS CheckOutCount
 FROM SourceCTE S
 INNER JOIN [Library].[AssetType] [AT] ON [AT].AssetTypeID = S.AssetTypeID

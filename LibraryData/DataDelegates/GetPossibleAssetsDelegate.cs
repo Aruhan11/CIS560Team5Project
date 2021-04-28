@@ -38,10 +38,10 @@ namespace LibarayData.DataDelegates
             while (reader.Read())
             {
                 assets.Add(new PossibleAssets(
-               reader.GetString("AssetName"),
-               reader.GetString("TypeName"),
+               assetName,
+               reader.GetString("AssetType"),
                reader.GetString("CreatorName"),
-               reader.GetString("CompanyName"),
+               reader.GetString("Company"),
                reader.GetDateTime("ReleaseDate"),
                reader.GetInt32("Stock")));
             }

@@ -24,11 +24,10 @@ namespace LibarayData.DataDelegates
             {
                 creatorList.Add(new CreatorByUser(
                     reader.GetString("UserName"),
-                    reader.GetInt32("AssetCountRank"),
+                    reader.GetInt64("AssetCountRank"),
                     reader.GetString("CreatorName"),
-                    reader.GetString("CompanyName"),
+                    reader.GetString("Company"),
                     reader.GetInt32("AssetCount"))
-                    
                     );
 
                      

@@ -11,7 +11,7 @@ WITH SourceCTE(RowNumber,AssetID,CheckOutDate, ReturnByDate, InBorrowingTotal) A
 		   COA.AssetID, COA.CheckOutDate, COA.ReturnByDate, 
 		   SUM(IIF(COA.IsReturned = 0,1,0))
 	FROM [Library].CheckedOutAsset COA
-	WHERE COA.AssetID = 78
+	WHERE COA.AssetID = @AssetID
 	GROUP BY COA.AssetID, COA.CheckOutDate, COA.ReturnByDate
 )
 

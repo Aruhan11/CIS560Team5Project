@@ -10,6 +10,12 @@ namespace LibraryData
     {
         private readonly SqlCommandExecutor executor;
 
+
+        public SqlComplexQueryRepository(string connectionString)
+        {
+            executor = new SqlCommandExecutor(connectionString);
+        }
+
         public IReadOnlyList<AssetByAssetType> RankingAssetByAssetType()
         {
             return executor.ExecuteReader(new RankingAssetByAssetTypeDelegate());

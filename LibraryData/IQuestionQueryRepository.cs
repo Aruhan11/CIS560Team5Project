@@ -18,7 +18,7 @@ namespace LibraryData
 
         IReadOnlyList<PossibleAssets> GetPossibleAssets(string assetName);
 
-        IReadOnlyList<ProductionOfCreator> FetchProductionOfCreator(int creatorID);
+        IReadOnlyList<ProductionOfCreator> FetchProductionsOfCreator(int creatorID);
 
         IReadOnlyList<SituationOfAsset> FetchSituationOfAsset(int assetID);
 

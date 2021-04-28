@@ -6,9 +6,10 @@ CREATE OR ALTER PROCEDURE [Library].TopTenAssetsStillAvaliable
 AS
 
 
-SELECT TOP(10) ROW_NUMBER() OVER(ORDER BY COUNT(*) DESC) AS [RowNumber],
-        A.[Name], [AT].[Name], 
-        (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, 
+
+SELECT TOP(10) 
+        A.[Name] as AssetName, [AT].[Name] AssetType, 
+        (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company AS Company, 
         COUNT(*) AS BorrowedTimes
 FROM [Library].CheckedOutAsset COA
 INNER JOIN [Library].[Asset] A ON A.AssetID = COA.AssetID

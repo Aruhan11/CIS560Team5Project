@@ -11,17 +11,18 @@ namespace LibarayData.Model
 
         public string AssetTypeName { get; }
 
-        public int CheckOutRank { get; }
+        public long CheckOutRank { get; }
 
         public string AssetName { get; }
 
         public int CheckOutCount { get; }
  
 
-        public AssetByAssetType(string AssetTypeName, string AssetName, int CheckOutCount)
+        public AssetByAssetType(string AssetTypeName, long CheckOutRank,string AssetName, int CheckOutCount)
         {
            // this.RowNumber = RowNumber;
             this.AssetTypeName = AssetTypeName;
+            this.CheckOutRank = CheckOutRank;
             this.AssetName = AssetName;
             this.CheckOutCount = CheckOutCount;
         }
