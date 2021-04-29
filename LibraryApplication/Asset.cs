@@ -13,14 +13,15 @@ namespace LibraryProject
     public partial class Asset : Form
     {
         const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;";
-        private IGeneralQueryRepository general;
-        private IQuestionQueryRepository question;
+       
+        private IAssetQueryRepository assetQ;
+        
 
 
         public Asset()
         {
-            general = new SqlGeneralQueryRepository(connectionString);
-            question = new SqlQuestionQueryRepository(connectionString);
+
+            assetQ = new SqlAssetQueryRepository(connectionString);
             InitializeComponent();
 
 
@@ -30,37 +31,26 @@ namespace LibraryProject
             uxAddTypeDDL.Items.Add("Game");
         }
 
-        private void uxFetchCheckoutHistoryButton_Click(object sender, EventArgs e)
-        {
-            int userId = Convert.ToInt32(uxAssetUserIDTextBox.Text);
-            IReadOnlyList <LibarayData.Model.CheckOutHistory> list = question.FetchCheckOutHistory(userId);
-            foreach (LibarayData.Model.CheckOutHistory coh in list)
-            {
-                uxFetchCheckoutHistoryListBox.Items.Add(coh.ToString());
-            }
-        }
+     
 
         private void uxFetchSituationOfAssetButton_Click(object sender, EventArgs e)
         {
+            // uxFetchSituationOfAssetGridView
             int assetId = Convert.ToInt32(uxAssetAssetIDTextBox.Text);
-            IReadOnlyList<LibarayData.Model.SituationOfAsset> list = question.FetchSituationOfAsset(assetId);
-            foreach (LibarayData.Model.SituationOfAsset soa in list)
-            {
-                uxFetchSituationOfAssetListBox.Items.Add(soa.ToString());
-            }
+            var list = assetQ.FetchSituationOfAsset(assetId);
+            uxFetchSituationOfAssetGridView.DataSource = list;
+
         }
 
         private void uxGetPossibleAssetsButton_Click(object sender, EventArgs e)
         {
-            string assetName = uxAssetAssetNameTextBox.Text.ToString();
-            IReadOnlyList<LibarayData.Model.PossibleAssets> list = question.GetPossibleAssets(assetName);
-            foreach (LibarayData.Model.PossibleAssets pa in list)
-            {
-                uxGetPossibleAssetsListBox.Items.Add(pa.ToString());
-            }
+            // uxGetPossibleAssetsGridView
+            string assetName = uxAssetAssetNameTextBox.Text;
+            var list = assetQ.GetPossibleAssets(assetName);
+            uxGetPossibleAssetsGridView.DataSource = list;
         }
 
-    
+
 
         private void uxAddAssetButton_Click_1(object sender, EventArgs e)
         {
@@ -114,15 +104,15 @@ namespace LibraryProject
 
             //List<LibraryData.Model.Asset> assets = new List<LibraryData.Model.Asset>();
 
-            var creator = general.InsertCreator(firstname, lastname, company);
+            var creator = assetQ.InsertCreator(firstname, lastname, company);
             int creatorID = creator.CreatorID;
 
-            var asset = general.InsertAsset(assetName, assetType, creatorID, datetime, stock);
+            var asset = assetQ.InsertAsset(assetName, assetType, creatorID, datetime, stock);
             int assetID = asset.AssetID;
 
             foreach (int categoryID in categorylist)
             {
-                general.InsertAssetCategory(assetID, categoryID);
+                assetQ.InsertAssetCategory(assetID, categoryID);
             }
 
 
@@ -131,9 +121,39 @@ namespace LibraryProject
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void uxRetriveButton_Click(object sender, EventArgs e)
         {
+            
+            var list = assetQ.RetrieveAssets();
+            uxRetriveGridView.DataSource = list;
 
         }
+
+        private void uxUpdateButton_Click(object sender, EventArgs e)
+        {
+            int assetID = Convert.ToInt32(textBox1.Text);
+            int stock = Convert.ToInt32(textBox2.Text);
+            assetQ.UpdateAsset(assetID, stock);
+            var check = assetQ.FetchAsset(assetID);
+            if (check.Stock == stock) MessageBox.Show(assetID + " stock has been updated!", "Stock Updated");
+        }
+
+        private void uxFetchButton_Click(object sender, EventArgs e)
+        {
+            int assetId = Convert.ToInt32(uxFetchAssetIDTextBox.Text);
+            var assets = assetQ.FetchAsset(assetId);
+
+            uxFetchNameTextBox.Text = assets.Name;
+            uxFetchTypeTextBox.Text = assets.AssetTypeID.ToString();
+            uxFetchReleaseDateTextBox.Text = assets.ReleaseDate.ToString();
+            uxFetchCreatorIDTextBox.Text = assets.CreatorID.ToString();
+            uxFetchStockTextBox.Text = assets.Stock.ToString();
+        }
+    
+    
+    
     }
+
+     
+    
 }

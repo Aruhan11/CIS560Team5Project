@@ -34,7 +34,7 @@ namespace LibarayData.DataDelegates
 
             return new Asset(assetID,
                reader.GetString("Name"),
-               reader.GetInt32("AssetTypeID"),
+               reader.GetByte("AssetTypeID"),
                reader.GetInt32("CreatorID"),
                reader.GetDateTime("ReleaseDate"),
                reader.GetInt32("Stock"));

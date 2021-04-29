@@ -8,7 +8,7 @@ AS
 SELECT U.UserID
 FROM [Library].Librarian L
 INNER JOIN [Library].[User] U ON U.UserID = L.UserID
-WHERE U.LibrarianID = @LibrarianID;
+WHERE L.LibrarianID = @LibrarianID;
 GO
 
 

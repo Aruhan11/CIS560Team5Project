@@ -10,7 +10,7 @@ namespace LibraryData.DataDelegates
     internal class RetriveUsersDelegate: DataReaderDelegate<IReadOnlyList<User>>
     {
         public RetriveUsersDelegate()
-        : base("Library.RetrieveUsers")
+        : base("Library.RetriveUsers")
         {
         }
 

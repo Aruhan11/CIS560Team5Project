@@ -22,8 +22,8 @@ namespace LibarayData.DataDelegates
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("PhoneNumber", AssetID);
-            command.Parameters.AddWithValue("UserID", Stock);
+            command.Parameters.AddWithValue("AssetID", AssetID);
+            command.Parameters.AddWithValue("Stock", Stock);
         }
     }
 }

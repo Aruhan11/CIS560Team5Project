@@ -7,16 +7,14 @@ namespace LibraryData
 {
    public interface ICheckOutAssetQueryRepository
     {
-        CheckOutAsset InsertCheckOutAsset(int assetID, int userID, int LibrarianID);
-
-
+        CheckOutAsset CreateCheckOutAsset(int assetID, int userID, int librarianID);
 
         void UpdateCheckOutAsset(int checkoutassetID);
 
 
         CheckOutAsset FetchCheckOutAsset(int checkoutassetID);
 
-        // retrive
+        IReadOnlyList<CheckOutAsset> RetrieveCheckOutAssets();
 
         IReadOnlyList<CheckOutHistory> FetchCheckOutHistory(int userID);
 

@@ -2,8 +2,8 @@
 
 AS
 
-SELECT COA.CheckOutAssetID, COA.AssetID, COA.UserID, COA.CheckOutDate, COA.ReturnByDate, COA.IsReturned
-FROM [Library].CheckOutAsset COA
+SELECT COA.CheckOutID, COA.AssetID, COA.UserID, COA.LibrarianID, COA.CheckOutDate, COA.ReturnByDate, COA.IsReturned
+FROM [Library].CheckedOutAsset COA
 
 
 GO

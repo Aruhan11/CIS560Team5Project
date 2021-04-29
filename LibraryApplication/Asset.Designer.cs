@@ -67,11 +67,8 @@ namespace LibraryProject
             this.uxGetPossibleAssetsButton = new System.Windows.Forms.Button();
             this.uxAssetAssetNameLabel = new System.Windows.Forms.Label();
             this.uxAssetAssetNameTextBox = new System.Windows.Forms.TextBox();
-            this.uxFetchSituationOfAssetListBox = new System.Windows.Forms.ListBox();
-            this.uxGetPossibleAssetsListBox = new System.Windows.Forms.ListBox();
             this.label18 = new System.Windows.Forms.Label();
             this.uxAddStockTextBox = new System.Windows.Forms.TextBox();
-            this.uxRetriveListBox = new System.Windows.Forms.ListBox();
             this.uxRetriveButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -91,6 +88,12 @@ namespace LibraryProject
             this.label7 = new System.Windows.Forms.Label();
             this.uxFetchNameTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.uxFetchSituationOfAssetGridView = new System.Windows.Forms.DataGridView();
+            this.uxGetPossibleAssetsGridView = new System.Windows.Forms.DataGridView();
+            this.uxRetriveGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.uxFetchSituationOfAssetGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxGetPossibleAssetsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxRetriveGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // uxTypeLabel
@@ -496,26 +499,6 @@ namespace LibraryProject
             this.uxAssetAssetNameTextBox.Size = new System.Drawing.Size(733, 61);
             this.uxAssetAssetNameTextBox.TabIndex = 46;
             // 
-            // uxFetchSituationOfAssetListBox
-            // 
-            this.uxFetchSituationOfAssetListBox.FormattingEnabled = true;
-            this.uxFetchSituationOfAssetListBox.ItemHeight = 41;
-            this.uxFetchSituationOfAssetListBox.Location = new System.Drawing.Point(82, 1762);
-            this.uxFetchSituationOfAssetListBox.Margin = new System.Windows.Forms.Padding(5);
-            this.uxFetchSituationOfAssetListBox.Name = "uxFetchSituationOfAssetListBox";
-            this.uxFetchSituationOfAssetListBox.Size = new System.Drawing.Size(1247, 332);
-            this.uxFetchSituationOfAssetListBox.TabIndex = 80;
-            // 
-            // uxGetPossibleAssetsListBox
-            // 
-            this.uxGetPossibleAssetsListBox.FormattingEnabled = true;
-            this.uxGetPossibleAssetsListBox.ItemHeight = 41;
-            this.uxGetPossibleAssetsListBox.Location = new System.Drawing.Point(1378, 1762);
-            this.uxGetPossibleAssetsListBox.Margin = new System.Windows.Forms.Padding(5);
-            this.uxGetPossibleAssetsListBox.Name = "uxGetPossibleAssetsListBox";
-            this.uxGetPossibleAssetsListBox.Size = new System.Drawing.Size(1274, 332);
-            this.uxGetPossibleAssetsListBox.TabIndex = 81;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -536,16 +519,6 @@ namespace LibraryProject
             this.uxAddStockTextBox.Size = new System.Drawing.Size(730, 61);
             this.uxAddStockTextBox.TabIndex = 83;
             // 
-            // uxRetriveListBox
-            // 
-            this.uxRetriveListBox.FormattingEnabled = true;
-            this.uxRetriveListBox.ItemHeight = 41;
-            this.uxRetriveListBox.Location = new System.Drawing.Point(1344, 804);
-            this.uxRetriveListBox.Margin = new System.Windows.Forms.Padding(5);
-            this.uxRetriveListBox.Name = "uxRetriveListBox";
-            this.uxRetriveListBox.Size = new System.Drawing.Size(1274, 619);
-            this.uxRetriveListBox.TabIndex = 85;
-            // 
             // uxRetriveButton
             // 
             this.uxRetriveButton.Location = new System.Drawing.Point(1796, 696);
@@ -555,6 +528,7 @@ namespace LibraryProject
             this.uxRetriveButton.TabIndex = 84;
             this.uxRetriveButton.Text = "Retrive All Assets";
             this.uxRetriveButton.UseVisualStyleBackColor = true;
+            this.uxRetriveButton.Click += new System.EventHandler(this.uxRetriveButton_Click);
             // 
             // textBox1
             // 
@@ -605,6 +579,7 @@ namespace LibraryProject
             this.uxUpdateButton.TabIndex = 90;
             this.uxUpdateButton.Text = "Update Stock";
             this.uxUpdateButton.UseVisualStyleBackColor = true;
+            this.uxUpdateButton.Click += new System.EventHandler(this.uxUpdateButton_Click);
             // 
             // uxFetchReleaseDateTextBox
             // 
@@ -645,7 +620,6 @@ namespace LibraryProject
             this.label4.Size = new System.Drawing.Size(177, 54);
             this.label4.TabIndex = 91;
             this.label4.Text = "AssetID: ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // uxFetchTypeTextBox
             // 
@@ -696,6 +670,7 @@ namespace LibraryProject
             this.uxFetchButton.TabIndex = 99;
             this.uxFetchButton.Text = "Fetch Asset";
             this.uxFetchButton.UseVisualStyleBackColor = true;
+            this.uxFetchButton.Click += new System.EventHandler(this.uxFetchButton_Click);
             // 
             // uxFetchStockTextBox
             // 
@@ -737,11 +712,44 @@ namespace LibraryProject
             this.label8.TabIndex = 102;
             this.label8.Text = "AssetName: ";
             // 
+            // uxFetchSituationOfAssetGridView
+            // 
+            this.uxFetchSituationOfAssetGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxFetchSituationOfAssetGridView.Location = new System.Drawing.Point(92, 1762);
+            this.uxFetchSituationOfAssetGridView.Name = "uxFetchSituationOfAssetGridView";
+            this.uxFetchSituationOfAssetGridView.RowHeadersWidth = 102;
+            this.uxFetchSituationOfAssetGridView.RowTemplate.Height = 49;
+            this.uxFetchSituationOfAssetGridView.Size = new System.Drawing.Size(1182, 332);
+            this.uxFetchSituationOfAssetGridView.TabIndex = 104;
+            // 
+            // uxGetPossibleAssetsGridView
+            // 
+            this.uxGetPossibleAssetsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxGetPossibleAssetsGridView.Location = new System.Drawing.Point(1344, 1762);
+            this.uxGetPossibleAssetsGridView.Name = "uxGetPossibleAssetsGridView";
+            this.uxGetPossibleAssetsGridView.RowHeadersWidth = 102;
+            this.uxGetPossibleAssetsGridView.RowTemplate.Height = 49;
+            this.uxGetPossibleAssetsGridView.Size = new System.Drawing.Size(1271, 332);
+            this.uxGetPossibleAssetsGridView.TabIndex = 105;
+            // 
+            // uxRetriveGridView
+            // 
+            this.uxRetriveGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxRetriveGridView.Location = new System.Drawing.Point(1332, 836);
+            this.uxRetriveGridView.Name = "uxRetriveGridView";
+            this.uxRetriveGridView.RowHeadersWidth = 102;
+            this.uxRetriveGridView.RowTemplate.Height = 49;
+            this.uxRetriveGridView.Size = new System.Drawing.Size(1283, 698);
+            this.uxRetriveGridView.TabIndex = 106;
+            // 
             // Asset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2694, 2108);
+            this.Controls.Add(this.uxRetriveGridView);
+            this.Controls.Add(this.uxGetPossibleAssetsGridView);
+            this.Controls.Add(this.uxFetchSituationOfAssetGridView);
             this.Controls.Add(this.uxFetchNameTextBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.uxFetchStockTextBox);
@@ -760,12 +768,9 @@ namespace LibraryProject
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.uxRetriveListBox);
             this.Controls.Add(this.uxRetriveButton);
             this.Controls.Add(this.uxAddStockTextBox);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.uxGetPossibleAssetsListBox);
-            this.Controls.Add(this.uxFetchSituationOfAssetListBox);
             this.Controls.Add(this.uxGetPossibleAssetsButton);
             this.Controls.Add(this.uxAssetAssetNameLabel);
             this.Controls.Add(this.uxAssetAssetNameTextBox);
@@ -807,6 +812,9 @@ namespace LibraryProject
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Asset";
             this.Text = "Asset";
+            ((System.ComponentModel.ISupportInitialize)(this.uxFetchSituationOfAssetGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxGetPossibleAssetsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxRetriveGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -852,11 +860,8 @@ namespace LibraryProject
         private System.Windows.Forms.Button uxGetPossibleAssetsButton;
         private System.Windows.Forms.Label uxAssetAssetNameLabel;
         private System.Windows.Forms.TextBox uxAssetAssetNameTextBox;
-        private System.Windows.Forms.ListBox uxFetchSituationOfAssetListBox;
-        private System.Windows.Forms.ListBox uxGetPossibleAssetsListBox;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox uxAddStockTextBox;
-        private System.Windows.Forms.ListBox uxRetriveListBox;
         private System.Windows.Forms.Button uxRetriveButton;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
@@ -876,5 +881,8 @@ namespace LibraryProject
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox uxFetchNameTextBox;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView uxFetchSituationOfAssetGridView;
+        private System.Windows.Forms.DataGridView uxGetPossibleAssetsGridView;
+        private System.Windows.Forms.DataGridView uxRetriveGridView;
     }
 }

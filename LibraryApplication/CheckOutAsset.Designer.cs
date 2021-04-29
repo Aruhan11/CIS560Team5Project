@@ -56,12 +56,12 @@ namespace LibraryApplication
             this.uxFetchCheckOutAssetButton = new System.Windows.Forms.Button();
             this.uxRetriveAllCheckOutAssetsButton = new System.Windows.Forms.Button();
             this.uxGetHistoryOfUserButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.uxRetriveGridView = new System.Windows.Forms.DataGridView();
+            this.uxCheckOutHistoryGridView = new System.Windows.Forms.DataGridView();
             this.uxGetHistoryUserIDTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxRetriveGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxCheckOutHistoryGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -120,6 +120,7 @@ namespace LibraryApplication
             this.uxCreateCheckOutAssetButton.TabIndex = 6;
             this.uxCreateCheckOutAssetButton.Text = "Create Check Out Asset";
             this.uxCreateCheckOutAssetButton.UseVisualStyleBackColor = true;
+            this.uxCreateCheckOutAssetButton.Click += new System.EventHandler(this.uxCreateCheckOutAssetButton_Click);
             // 
             // uxUpdateButton
             // 
@@ -129,6 +130,7 @@ namespace LibraryApplication
             this.uxUpdateButton.TabIndex = 9;
             this.uxUpdateButton.Text = "Update Returened";
             this.uxUpdateButton.UseVisualStyleBackColor = true;
+            this.uxUpdateButton.Click += new System.EventHandler(this.uxUpdateButton_Click);
             // 
             // uxUpdateTextBox
             // 
@@ -257,7 +259,6 @@ namespace LibraryApplication
             this.label11.Size = new System.Drawing.Size(167, 41);
             this.label11.TabIndex = 22;
             this.label11.Text = "IsReturned:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // uxFetchCheckOutAssetButton
             // 
@@ -267,6 +268,7 @@ namespace LibraryApplication
             this.uxFetchCheckOutAssetButton.TabIndex = 24;
             this.uxFetchCheckOutAssetButton.Text = "Fetch Check Out Asset";
             this.uxFetchCheckOutAssetButton.UseVisualStyleBackColor = true;
+            this.uxFetchCheckOutAssetButton.Click += new System.EventHandler(this.uxFetchCheckOutAssetButton_Click);
             // 
             // uxRetriveAllCheckOutAssetsButton
             // 
@@ -276,6 +278,7 @@ namespace LibraryApplication
             this.uxRetriveAllCheckOutAssetsButton.TabIndex = 25;
             this.uxRetriveAllCheckOutAssetsButton.Text = "Retrive All Check Out Assets";
             this.uxRetriveAllCheckOutAssetsButton.UseVisualStyleBackColor = true;
+            this.uxRetriveAllCheckOutAssetsButton.Click += new System.EventHandler(this.uxRetriveAllCheckOutAssetsButton_Click);
             // 
             // uxGetHistoryOfUserButton
             // 
@@ -285,26 +288,27 @@ namespace LibraryApplication
             this.uxGetHistoryOfUserButton.TabIndex = 26;
             this.uxGetHistoryOfUserButton.Text = "Get Check Out History of User";
             this.uxGetHistoryOfUserButton.UseVisualStyleBackColor = true;
+            this.uxGetHistoryOfUserButton.Click += new System.EventHandler(this.uxGetHistoryOfUserButton_Click);
             // 
-            // dataGridView1
+            // uxRetriveGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 905);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 102;
-            this.dataGridView1.RowTemplate.Height = 49;
-            this.dataGridView1.Size = new System.Drawing.Size(947, 892);
-            this.dataGridView1.TabIndex = 27;
+            this.uxRetriveGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxRetriveGridView.Location = new System.Drawing.Point(40, 905);
+            this.uxRetriveGridView.Name = "uxRetriveGridView";
+            this.uxRetriveGridView.RowHeadersWidth = 102;
+            this.uxRetriveGridView.RowTemplate.Height = 49;
+            this.uxRetriveGridView.Size = new System.Drawing.Size(947, 892);
+            this.uxRetriveGridView.TabIndex = 27;
             // 
-            // dataGridView2
+            // uxCheckOutHistoryGridView
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(1014, 982);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 102;
-            this.dataGridView2.RowTemplate.Height = 49;
-            this.dataGridView2.Size = new System.Drawing.Size(992, 815);
-            this.dataGridView2.TabIndex = 28;
+            this.uxCheckOutHistoryGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxCheckOutHistoryGridView.Location = new System.Drawing.Point(1014, 982);
+            this.uxCheckOutHistoryGridView.Name = "uxCheckOutHistoryGridView";
+            this.uxCheckOutHistoryGridView.RowHeadersWidth = 102;
+            this.uxCheckOutHistoryGridView.RowTemplate.Height = 49;
+            this.uxCheckOutHistoryGridView.Size = new System.Drawing.Size(992, 815);
+            this.uxCheckOutHistoryGridView.TabIndex = 28;
             // 
             // uxGetHistoryUserIDTextBox
             // 
@@ -329,8 +333,8 @@ namespace LibraryApplication
             this.ClientSize = new System.Drawing.Size(2027, 1821);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.uxGetHistoryUserIDTextBox);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.uxCheckOutHistoryGridView);
+            this.Controls.Add(this.uxRetriveGridView);
             this.Controls.Add(this.uxGetHistoryOfUserButton);
             this.Controls.Add(this.uxRetriveAllCheckOutAssetsButton);
             this.Controls.Add(this.uxFetchCheckOutAssetButton);
@@ -360,8 +364,8 @@ namespace LibraryApplication
             this.Controls.Add(this.label1);
             this.Name = "CheckOutAsset";
             this.Text = "CheckOutAsset";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxRetriveGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxCheckOutHistoryGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,8 +400,8 @@ namespace LibraryApplication
         private System.Windows.Forms.Button uxFetchCheckOutAssetButton;
         private System.Windows.Forms.Button uxRetriveAllCheckOutAssetsButton;
         private System.Windows.Forms.Button uxGetHistoryOfUserButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView uxRetriveGridView;
+        private System.Windows.Forms.DataGridView uxCheckOutHistoryGridView;
         private System.Windows.Forms.TextBox uxGetHistoryUserIDTextBox;
         private System.Windows.Forms.Label label12;
     }

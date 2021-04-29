@@ -10,7 +10,7 @@ namespace LibraryData.DataDelegates
     internal class RetriveAssetsDelegate: DataReaderDelegate<IReadOnlyList<Asset>>
     {
         public RetriveAssetsDelegate()
-        : base("Library.RetrieveAssets")
+        : base("Library.RetriveAssets")
         {
         }
 
@@ -23,7 +23,7 @@ namespace LibraryData.DataDelegates
                 assets.Add(new Asset(
                    reader.GetInt32("AssetID"),
                    reader.GetString("Name"),
-                   reader.GetInt32("AssetTypeID"),
+                   reader.GetByte("AssetTypeID"),
                    reader.GetInt32("CreatorID"),
                    reader.GetDateTime("ReleaseDate"),
                    reader.GetInt32("Stock")));

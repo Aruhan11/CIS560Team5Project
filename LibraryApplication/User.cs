@@ -79,8 +79,7 @@ namespace LibraryProject
 
         private void uxRetriveButton_Click(object sender, EventArgs e)
         {
-            
-          
+  
             var list = userRepo.RetrieveUsers();
 
             uxRetriveUsersGridView.DataSource = list;

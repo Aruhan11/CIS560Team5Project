@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryApplication;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,6 +38,13 @@ namespace LibraryProject
         {
             Important i = new Important();
             i.Show();
+        }
+
+        private void uxMangeCheckOutAssetButton_Click(object sender, EventArgs e)
+        {
+
+            CheckOutAsset coa = new CheckOutAsset();
+            coa.Show();
         }
     }
 }

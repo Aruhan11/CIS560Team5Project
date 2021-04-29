@@ -42,7 +42,7 @@ namespace LibarayData.DataDelegates
                reader.GetString("Company"),
                reader.GetDateTimeOffset("CheckOutDate"),
                reader.GetDateTimeOffset("ReturnByDate"),
-               reader.GetByte("IsReturned")));
+               reader.GetInt32("IsReturned")));
             }
 
             return checkOutAssets;

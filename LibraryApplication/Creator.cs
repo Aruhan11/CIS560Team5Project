@@ -14,14 +14,14 @@ namespace LibraryProject
     {
 
         const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;";
-       
-        private IQuestionQueryRepository question;
+
+        private ICreatorQueryRepository creatorRepo;
 
 
         public Creator()
         {
-           
-            question = new SqlQuestionQueryRepository(connectionString);
+
+            creatorRepo = new SqlCreatorQueryRepository(connectionString);
             InitializeComponent();
             uxCreatorTypeDDL.Items.Add("Author");
             uxCreatorTypeDDL.Items.Add("Producer");
@@ -31,10 +31,48 @@ namespace LibraryProject
 
         }
 
+
+        private void uxUpdateButton_Click(object sender, EventArgs e)
+        {
+            int creataorID = Convert.ToInt32(uxUpdateCreatorIDTextBox.Text);
+
+            List<int> creatorTypeIDs = new List<int>();
+
+            if (uxAuthorCheckBox.Checked) { creatorTypeIDs.Add(1); }
+            if (uxProducerCheckBox.Checked) { creatorTypeIDs.Add(2); }
+            if (uxProducerCheckBox.Checked) { creatorTypeIDs.Add(3); }
+
+            foreach (int creatorTypeID in creatorTypeIDs)
+            {
+                creatorRepo.UpdateCreator(creataorID, creatorTypeID);
+            }
+
+           // fetch creatorcreatortype
+
+        }
+
+        private void uxFetchButton_Click(object sender, EventArgs e)
+        {
+
+            int creatorID = Convert.ToInt32(uxFetchCreatorIDTextBox.Text);
+            var fetchedCreator = creatorRepo.FetchCreator(creatorID);
+
+            uxFirstNameTextBox.Text = fetchedCreator.FirstName.ToString();
+            uxLastNameTextBox.Text = fetchedCreator.LastName.ToString();
+            uxCompanyTextBox.Text = fetchedCreator.CompanyName.ToString();
+        }
+
+        private void uxRetriveButton_Click(object sender, EventArgs e)
+        {
+            var list = creatorRepo.RetrieveCreators();
+
+            uxRetriveCreatorsGridView.DataSource = list;
+        }
+
         private void uxGetCreatorByTypeButton_Click(object sender, EventArgs e)
         {
             string selectedItem = uxCreatorTypeDDL.Items[uxCreatorTypeDDL.SelectedIndex].ToString();
-            var list = question.GetCreatorsByType(selectedItem);
+            var list = creatorRepo.GetCreatorsByType(selectedItem);
             uxGetCreatorByTypeGridView.DataSource = list;
            
         }
@@ -42,8 +80,10 @@ namespace LibraryProject
         private void uxFetchProductionsByCreatorButton_Click(object sender, EventArgs e)
         {
             int creatorID = Int32.Parse(uxCreatorCreatorIDTextBox.Text);
-            var list = question.FetchProductionsOfCreator(creatorID);
+            var list = creatorRepo.FetchProductionsOfCreator(creatorID);
             uxFetchProductionsByCreatorGridView.DataSource = list;
         }
+
+       
     }
 }

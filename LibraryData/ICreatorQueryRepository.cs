@@ -8,12 +8,12 @@ namespace LibraryData
     {
         
 
-        void UpdateCreator(string creatorID, int creatorTypeID);
+        void UpdateCreator(int creatorID, int creatorTypeID);
        
 
         Creator FetchCreator(int creatorID);
 
-        // retrive
+        IReadOnlyList<Creator> RetrieveCreators();
 
         IReadOnlyList<ProductionOfCreator> FetchProductionsOfCreator(int creatorID);
 
