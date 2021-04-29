@@ -2,7 +2,7 @@
 
 CREATE OR ALTER PROCEDURE [Library].UpdateUser
    @UserID INT,
-   @PhoneNumber NVARCHAR(10)
+   @PhoneNumber NVARCHAR(32)
 AS
 
 MERGE [Library].[User] T
@@ -22,8 +22,8 @@ WHEN MATCHED AND NOT EXISTS
       PhoneNumber = S.PhoneNumber,
       UpdatedOn = SYSDATETIMEOFFSET()
 WHEN NOT MATCHED THEN
-   INSERT(UserID,PhoneNumber)
-   VALUES(S.UserID, S.PhoneNumber);
+   INSERT(PhoneNumber)
+   VALUES(S.PhoneNumber);
 
 
 

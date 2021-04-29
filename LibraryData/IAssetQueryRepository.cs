@@ -19,7 +19,7 @@ namespace LibraryData
 
         Asset FetchAsset(int assetID);
 
-        IReadOnlyList<Asset> RetrieveAssets();
+        IReadOnlyList<Asset> RetriveAssets();
 
         IReadOnlyList<SituationOfAsset> FetchSituationOfAsset(int assetID);
 

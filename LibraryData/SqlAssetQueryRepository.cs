@@ -88,7 +88,7 @@ namespace LibraryData
             return executor.ExecuteReader(d);
         }
 
-        public IReadOnlyList<Asset> RetrieveAssets()
+        public IReadOnlyList<Asset> RetriveAssets()
         {
             return executor.ExecuteReader(new RetriveAssetsDelegate());
         }

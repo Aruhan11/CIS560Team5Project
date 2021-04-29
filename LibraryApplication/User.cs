@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Transactions;
 using LibraryData;
+using System.Text.RegularExpressions;
 
 namespace LibraryProject
 {
@@ -30,7 +31,7 @@ namespace LibraryProject
         private void uxCreateUserButton_Click(object sender, EventArgs e)
         {
             var user = userRepo.CreateUser(uxAddFirstNameTextBox.Text, uxAddLastNameTextBox.Text, uxAddPhoneTextBox.Text, default(DateTime), 0 );
-            if  (user != null) MessageBox.Show(user.FirstName + user.LastName + " have been added!", "User Added");
+            if  (user != null) MessageBox.Show(user.FirstName + " " + user.LastName + " has been added!", "User Added");
         }
 
     
@@ -41,7 +42,7 @@ namespace LibraryProject
 
             userRepo.DeleteUser(userid);
             var checkDel = userRepo.FetchUser(userid);
-            if(checkDel.IsDeleted == 1) MessageBox.Show(userid + " have been deleted", "User Added");
+            if(checkDel.IsDeleted == 1) MessageBox.Show(userid + " has been deleted", "User Added");
             textBox9.Clear();
         }
 
@@ -56,25 +57,43 @@ namespace LibraryProject
 
         private void uxGetButton_Click(object sender, EventArgs e)
         {
-            string phone = textBox8.Text;
-            var user = userRepo.GetUser(phone);
-            textBox7.Text = user.UserID.ToString();
-            textBox6.Text = user.FirstName.ToString();
-            textBox5.Text = user.LastName.ToString();
+            string phonenumber = Regex.Replace(textBox8.Text, "[^0-9]", "");
+            if (phonenumber.Length != 10)
+            {
+                MessageBox.Show("Invalid entry, please insert in the format (###) ###-####", "Error", MessageBoxButtons.OK);
+            }
+            else
+            {
+                var user = userRepo.GetUser(phonenumber);
+                textBox7.Text = user.UserID.ToString();
+                textBox6.Text = user.FirstName.ToString();
+                textBox5.Text = user.LastName.ToString();
+            }
         }
 
 
         private void uxUpdateUserButton_Click(object sender, EventArgs e)
         {
-            string phonenumber = uxUpdatePhonenumberTextBox.Text;
-            int userid = Convert.ToInt32(uxUpdateUserIDTextBox.Text);
+            string phonenumber = Regex.Replace(uxUpdatePhonenumberTextBox.Text, "[^0-9]", "");
+            if (phonenumber.Length != 10)
+            {
+                MessageBox.Show("Invalid entry, please insert in the format (###) ###-####", "Error", MessageBoxButtons.OK);
+            }
+            else
+            {
+                phonenumber = phonenumber.Insert(0, "(");
+                phonenumber = phonenumber.Insert(4, ")");
+                phonenumber = phonenumber.Insert(5, " ");
+                phonenumber = phonenumber.Insert(9, "-");
 
-            userRepo.UpdateUser(userid, phonenumber);
-            var check = userRepo.FetchUser(userid);
-            if (String.Compare(check.PhoneNumber,phonenumber) == 0) MessageBox.Show(phonenumber + " have been updated", "Update User Phone Number");
-            textBox9.Clear();
+                int userid = Convert.ToInt32(uxUpdateUserIDTextBox.Text);
 
+                userRepo.UpdateUser(userid, phonenumber);
+                var check = userRepo.FetchUser(userid);
+                if (String.Compare(check.PhoneNumber, phonenumber) == 0) MessageBox.Show(check.FirstName + "'s phone number has been updated", "Update User Phone Number");
+                textBox9.Clear();
 
+            }
         }
 
         private void uxRetriveButton_Click(object sender, EventArgs e)

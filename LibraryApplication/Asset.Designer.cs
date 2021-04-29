@@ -124,7 +124,6 @@ namespace LibraryProject
             this.uxAddAssetButton.TabIndex = 9;
             this.uxAddAssetButton.Text = "Insert Asset";
             this.uxAddAssetButton.UseVisualStyleBackColor = true;
-            this.uxAddAssetButton.Click += new System.EventHandler(this.uxAddAssetButton_Click_1);
             // 
             // uxAddNameLabel
             // 

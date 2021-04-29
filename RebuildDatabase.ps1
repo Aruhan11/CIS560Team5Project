@@ -66,6 +66,8 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryDat
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Procedures\Library.InsertAssetCategory.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Procedures\Library.RankingAssetByAssetType.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Procedures\Library.RankingCreatorByAssetType.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Procedures\Library.RetriveAssets.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Procedures\Library.RetriveUsers.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Procedures\Library.RankingCreatorByUser.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Procedures\Library.UpdateUser.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "LibraryData\Sql\Procedures\Library.TopTenAssetsStillAvaliable.sql"

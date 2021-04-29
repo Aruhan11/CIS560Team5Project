@@ -29,16 +29,17 @@ namespace LibraryProject
             uxAddTypeDDL.Items.Add("Movie");
             uxAddTypeDDL.Items.Add("Game");
         }
-
+        //NEEDS TO BE MOVED to checkoutasset
         private void uxFetchCheckoutHistoryButton_Click(object sender, EventArgs e)
         {
-            int userId = Convert.ToInt32(uxAssetUserIDTextBox.Text);
+            /*int userId = Convert.ToInt32(uxAssetUserIDTextBox.Text);
             IReadOnlyList <LibarayData.Model.CheckOutHistory> list = question.FetchCheckOutHistory(userId);
             foreach (LibarayData.Model.CheckOutHistory coh in list)
             {
                 uxFetchCheckoutHistoryListBox.Items.Add(coh.ToString());
-            }
+            } */
         }
+        // here
 
         private void uxFetchSituationOfAssetButton_Click(object sender, EventArgs e)
         {
@@ -60,27 +61,27 @@ namespace LibraryProject
             }
         }
 
-    
 
-        private void uxAddAssetButton_Click_1(object sender, EventArgs e)
+
+        private void uxAddAssetButton_Click(object sender, EventArgs e)
         {
-            string assetName = uxAddNameTextBox.Text;
+            /*string assetName = uxAddNameTextBox.Text;
             int assetType = 0;
 
 
-            if (uxAddTypeDDL.Text == "Book")
+            if (uxAssetTypeComboBox.Text == "Book")
             {
                 assetType = 1;
             }
-            else if (uxAddTypeDDL.Text == "Audio Book")
+            else if (uxAssetTypeComboBox.Text == "Audio Book")
             {
                 assetType = 2;
             }
-            else if (uxAddTypeDDL.Text == "Movie")
+            else if (uxAssetTypeComboBox.Text == "Movie")
             {
                 assetType = 3;
             }
-            else if (uxAddTypeDDL.Text == "Game")
+            else if (uxAssetTypeComboBox.Text == "Game")
             {
                 assetType = 4;
             }
@@ -90,7 +91,7 @@ namespace LibraryProject
             string firstname = uxAddFNameTextBox.Text;
             string lastname = uxAddLNameTextBox.Text;
             string company = uxAddCompanyTextBox.Text;
-            int stock = Convert.ToInt32(uxAddStockTextBox.Text);
+            int stock = Convert.ToInt32(uxAddStock.Text);
 
             List<int> categorylist = new List<int>();
 
@@ -122,18 +123,31 @@ namespace LibraryProject
 
             foreach (int categoryID in categorylist)
             {
-                general.InsertAssetCategory(assetID, categoryID);
+                var assetcategory = general.InsertAssetCategory(assetID, categoryID);
             }
 
 
 
             if (creator != null & asset != null) MessageBox.Show(asset.Name + " have been added!", "Asset Added");
 
+            */
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
 
         }
+
+
+        /*
+         * ADD THIS TO RetriveAllAssets
+         *  var list = assetQ.RetriveAssets();
+            dataGridView1.DataSource = list;
+         * 
+         */
+
+
+
+
     }
 }
