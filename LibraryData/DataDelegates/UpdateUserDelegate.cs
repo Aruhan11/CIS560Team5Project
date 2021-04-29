@@ -6,13 +6,13 @@ using System;
 
 namespace LibarayData.DataDelegates
 {
-    internal class SavePhoneNumberDelegate : DataDelegate
+    internal class UpdateUserDelegate : DataDelegate
     {
         private readonly string phonenumber;
         private readonly int userID;
 
-        public SavePhoneNumberDelegate(string phonenumber, int userID)
-           : base("Library.SavePhoneNumber")
+        public UpdateUserDelegate(int userID, string phonenumber)
+           : base("Library.UpdateUser")
         {
             this.phonenumber = phonenumber;
             this.userID  = userID;

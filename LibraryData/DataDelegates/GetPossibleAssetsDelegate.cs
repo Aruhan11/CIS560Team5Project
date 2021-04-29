@@ -1,7 +1,5 @@
 ﻿using DataAccess;
 using LibarayData.Model;
-using DataAccess;
-using LibarayData.Model;
 using System.Data;
 using System.Data.SqlClient;
 using System;

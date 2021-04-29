@@ -9,8 +9,12 @@ namespace LibraryData
 
         void DeleteUser(int userID);
 
-        Asset InsertAssetDelegate(string assetname, int assettypeID, string firstname, string lastname, string companyname, DateTime releasedate, int categoryID);
+        Asset InsertAsset(string assetname, int assettypeID, int creatorID, DateTime releasedate, int stock);
 
-        void SavePhoneNumber(string phonenumber, int userID);
+        Creator InsertCreator(string firstname, string lastname, string company);
+
+        AssetCategory InsertAssetCategory(int assetID, int categoryID);
+
+      
     }
 }

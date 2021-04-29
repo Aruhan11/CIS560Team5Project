@@ -1,6 +1,6 @@
 
 
-CREATE OR ALTER PROCEDURE [Library].SavePhoneNumber
+CREATE OR ALTER PROCEDURE [Library].UpdateUser
    @UserID INT,
    @PhoneNumber NVARCHAR(10)
 AS

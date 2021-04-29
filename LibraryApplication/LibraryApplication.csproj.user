@@ -4,6 +4,9 @@
     <Compile Update="Asset.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CheckOutAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Creator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11,6 +14,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Important.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Librarian.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="User.cs">
