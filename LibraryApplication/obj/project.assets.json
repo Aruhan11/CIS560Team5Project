@@ -492,23 +492,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\86975\\.nuget\\packages\\": {},
+    "C:\\Users\\amb10\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\Spring21\\CIS560\\NoErrorRepo\\LibraryApplication\\LibraryApplication.csproj",
+      "projectUniqueName": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project0429\\LibraryApplication\\LibraryApplication.csproj",
       "projectName": "LibraryApplication",
-      "projectPath": "D:\\Study\\Spring21\\CIS560\\NoErrorRepo\\LibraryApplication\\LibraryApplication.csproj",
-      "packagesPath": "C:\\Users\\86975\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\Spring21\\CIS560\\NoErrorRepo\\LibraryApplication\\obj\\",
+      "projectPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project0429\\LibraryApplication\\LibraryApplication.csproj",
+      "packagesPath": "C:\\Users\\amb10\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project0429\\LibraryApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\86975\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\amb10\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -523,11 +523,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Study\\Spring21\\CIS560\\NoErrorRepo\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "D:\\Study\\Spring21\\CIS560\\NoErrorRepo\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project0429\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project0429\\DataAccess\\DataAccess.csproj"
             },
-            "D:\\Study\\Spring21\\CIS560\\NoErrorRepo\\LibraryData\\LibraryData.csproj": {
-              "projectPath": "D:\\Study\\Spring21\\CIS560\\NoErrorRepo\\LibraryData\\LibraryData.csproj"
+            "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project0429\\LibraryData\\LibraryData.csproj": {
+              "projectPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project0429\\LibraryData\\LibraryData.csproj"
             }
           }
         }
@@ -559,7 +559,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

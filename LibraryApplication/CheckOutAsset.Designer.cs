@@ -67,56 +67,63 @@ namespace LibraryApplication
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(161, 67);
+            this.label1.Location = new System.Drawing.Point(51, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 41);
+            this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "AssetID: ";
             // 
             // uxCreateAssetIDTextBox
             // 
-            this.uxCreateAssetIDTextBox.Location = new System.Drawing.Point(314, 64);
+            this.uxCreateAssetIDTextBox.Location = new System.Drawing.Point(118, 22);
+            this.uxCreateAssetIDTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxCreateAssetIDTextBox.Name = "uxCreateAssetIDTextBox";
-            this.uxCreateAssetIDTextBox.Size = new System.Drawing.Size(461, 47);
+            this.uxCreateAssetIDTextBox.Size = new System.Drawing.Size(192, 23);
             this.uxCreateAssetIDTextBox.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(161, 153);
+            this.label2.Location = new System.Drawing.Point(56, 56);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 41);
+            this.label2.Size = new System.Drawing.Size(47, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "UserID: ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(133, 239);
+            this.label3.Location = new System.Drawing.Point(33, 90);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 41);
+            this.label3.Size = new System.Drawing.Size(70, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "LibrarianID: ";
             // 
             // uxCreateUserIDTextBox
             // 
-            this.uxCreateUserIDTextBox.Location = new System.Drawing.Point(314, 153);
+            this.uxCreateUserIDTextBox.Location = new System.Drawing.Point(118, 56);
+            this.uxCreateUserIDTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxCreateUserIDTextBox.Name = "uxCreateUserIDTextBox";
-            this.uxCreateUserIDTextBox.Size = new System.Drawing.Size(461, 47);
+            this.uxCreateUserIDTextBox.Size = new System.Drawing.Size(192, 23);
             this.uxCreateUserIDTextBox.TabIndex = 4;
             // 
             // uxCreateLibrarianIDTextBox
             // 
-            this.uxCreateLibrarianIDTextBox.Location = new System.Drawing.Point(314, 239);
+            this.uxCreateLibrarianIDTextBox.Location = new System.Drawing.Point(118, 87);
+            this.uxCreateLibrarianIDTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxCreateLibrarianIDTextBox.Name = "uxCreateLibrarianIDTextBox";
-            this.uxCreateLibrarianIDTextBox.Size = new System.Drawing.Size(461, 47);
+            this.uxCreateLibrarianIDTextBox.Size = new System.Drawing.Size(192, 23);
             this.uxCreateLibrarianIDTextBox.TabIndex = 5;
             // 
             // uxCreateCheckOutAssetButton
             // 
-            this.uxCreateCheckOutAssetButton.Location = new System.Drawing.Point(287, 341);
+            this.uxCreateCheckOutAssetButton.Location = new System.Drawing.Point(129, 124);
+            this.uxCreateCheckOutAssetButton.Margin = new System.Windows.Forms.Padding(1);
             this.uxCreateCheckOutAssetButton.Name = "uxCreateCheckOutAssetButton";
-            this.uxCreateCheckOutAssetButton.Size = new System.Drawing.Size(399, 58);
+            this.uxCreateCheckOutAssetButton.Size = new System.Drawing.Size(164, 35);
             this.uxCreateCheckOutAssetButton.TabIndex = 6;
             this.uxCreateCheckOutAssetButton.Text = "Create Check Out Asset";
             this.uxCreateCheckOutAssetButton.UseVisualStyleBackColor = true;
@@ -124,9 +131,10 @@ namespace LibraryApplication
             // 
             // uxUpdateButton
             // 
-            this.uxUpdateButton.Location = new System.Drawing.Point(314, 641);
+            this.uxUpdateButton.Location = new System.Drawing.Point(129, 222);
+            this.uxUpdateButton.Margin = new System.Windows.Forms.Padding(1);
             this.uxUpdateButton.Name = "uxUpdateButton";
-            this.uxUpdateButton.Size = new System.Drawing.Size(315, 58);
+            this.uxUpdateButton.Size = new System.Drawing.Size(164, 34);
             this.uxUpdateButton.TabIndex = 9;
             this.uxUpdateButton.Text = "Update Returened";
             this.uxUpdateButton.UseVisualStyleBackColor = true;
@@ -134,137 +142,154 @@ namespace LibraryApplication
             // 
             // uxUpdateTextBox
             // 
-            this.uxUpdateTextBox.Location = new System.Drawing.Point(302, 539);
+            this.uxUpdateTextBox.Location = new System.Drawing.Point(118, 197);
+            this.uxUpdateTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxUpdateTextBox.Name = "uxUpdateTextBox";
-            this.uxUpdateTextBox.Size = new System.Drawing.Size(461, 47);
+            this.uxUpdateTextBox.Size = new System.Drawing.Size(192, 23);
             this.uxUpdateTextBox.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 539);
+            this.label4.Location = new System.Drawing.Point(16, 197);
+            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(264, 41);
+            this.label4.Size = new System.Drawing.Size(105, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "CheckOutAssetID: ";
             // 
             // uxFetchUserIDTextBox
             // 
-            this.uxFetchUserIDTextBox.Location = new System.Drawing.Point(1309, 288);
+            this.uxFetchUserIDTextBox.Location = new System.Drawing.Point(539, 105);
+            this.uxFetchUserIDTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxFetchUserIDTextBox.Name = "uxFetchUserIDTextBox";
-            this.uxFetchUserIDTextBox.Size = new System.Drawing.Size(461, 47);
+            this.uxFetchUserIDTextBox.Size = new System.Drawing.Size(192, 23);
             this.uxFetchUserIDTextBox.TabIndex = 15;
             // 
             // uxFetchAssetIDTextBox
             // 
-            this.uxFetchAssetIDTextBox.Location = new System.Drawing.Point(1309, 202);
+            this.uxFetchAssetIDTextBox.Location = new System.Drawing.Point(539, 74);
+            this.uxFetchAssetIDTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxFetchAssetIDTextBox.Name = "uxFetchAssetIDTextBox";
-            this.uxFetchAssetIDTextBox.Size = new System.Drawing.Size(461, 47);
+            this.uxFetchAssetIDTextBox.Size = new System.Drawing.Size(192, 23);
             this.uxFetchAssetIDTextBox.TabIndex = 14;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1176, 291);
+            this.label5.Location = new System.Drawing.Point(484, 106);
+            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 41);
+            this.label5.Size = new System.Drawing.Size(41, 15);
             this.label5.TabIndex = 13;
             this.label5.Text = "UserID";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1165, 202);
+            this.label6.Location = new System.Drawing.Point(480, 74);
+            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 41);
+            this.label6.Size = new System.Drawing.Size(46, 15);
             this.label6.TabIndex = 12;
             this.label6.Text = "AssetID";
             // 
             // uxFetchCheckOutAssetIDTextBox
             // 
-            this.uxFetchCheckOutAssetIDTextBox.Location = new System.Drawing.Point(1309, 52);
+            this.uxFetchCheckOutAssetIDTextBox.Location = new System.Drawing.Point(539, 18);
+            this.uxFetchCheckOutAssetIDTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxFetchCheckOutAssetIDTextBox.Name = "uxFetchCheckOutAssetIDTextBox";
-            this.uxFetchCheckOutAssetIDTextBox.Size = new System.Drawing.Size(461, 47);
+            this.uxFetchCheckOutAssetIDTextBox.Size = new System.Drawing.Size(192, 23);
             this.uxFetchCheckOutAssetIDTextBox.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1038, 58);
+            this.label7.Location = new System.Drawing.Point(427, 21);
+            this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(256, 41);
+            this.label7.Size = new System.Drawing.Size(102, 15);
             this.label7.TabIndex = 10;
             this.label7.Text = "CheckOutAssetID:";
             // 
             // uxFetchReturnDateTextBox
             // 
-            this.uxFetchReturnDateTextBox.Location = new System.Drawing.Point(1309, 563);
+            this.uxFetchReturnDateTextBox.Location = new System.Drawing.Point(539, 206);
+            this.uxFetchReturnDateTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxFetchReturnDateTextBox.Name = "uxFetchReturnDateTextBox";
-            this.uxFetchReturnDateTextBox.Size = new System.Drawing.Size(461, 47);
+            this.uxFetchReturnDateTextBox.Size = new System.Drawing.Size(192, 23);
             this.uxFetchReturnDateTextBox.TabIndex = 21;
             // 
             // uxFetchCheckDateTextBox
             // 
-            this.uxFetchCheckDateTextBox.Location = new System.Drawing.Point(1309, 477);
+            this.uxFetchCheckDateTextBox.Location = new System.Drawing.Point(539, 175);
+            this.uxFetchCheckDateTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxFetchCheckDateTextBox.Name = "uxFetchCheckDateTextBox";
-            this.uxFetchCheckDateTextBox.Size = new System.Drawing.Size(461, 47);
+            this.uxFetchCheckDateTextBox.Size = new System.Drawing.Size(192, 23);
             this.uxFetchCheckDateTextBox.TabIndex = 20;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1088, 563);
+            this.label8.Location = new System.Drawing.Point(448, 206);
+            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(206, 41);
+            this.label8.Size = new System.Drawing.Size(82, 15);
             this.label8.TabIndex = 19;
             this.label8.Text = "ReturnByDate:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1092, 480);
+            this.label9.Location = new System.Drawing.Point(450, 176);
+            this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(218, 41);
+            this.label9.Size = new System.Drawing.Size(87, 15);
             this.label9.TabIndex = 18;
             this.label9.Text = "CheckOutDate:";
             // 
             // uxFetchLibrarianIDTextBox
             // 
-            this.uxFetchLibrarianIDTextBox.Location = new System.Drawing.Point(1309, 388);
+            this.uxFetchLibrarianIDTextBox.Location = new System.Drawing.Point(539, 142);
+            this.uxFetchLibrarianIDTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxFetchLibrarianIDTextBox.Name = "uxFetchLibrarianIDTextBox";
-            this.uxFetchLibrarianIDTextBox.Size = new System.Drawing.Size(461, 47);
+            this.uxFetchLibrarianIDTextBox.Size = new System.Drawing.Size(192, 23);
             this.uxFetchLibrarianIDTextBox.TabIndex = 17;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1136, 394);
+            this.label10.Location = new System.Drawing.Point(468, 144);
+            this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(167, 41);
+            this.label10.Size = new System.Drawing.Size(67, 15);
             this.label10.TabIndex = 16;
             this.label10.Text = "LibrarianID:";
             // 
             // uxFetchIsReturnTextBox
             // 
-            this.uxFetchIsReturnTextBox.Location = new System.Drawing.Point(1309, 647);
+            this.uxFetchIsReturnTextBox.Location = new System.Drawing.Point(539, 237);
+            this.uxFetchIsReturnTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxFetchIsReturnTextBox.Name = "uxFetchIsReturnTextBox";
-            this.uxFetchIsReturnTextBox.Size = new System.Drawing.Size(461, 47);
+            this.uxFetchIsReturnTextBox.Size = new System.Drawing.Size(192, 23);
             this.uxFetchIsReturnTextBox.TabIndex = 23;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1116, 658);
+            this.label11.Location = new System.Drawing.Point(460, 241);
+            this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(167, 41);
+            this.label11.Size = new System.Drawing.Size(66, 15);
             this.label11.TabIndex = 22;
             this.label11.Text = "IsReturned:";
             // 
             // uxFetchCheckOutAssetButton
             // 
-            this.uxFetchCheckOutAssetButton.Location = new System.Drawing.Point(1427, 127);
+            this.uxFetchCheckOutAssetButton.Location = new System.Drawing.Point(595, 50);
+            this.uxFetchCheckOutAssetButton.Margin = new System.Windows.Forms.Padding(1);
             this.uxFetchCheckOutAssetButton.Name = "uxFetchCheckOutAssetButton";
-            this.uxFetchCheckOutAssetButton.Size = new System.Drawing.Size(188, 58);
+            this.uxFetchCheckOutAssetButton.Size = new System.Drawing.Size(77, 21);
             this.uxFetchCheckOutAssetButton.TabIndex = 24;
             this.uxFetchCheckOutAssetButton.Text = "Fetch Check Out Asset";
             this.uxFetchCheckOutAssetButton.UseVisualStyleBackColor = true;
@@ -272,9 +297,10 @@ namespace LibraryApplication
             // 
             // uxRetriveAllCheckOutAssetsButton
             // 
-            this.uxRetriveAllCheckOutAssetsButton.Location = new System.Drawing.Point(253, 824);
+            this.uxRetriveAllCheckOutAssetsButton.Location = new System.Drawing.Point(118, 323);
+            this.uxRetriveAllCheckOutAssetsButton.Margin = new System.Windows.Forms.Padding(1);
             this.uxRetriveAllCheckOutAssetsButton.Name = "uxRetriveAllCheckOutAssetsButton";
-            this.uxRetriveAllCheckOutAssetsButton.Size = new System.Drawing.Size(476, 58);
+            this.uxRetriveAllCheckOutAssetsButton.Size = new System.Drawing.Size(192, 29);
             this.uxRetriveAllCheckOutAssetsButton.TabIndex = 25;
             this.uxRetriveAllCheckOutAssetsButton.Text = "Retrive All Check Out Assets";
             this.uxRetriveAllCheckOutAssetsButton.UseVisualStyleBackColor = true;
@@ -282,9 +308,10 @@ namespace LibraryApplication
             // 
             // uxGetHistoryOfUserButton
             // 
-            this.uxGetHistoryOfUserButton.Location = new System.Drawing.Point(1322, 905);
+            this.uxGetHistoryOfUserButton.Location = new System.Drawing.Point(539, 331);
+            this.uxGetHistoryOfUserButton.Margin = new System.Windows.Forms.Padding(1);
             this.uxGetHistoryOfUserButton.Name = "uxGetHistoryOfUserButton";
-            this.uxGetHistoryOfUserButton.Size = new System.Drawing.Size(461, 58);
+            this.uxGetHistoryOfUserButton.Size = new System.Drawing.Size(190, 21);
             this.uxGetHistoryOfUserButton.TabIndex = 26;
             this.uxGetHistoryOfUserButton.Text = "Get Check Out History of User";
             this.uxGetHistoryOfUserButton.UseVisualStyleBackColor = true;
@@ -293,44 +320,48 @@ namespace LibraryApplication
             // uxRetriveGridView
             // 
             this.uxRetriveGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uxRetriveGridView.Location = new System.Drawing.Point(40, 905);
+            this.uxRetriveGridView.Location = new System.Drawing.Point(16, 359);
+            this.uxRetriveGridView.Margin = new System.Windows.Forms.Padding(1);
             this.uxRetriveGridView.Name = "uxRetriveGridView";
             this.uxRetriveGridView.RowHeadersWidth = 102;
             this.uxRetriveGridView.RowTemplate.Height = 49;
-            this.uxRetriveGridView.Size = new System.Drawing.Size(947, 892);
+            this.uxRetriveGridView.Size = new System.Drawing.Size(387, 298);
             this.uxRetriveGridView.TabIndex = 27;
             // 
             // uxCheckOutHistoryGridView
             // 
             this.uxCheckOutHistoryGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uxCheckOutHistoryGridView.Location = new System.Drawing.Point(1014, 982);
+            this.uxCheckOutHistoryGridView.Location = new System.Drawing.Point(417, 359);
+            this.uxCheckOutHistoryGridView.Margin = new System.Windows.Forms.Padding(1);
             this.uxCheckOutHistoryGridView.Name = "uxCheckOutHistoryGridView";
             this.uxCheckOutHistoryGridView.RowHeadersWidth = 102;
             this.uxCheckOutHistoryGridView.RowTemplate.Height = 49;
-            this.uxCheckOutHistoryGridView.Size = new System.Drawing.Size(992, 815);
+            this.uxCheckOutHistoryGridView.Size = new System.Drawing.Size(408, 298);
             this.uxCheckOutHistoryGridView.TabIndex = 28;
             // 
             // uxGetHistoryUserIDTextBox
             // 
-            this.uxGetHistoryUserIDTextBox.Location = new System.Drawing.Point(1322, 824);
+            this.uxGetHistoryUserIDTextBox.Location = new System.Drawing.Point(539, 300);
+            this.uxGetHistoryUserIDTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxGetHistoryUserIDTextBox.Name = "uxGetHistoryUserIDTextBox";
-            this.uxGetHistoryUserIDTextBox.Size = new System.Drawing.Size(461, 47);
+            this.uxGetHistoryUserIDTextBox.Size = new System.Drawing.Size(192, 23);
             this.uxGetHistoryUserIDTextBox.TabIndex = 29;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(1152, 827);
+            this.label12.Location = new System.Drawing.Point(474, 303);
+            this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(122, 41);
+            this.label12.Size = new System.Drawing.Size(47, 15);
             this.label12.TabIndex = 30;
             this.label12.Text = "UserID: ";
             // 
             // CheckOutAsset
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2027, 1821);
+            this.ClientSize = new System.Drawing.Size(835, 793);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.uxGetHistoryUserIDTextBox);
             this.Controls.Add(this.uxCheckOutHistoryGridView);
@@ -362,6 +393,7 @@ namespace LibraryApplication
             this.Controls.Add(this.label2);
             this.Controls.Add(this.uxCreateAssetIDTextBox);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "CheckOutAsset";
             this.Text = "CheckOutAsset";
             ((System.ComponentModel.ISupportInitialize)(this.uxRetriveGridView)).EndInit();

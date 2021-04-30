@@ -46,5 +46,11 @@ namespace LibraryProject
             CheckOutAsset coa = new CheckOutAsset();
             coa.Show();
         }
+
+        private void uxManageLibrarianButton_Click(object sender, EventArgs e)
+        {
+            Librarian lib = new Librarian();
+            lib.Show();
+        }
     }
 }

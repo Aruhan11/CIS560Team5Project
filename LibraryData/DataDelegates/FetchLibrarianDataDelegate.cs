@@ -13,7 +13,7 @@ namespace LibarayData.DataDelegates
         private readonly int librarianID;
 
         public FetchLibrarianDataDelegate(int librarianID)
-           : base("Library.FetchLibrarianData")
+           : base("Library.FetchLibrarian")
         {
             this.librarianID = librarianID;
         }

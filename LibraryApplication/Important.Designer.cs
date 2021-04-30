@@ -58,7 +58,7 @@ namespace LibraryProject
             // uxRankAssetByTypeButton
             // 
             this.uxRankAssetByTypeButton.Location = new System.Drawing.Point(1045, 14);
-            this.uxRankAssetByTypeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxRankAssetByTypeButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxRankAssetByTypeButton.Name = "uxRankAssetByTypeButton";
             this.uxRankAssetByTypeButton.Size = new System.Drawing.Size(178, 51);
             this.uxRankAssetByTypeButton.TabIndex = 90;
@@ -68,9 +68,10 @@ namespace LibraryProject
             // 
             // uxRankAssetByTypeGridView
             // 
+            this.uxRankAssetByTypeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.uxRankAssetByTypeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uxRankAssetByTypeGridView.Location = new System.Drawing.Point(793, 89);
-            this.uxRankAssetByTypeGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxRankAssetByTypeGridView.Margin = new System.Windows.Forms.Padding(2);
             this.uxRankAssetByTypeGridView.Name = "uxRankAssetByTypeGridView";
             this.uxRankAssetByTypeGridView.RowHeadersWidth = 62;
             this.uxRankAssetByTypeGridView.RowTemplate.Height = 33;
@@ -80,7 +81,7 @@ namespace LibraryProject
             // uxTopTenButtons
             // 
             this.uxTopTenButtons.Location = new System.Drawing.Point(278, 14);
-            this.uxTopTenButtons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxTopTenButtons.Margin = new System.Windows.Forms.Padding(2);
             this.uxTopTenButtons.Name = "uxTopTenButtons";
             this.uxTopTenButtons.Size = new System.Drawing.Size(178, 51);
             this.uxTopTenButtons.TabIndex = 94;
@@ -90,9 +91,10 @@ namespace LibraryProject
             // 
             // uxTopTenGridView
             // 
+            this.uxTopTenGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.uxTopTenGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uxTopTenGridView.Location = new System.Drawing.Point(26, 89);
-            this.uxTopTenGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxTopTenGridView.Margin = new System.Windows.Forms.Padding(2);
             this.uxTopTenGridView.Name = "uxTopTenGridView";
             this.uxTopTenGridView.RowHeadersWidth = 62;
             this.uxTopTenGridView.RowTemplate.Height = 33;
@@ -102,7 +104,7 @@ namespace LibraryProject
             // uxRankCreatorByUserButton
             // 
             this.uxRankCreatorByUserButton.Location = new System.Drawing.Point(286, 473);
-            this.uxRankCreatorByUserButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxRankCreatorByUserButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxRankCreatorByUserButton.Name = "uxRankCreatorByUserButton";
             this.uxRankCreatorByUserButton.Size = new System.Drawing.Size(178, 51);
             this.uxRankCreatorByUserButton.TabIndex = 96;
@@ -112,9 +114,10 @@ namespace LibraryProject
             // 
             // uxRankCreatorByUserGridView
             // 
+            this.uxRankCreatorByUserGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.uxRankCreatorByUserGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uxRankCreatorByUserGridView.Location = new System.Drawing.Point(34, 548);
-            this.uxRankCreatorByUserGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxRankCreatorByUserGridView.Margin = new System.Windows.Forms.Padding(2);
             this.uxRankCreatorByUserGridView.Name = "uxRankCreatorByUserGridView";
             this.uxRankCreatorByUserGridView.RowHeadersWidth = 62;
             this.uxRankCreatorByUserGridView.RowTemplate.Height = 33;
@@ -124,7 +127,7 @@ namespace LibraryProject
             // uxRankCreatorByTypeButton
             // 
             this.uxRankCreatorByTypeButton.Location = new System.Drawing.Point(1045, 473);
-            this.uxRankCreatorByTypeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxRankCreatorByTypeButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxRankCreatorByTypeButton.Name = "uxRankCreatorByTypeButton";
             this.uxRankCreatorByTypeButton.Size = new System.Drawing.Size(178, 51);
             this.uxRankCreatorByTypeButton.TabIndex = 98;
@@ -134,9 +137,10 @@ namespace LibraryProject
             // 
             // uxRankCreatorByAssetGridView
             // 
+            this.uxRankCreatorByAssetGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.uxRankCreatorByAssetGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uxRankCreatorByAssetGridView.Location = new System.Drawing.Point(793, 548);
-            this.uxRankCreatorByAssetGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxRankCreatorByAssetGridView.Margin = new System.Windows.Forms.Padding(2);
             this.uxRankCreatorByAssetGridView.Name = "uxRankCreatorByAssetGridView";
             this.uxRankCreatorByAssetGridView.RowHeadersWidth = 62;
             this.uxRankCreatorByAssetGridView.RowTemplate.Height = 33;
@@ -157,7 +161,7 @@ namespace LibraryProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1514, 853);
+            this.ClientSize = new System.Drawing.Size(1514, 972);
             this.Controls.Add(this.uxLine1);
             this.Controls.Add(this.uxRankCreatorByTypeButton);
             this.Controls.Add(this.uxRankCreatorByAssetGridView);
@@ -168,7 +172,7 @@ namespace LibraryProject
             this.Controls.Add(this.uxLine2);
             this.Controls.Add(this.uxRankAssetByTypeButton);
             this.Controls.Add(this.uxRankAssetByTypeGridView);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Important";
             this.Text = "Rankings and Top Ten";
             ((System.ComponentModel.ISupportInitialize)(this.uxRankAssetByTypeGridView)).EndInit();
