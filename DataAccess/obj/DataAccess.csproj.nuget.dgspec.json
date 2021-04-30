@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project0429\\DataAccess\\DataAccess.csproj": {}
+    "D:\\Study\\Spring21\\CIS560\\EverythingWorkRepo\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project0429\\DataAccess\\DataAccess.csproj": {
+    "D:\\Study\\Spring21\\CIS560\\EverythingWorkRepo\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project0429\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\Study\\Spring21\\CIS560\\EverythingWorkRepo\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project0429\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\amb10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5Project0429\\DataAccess\\obj\\",
+        "projectPath": "D:\\Study\\Spring21\\CIS560\\EverythingWorkRepo\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\86975\\.nuget\\packages\\",
+        "outputPath": "D:\\Study\\Spring21\\CIS560\\EverythingWorkRepo\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\amb10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\86975\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
