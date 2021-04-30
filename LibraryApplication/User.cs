@@ -195,5 +195,14 @@ namespace LibraryProject
             else uxDeleteButton.Enabled = false;
            
         }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox8.Text.Trim().Length > 0)
+            {
+                uxGetButton.Enabled = true;
+            }
+            else uxGetButton.Enabled = false;
+        }
     }
 }

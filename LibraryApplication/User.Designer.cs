@@ -281,7 +281,8 @@ namespace LibraryProject
             // 
             // uxGetButton
             // 
-            this.uxGetButton.Location = new System.Drawing.Point(1207, 658);
+            this.uxGetButton.Enabled = false;
+            this.uxGetButton.Location = new System.Drawing.Point(1207, 661);
             this.uxGetButton.Name = "uxGetButton";
             this.uxGetButton.Size = new System.Drawing.Size(254, 85);
             this.uxGetButton.TabIndex = 19;
@@ -295,6 +296,7 @@ namespace LibraryProject
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(433, 29);
             this.textBox8.TabIndex = 18;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // uxDeleteButton
             // 
