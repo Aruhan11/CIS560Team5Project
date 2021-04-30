@@ -8,7 +8,7 @@ namespace LibraryData
     {
         User CreateUser(string firstname, string lastname, string phonenumber, DateTime lastcheckoutdate, int isdeleted);
 
-        void UpdateUser(int userID, string phonenumber);
+        bool UpdateUser(int userID, string phonenumber);
         
         void DeleteUser(int userID);
 
@@ -17,5 +17,12 @@ namespace LibraryData
         User FetchUser(int userID);
 
         IReadOnlyList<User> RetrieveUsers();
+
+
+        bool CheckInt(string s);
+
+
+        bool CheckString(string s);
+
     }
 }

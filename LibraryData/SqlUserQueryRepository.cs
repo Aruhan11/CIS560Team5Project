@@ -4,6 +4,7 @@ using DataAccess;
 using LibarayData.Model;
 using LibarayData.DataDelegates;
 using LibraryData.DataDelegates;
+using System.Linq;
 
 namespace LibraryData
 {
@@ -34,8 +35,12 @@ namespace LibraryData
             if (string.IsNullOrWhiteSpace(isdeleted.ToString()))
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(isdeleted));
 
-            var d = new CreateUserDataDelegate(firstname, lastname, phonenumber, lastcheckoutdate, isdeleted);
-            return executor.ExecuteNonQuery(d);
+            if (GetUser(phonenumber) == null)
+            {
+                var d = new CreateUserDataDelegate(firstname, lastname, phonenumber, lastcheckoutdate, isdeleted);
+                return executor.ExecuteNonQuery(d);
+            }
+            else return null;
         }
 
         public void DeleteUser(int userID)
@@ -49,7 +54,7 @@ namespace LibraryData
         }
 
 
-        public void UpdateUser(int userID, string phonenumber)
+        public bool UpdateUser(int userID, string phonenumber)
         {
 
             if (userID <= 0)
@@ -57,10 +62,14 @@ namespace LibraryData
 
             if (string.IsNullOrWhiteSpace(phonenumber))
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(phonenumber));
-
-            var d = new UpdateUserDelegate(userID, phonenumber);
-            executor.ExecuteNonQuery(d);
-
+            if (GetUser(phonenumber) == null)
+            {
+                var d = new UpdateUserDelegate(userID, phonenumber);
+                executor.ExecuteNonQuery(d);
+                return true;
+            }
+            return false;
+           
         }
 
 
@@ -76,6 +85,9 @@ namespace LibraryData
 
         public User FetchUser(int userID)
         {
+
+            if (userID <= 0)
+                throw new ArgumentException("UserID should be greater than 0.", nameof(userID));
             var d = new FetchUserDelegate(userID);
             return executor.ExecuteReader(d);
         }
@@ -85,5 +97,40 @@ namespace LibraryData
         {
             return executor.ExecuteReader(new RetriveUsersDelegate());
         }
+
+
+
+        /*
+         *   private bool checkUserId(int id)
+        {
+            var checkLength = userRepo.RetrieveUsers();
+           
+            if (checkLength.Count >= id && checkLength.Count != 0)
+            {
+                return true;
+            }
+            return false;
+        }
+         */
+
+        public bool CheckInt(string s)
+        {
+            if (s != "" && !s.Any(c => Char.IsLetter(c))&& s != "0")
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool CheckString(string s)
+        {
+            if (s != "" && !s.Any(c => Char.IsDigit(c)))
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+
     }
 }
