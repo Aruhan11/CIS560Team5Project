@@ -30,7 +30,7 @@ namespace LibarayData.DataDelegates
         public override Asset Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
-                throw new RecordNotFoundException(assetID.ToString());
+                return null;
 
             return new Asset(assetID,
                reader.GetString("Name"),

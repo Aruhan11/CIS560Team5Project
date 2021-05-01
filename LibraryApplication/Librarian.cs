@@ -31,15 +31,23 @@ namespace LibraryApplication
             {
                 int librainID = Convert.ToInt32(uxLibrarianIDInput.Text);
                 var lib = libraianQ.FetchLibrarian(librainID);
-                var user = userQ.FetchUser(lib.UserID);
-                uxUserID.Text = user.UserID.ToString();
-                uxFirstName.Text = user.FirstName;
-                uxLastName.Text = user.LastName;
+                if (lib == null)
+                {
+                    uxLibrarianIDInput.BackColor = Color.LightCoral;
+                    MessageBox.Show("LibrarianID does not exist", "Invalid Input");
+                }
+                else
+                {
+                    var user = userQ.FetchUser(lib.UserID);
+                    uxUserID.Text = user.UserID.ToString();
+                    uxFirstName.Text = user.FirstName;
+                    uxLastName.Text = user.LastName;
+                }
             }
             else 
             {
                 uxLibrarianIDInput.BackColor = Color.LightCoral;
-                MessageBox.Show("Please Input UserID", "Invalid Input");
+                MessageBox.Show("Please Input LibrarianID", "Invalid Input");
                 
             }
 

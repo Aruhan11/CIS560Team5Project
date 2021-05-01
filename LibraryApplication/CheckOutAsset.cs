@@ -14,10 +14,17 @@ namespace LibraryApplication
     {
         const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;";
         private ICheckOutAssetQueryRepository checkOutAssetRepo;
-
+        private IUserQueryRepository userRepo;
+        private ILibrarianQueryRepository librarianRepo;
+        private IAssetQueryRepository assetRepo;
+        
         public CheckOutAsset()
         {
             checkOutAssetRepo = new SqlCheckOutAssetQueryRepository(connectionString);
+            userRepo = new SqlUserQueryRepository(connectionString);
+            librarianRepo = new SqlLibrarianQueryRepository(connectionString);
+            assetRepo = new SqlAssetQueryRepository(connectionString);
+
             InitializeComponent();
         }
 
@@ -31,9 +38,27 @@ namespace LibraryApplication
                 int assetID = Convert.ToInt32(uxCreateAssetIDTextBox.Text);
                 int userID = Convert.ToInt32(uxCreateUserIDTextBox.Text);
                 int librarianID = Convert.ToInt32(uxCreateLibrarianIDTextBox.Text);
-
-                var checkOutAsset = checkOutAssetRepo.CreateCheckOutAsset(assetID, userID, librarianID);
-                if (checkOutAsset != null) MessageBox.Show(checkOutAsset.CheckOutAssetID + " have been added!", "CheckOutAsset Added");
+                if (assetRepo.FetchAsset(assetID) == null) 
+                {
+                    uxCreateAssetIDTextBox.BackColor = Color.LightCoral;
+                }
+                if (userRepo.FetchUser(userID) == null)
+                {
+                    uxCreateUserIDTextBox.BackColor = Color.LightCoral;
+                }
+                if (librarianRepo.FetchLibrarian(librarianID) == null)
+                {
+                    uxCreateLibrarianIDTextBox.BackColor = Color.LightCoral;
+                }
+                if(assetRepo.FetchAsset(assetID) == null 
+                    || userRepo.FetchUser(userID) == null 
+                    || librarianRepo.FetchLibrarian(librarianID) == null)
+                    MessageBox.Show("Invalid Input", "Invalid Input");
+                else
+                {
+                    var checkOutAsset = checkOutAssetRepo.CreateCheckOutAsset(assetID, userID, librarianID);
+                    if (checkOutAsset != null) MessageBox.Show(checkOutAsset.CheckOutAssetID + " have been added!", "CheckOutAsset Added");
+                }
             }
             else
             {
@@ -57,8 +82,17 @@ namespace LibraryApplication
 
                 checkOutAssetRepo.UpdateCheckOutAsset(checkoutID);
                 var check = checkOutAssetRepo.FetchCheckOutAsset(checkoutID);
-                if (check.IsReturned == 1) MessageBox.Show(checkoutID + " have returned", "CheckOutAsset Returned");
-                uxUpdateTextBox.Clear();
+                if (check == null)
+                {
+                    uxUpdateTextBox.BackColor = Color.LightCoral;
+                    MessageBox.Show("CheckOutAssetID does not exist", "Invalid Input");
+                }
+                else
+                {
+                    if (check.IsReturned == 1) MessageBox.Show(checkoutID + " have returned", "CheckOutAsset Returned");
+                    uxUpdateTextBox.Clear();
+                }
+
             }
             else
             {
@@ -74,12 +108,21 @@ namespace LibraryApplication
             {
                 int checkOutID = Convert.ToInt32(uxFetchCheckOutAssetIDTextBox.Text);
                 var fetchedCheckOut = checkOutAssetRepo.FetchCheckOutAsset(checkOutID);
-                uxFetchAssetIDTextBox.Text = fetchedCheckOut.AssetID.ToString();
-                uxFetchUserIDTextBox.Text = fetchedCheckOut.UserID.ToString();
-                uxFetchLibrarianIDTextBox.Text = fetchedCheckOut.LibrarianID.ToString();
-                uxFetchCheckDateTextBox.Text = fetchedCheckOut.CheckOutDate.ToString();
-                uxFetchReturnDateTextBox.Text = fetchedCheckOut.ReturnByDate.ToString();
-                uxFetchIsReturnTextBox.Text = fetchedCheckOut.IsReturned.ToString();
+                if(fetchedCheckOut != null)
+                {
+                    uxFetchAssetIDTextBox.Text = fetchedCheckOut.AssetID.ToString();
+                    uxFetchUserIDTextBox.Text = fetchedCheckOut.UserID.ToString();
+                    uxFetchLibrarianIDTextBox.Text = fetchedCheckOut.LibrarianID.ToString();
+                    uxFetchCheckDateTextBox.Text = fetchedCheckOut.CheckOutDate.ToString();
+                    uxFetchReturnDateTextBox.Text = fetchedCheckOut.ReturnByDate.ToString();
+                    uxFetchIsReturnTextBox.Text = fetchedCheckOut.IsReturned.ToString();
+                }
+                else
+                {
+                    uxFetchCheckOutAssetIDTextBox.BackColor = Color.LightCoral;
+                    MessageBox.Show("CheckOutAssetID does not exist", "Invalid Input");
+                }
+
             }
             else
             {

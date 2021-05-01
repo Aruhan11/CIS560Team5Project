@@ -47,13 +47,20 @@ namespace LibraryProject
                 if (uxAuthorCheckBox.Checked) { creatorTypeIDs.Add(1); }
                 if (uxProducerCheckBox.Checked) { creatorTypeIDs.Add(2); }
                 if (uxProducerCheckBox.Checked) { creatorTypeIDs.Add(3); }
-
-                foreach (int creatorTypeID in creatorTypeIDs)
+                if (creatorRepo.FetchCreator(creataorID) == null)
                 {
-                    creatorRepo.UpdateCreator(creataorID, creatorTypeID);
+                    uxUpdateCreatorIDTextBox.BackColor = Color.LightCoral;
+                    MessageBox.Show("CreatorID does not exist", "Invalid Input"); 
                 }
+                else
+                {
+                    foreach (int creatorTypeID in creatorTypeIDs)
+                    {
+                        creatorRepo.UpdateCreator(creataorID, creatorTypeID);
+                    }
 
-                MessageBox.Show("Updated Creator", "Update");
+                    MessageBox.Show("Updated Creator", "Update");
+                }
             }
             else
             {
@@ -78,10 +85,17 @@ namespace LibraryProject
             {
                 int creatorID = Convert.ToInt32(uxFetchCreatorIDTextBox.Text);
                 var fetchedCreator = creatorRepo.FetchCreator(creatorID);
-
-                uxFirstNameTextBox.Text = fetchedCreator.FirstName.ToString();
-                uxLastNameTextBox.Text = fetchedCreator.LastName.ToString();
-                uxCompanyTextBox.Text = fetchedCreator.CompanyName.ToString();
+                if (fetchedCreator == null) 
+                {
+                    uxFetchCreatorIDTextBox.BackColor = Color.LightCoral;
+                    MessageBox.Show("CreatorID does not exist", "Invalid Input");
+                }
+                else
+                {
+                    uxFirstNameTextBox.Text = fetchedCreator.FirstName.ToString();
+                    uxLastNameTextBox.Text = fetchedCreator.LastName.ToString();
+                    uxCompanyTextBox.Text = fetchedCreator.CompanyName.ToString();
+                }
             }
             else
             {

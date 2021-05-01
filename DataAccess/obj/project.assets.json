@@ -460,11 +460,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5ProjectIgiveup\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5ProjectFinalVersion\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5ProjectIgiveup\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5ProjectFinalVersion\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\amb10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5ProjectIgiveup\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\amb10\\Source\\Repos\\CIS560Team5ProjectFinalVersion\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

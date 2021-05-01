@@ -29,7 +29,7 @@ namespace LibarayData.DataDelegates
         public override Librarian Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
-                throw new RecordNotFoundException(librarianID.ToString());
+                return null;
 
             return new Librarian(librarianID,
                reader.GetInt32("UserID"));

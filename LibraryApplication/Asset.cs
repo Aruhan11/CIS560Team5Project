@@ -201,7 +201,15 @@ namespace LibraryProject
                 int stock = Convert.ToInt32(uxUpStockTextBox.Text);
                 assetQ.UpdateAsset(assetID, stock);
                 var check = assetQ.FetchAsset(assetID);
-                if (check.Stock == stock) MessageBox.Show(assetID + " stock has been updated!", "Stock Updated");
+                if (check == null)
+                {
+                    uxUpAssetIDTextBox.BackColor = Color.LightCoral;
+                    MessageBox.Show("Invalid AssetID", "Invalid Input");
+                }
+                else
+                {
+                    if (check.Stock == stock) MessageBox.Show(assetID + " stock has been updated!", "Stock Updated");
+                }
             }
             else
             {
@@ -220,12 +228,22 @@ namespace LibraryProject
             {
                 int assetId = Convert.ToInt32(uxFetchAssetIDTextBox.Text);
                 var assets = assetQ.FetchAsset(assetId);
+                if(assets == null)
+                {
+                    uxFetchAssetIDTextBox.BackColor = Color.LightCoral;
+                    MessageBox.Show("Invalid assetID", "Invalid Input");
+                    
+                }
+                else
+                {
+                    uxFetchNameTextBox.Text = assets.Name;
+                    uxFetchTypeTextBox.Text = assets.AssetTypeID.ToString();
+                    uxFetchReleaseDateTextBox.Text = assets.ReleaseDate.ToString();
+                    uxFetchCreatorIDTextBox.Text = assets.CreatorID.ToString();
+                    uxFetchStockTextBox.Text = assets.Stock.ToString();
 
-                uxFetchNameTextBox.Text = assets.Name;
-                uxFetchTypeTextBox.Text = assets.AssetTypeID.ToString();
-                uxFetchReleaseDateTextBox.Text = assets.ReleaseDate.ToString();
-                uxFetchCreatorIDTextBox.Text = assets.CreatorID.ToString();
-                uxFetchStockTextBox.Text = assets.Stock.ToString();
+                }
+
             }
             else
             {

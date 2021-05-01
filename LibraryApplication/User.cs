@@ -54,7 +54,7 @@ namespace LibraryProject
                     else
                     {
                         uxAddPhoneTextBox.BackColor = Color.LightCoral;
-                        MessageBox.Show("Phone Number Not Added Number Already Exists", "User exists");
+                        MessageBox.Show("Phone Number Not Added Number Already Exists", "Invalid Phone Number");
 
                     }
                 }
@@ -80,7 +80,12 @@ namespace LibraryProject
 
                 userRepo.DeleteUser(userid);
                 var checkDel = userRepo.FetchUser(userid);
-                if (checkDel.IsDeleted == 1) MessageBox.Show(userid + " have been deleted", "User Added");
+                if (checkDel == null) 
+                {
+                    uxDelUserIDTextBox.BackColor = Color.LightCoral;
+                    MessageBox.Show("UserID does not exist", "Invalid UserID");
+                } 
+                else if (checkDel.IsDeleted == 1) MessageBox.Show(userid + " have been deleted", "User Added");
                 uxDelUserIDTextBox.Clear();
             }
             else
@@ -100,7 +105,11 @@ namespace LibraryProject
             {
                 int userId = Convert.ToInt32(uxFetchUserIDTextBox.Text);
                 var fetchedUser = userRepo.FetchUser(userId);
-                if (fetchedUser == null) MessageBox.Show("UserID does not exist", "Invalid UserID");
+                if (fetchedUser == null)
+                {
+                    uxFetchUserIDTextBox.BackColor = Color.LightCoral;
+                    MessageBox.Show("UserID does not exist", "Invalid UserID");
+                }
                 else
                 {
                     uxFetchFNameTextBox.Text = fetchedUser.FirstName.ToString();
@@ -138,9 +147,19 @@ namespace LibraryProject
                     phonenumber = phonenumber.Insert(9, "-");
                     
                     var user = userRepo.GetUser(phonenumber);
-                    uxGetUserIDTextBox.Text = user.UserID.ToString();
-                    uxGetFNameTextBox.Text = user.FirstName.ToString();
-                    uxGetLNameTextBox.Text = user.LastName.ToString();
+                    if(user == null)
+                    {
+                        uxGetPhoneTextBox.BackColor = Color.LightCoral;
+                        MessageBox.Show("Phone Number Does Not Exists", "Invalid Phone Number");
+
+                    }
+                    else
+                    {
+                        uxGetUserIDTextBox.Text = user.UserID.ToString();
+                        uxGetFNameTextBox.Text = user.FirstName.ToString();
+                        uxGetLNameTextBox.Text = user.LastName.ToString();
+                    }
+
                 }
             }
             else
@@ -174,12 +193,22 @@ namespace LibraryProject
 
                     var checkNumber = userRepo.UpdateUser(userid, phonenumber);
                     var check = userRepo.FetchUser(userid);
-                    if (String.Compare(check.PhoneNumber, phonenumber) == 0 && checkNumber == true) MessageBox.Show(phonenumber + " have been updated", "Update User Phone Number");
-                    else {
-                        uxUpdatePhonenumberTextBox.BackColor = Color.LightCoral;
-                        MessageBox.Show("Phone Number Already Exists", "Number Exists");
+                    if (check == null)
+                    {
+                        uxUpdateUserIDTextBox.BackColor = Color.LightCoral;
+                        MessageBox.Show("UserID does not exist", "Invalid UserID");
+                    }
+                    else
+                    {
+                        if (String.Compare(check.PhoneNumber, phonenumber) == 0 && checkNumber == true) MessageBox.Show(phonenumber + " have been updated", "Update User Phone Number");
+                        else
+                        {
+                            uxUpdatePhonenumberTextBox.BackColor = Color.LightCoral;
+                            MessageBox.Show("Phone Number Already Exists", "Number Exists");
                         }
-                    uxDelUserIDTextBox.Clear();
+                        uxDelUserIDTextBox.Clear();
+                    }
+
                 }
             }
             else

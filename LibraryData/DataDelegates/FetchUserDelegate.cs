@@ -30,7 +30,7 @@ namespace LibarayData.DataDelegates
         public override User Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
-                throw new RecordNotFoundException(userID.ToString());
+                return null;
 
             return new User(userID,
                reader.GetString("FirstName"),

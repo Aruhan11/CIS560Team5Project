@@ -30,7 +30,7 @@ namespace LibarayData.DataDelegates
         public override CheckOutAsset Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
-                throw new RecordNotFoundException(checkoutassetID.ToString());
+                return null;
 
             return new CheckOutAsset(checkoutassetID,
                  reader.GetInt32("AssetID"),

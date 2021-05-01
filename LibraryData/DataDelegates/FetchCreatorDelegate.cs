@@ -30,7 +30,8 @@ namespace LibarayData.DataDelegates
         public override Creator Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
-                throw new RecordNotFoundException(creatorID.ToString());
+
+                return null;
 
             return new Creator(creatorID,
                reader.GetString("FirstName"),
