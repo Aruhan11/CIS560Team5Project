@@ -35,7 +35,7 @@ namespace LibraryProject
             this.uxUserButton = new System.Windows.Forms.Button();
             this.uxSloganLabel = new System.Windows.Forms.Label();
             this.uxCreatorButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.uxLibManSysLabel = new System.Windows.Forms.Label();
             this.uxMangeCheckOutAssetButton = new System.Windows.Forms.Button();
             this.uxManageLibrarianButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,20 +44,18 @@ namespace LibraryProject
             // 
             this.uxLibraryNameLabel.AutoSize = true;
             this.uxLibraryNameLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxLibraryNameLabel.Location = new System.Drawing.Point(224, 21);
-            this.uxLibraryNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.uxLibraryNameLabel.Location = new System.Drawing.Point(320, 35);
             this.uxLibraryNameLabel.Name = "uxLibraryNameLabel";
-            this.uxLibraryNameLabel.Size = new System.Drawing.Size(244, 37);
+            this.uxLibraryNameLabel.Size = new System.Drawing.Size(360, 54);
             this.uxLibraryNameLabel.TabIndex = 0;
             this.uxLibraryNameLabel.Text = "Virtual Hale Library";
             // 
             // uxAssetButton
             // 
             this.uxAssetButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAssetButton.Location = new System.Drawing.Point(52, 225);
-            this.uxAssetButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxAssetButton.Location = new System.Drawing.Point(74, 375);
             this.uxAssetButton.Name = "uxAssetButton";
-            this.uxAssetButton.Size = new System.Drawing.Size(251, 63);
+            this.uxAssetButton.Size = new System.Drawing.Size(359, 105);
             this.uxAssetButton.TabIndex = 1;
             this.uxAssetButton.Text = "Manage Asset";
             this.uxAssetButton.UseVisualStyleBackColor = true;
@@ -66,10 +64,9 @@ namespace LibraryProject
             // uxRankButton
             // 
             this.uxRankButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxRankButton.Location = new System.Drawing.Point(357, 316);
-            this.uxRankButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxRankButton.Location = new System.Drawing.Point(510, 527);
             this.uxRankButton.Name = "uxRankButton";
-            this.uxRankButton.Size = new System.Drawing.Size(251, 63);
+            this.uxRankButton.Size = new System.Drawing.Size(359, 105);
             this.uxRankButton.TabIndex = 5;
             this.uxRankButton.Text = "Interesting Report Queries";
             this.uxRankButton.UseVisualStyleBackColor = true;
@@ -78,10 +75,9 @@ namespace LibraryProject
             // uxUserButton
             // 
             this.uxUserButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxUserButton.Location = new System.Drawing.Point(52, 142);
-            this.uxUserButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxUserButton.Location = new System.Drawing.Point(74, 237);
             this.uxUserButton.Name = "uxUserButton";
-            this.uxUserButton.Size = new System.Drawing.Size(249, 63);
+            this.uxUserButton.Size = new System.Drawing.Size(356, 105);
             this.uxUserButton.TabIndex = 6;
             this.uxUserButton.Text = "Manage User";
             this.uxUserButton.UseVisualStyleBackColor = true;
@@ -91,43 +87,39 @@ namespace LibraryProject
             // 
             this.uxSloganLabel.AutoSize = true;
             this.uxSloganLabel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxSloganLabel.Location = new System.Drawing.Point(290, 59);
-            this.uxSloganLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.uxSloganLabel.Location = new System.Drawing.Point(414, 98);
             this.uxSloganLabel.Name = "uxSloganLabel";
-            this.uxSloganLabel.Size = new System.Drawing.Size(109, 20);
+            this.uxSloganLabel.Size = new System.Drawing.Size(158, 30);
             this.uxSloganLabel.TabIndex = 8;
             this.uxSloganLabel.Text = "Reading is Fun!";
             // 
             // uxCreatorButton
             // 
             this.uxCreatorButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxCreatorButton.Location = new System.Drawing.Point(357, 142);
-            this.uxCreatorButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxCreatorButton.Location = new System.Drawing.Point(510, 237);
             this.uxCreatorButton.Name = "uxCreatorButton";
-            this.uxCreatorButton.Size = new System.Drawing.Size(251, 63);
+            this.uxCreatorButton.Size = new System.Drawing.Size(359, 105);
             this.uxCreatorButton.TabIndex = 9;
             this.uxCreatorButton.Text = "Manage Creator";
             this.uxCreatorButton.UseVisualStyleBackColor = true;
             this.uxCreatorButton.Click += new System.EventHandler(this.uxCreatorButton_Click);
             // 
-            // label1
+            // uxLibManSysLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(239, 99);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Librarian Mangament System";
+            this.uxLibManSysLabel.AutoSize = true;
+            this.uxLibManSysLabel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uxLibManSysLabel.Location = new System.Drawing.Point(341, 165);
+            this.uxLibManSysLabel.Name = "uxLibManSysLabel";
+            this.uxLibManSysLabel.Size = new System.Drawing.Size(294, 30);
+            this.uxLibManSysLabel.TabIndex = 10;
+            this.uxLibManSysLabel.Text = "Librarian Mangament System";
             // 
             // uxMangeCheckOutAssetButton
             // 
             this.uxMangeCheckOutAssetButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxMangeCheckOutAssetButton.Location = new System.Drawing.Point(357, 225);
-            this.uxMangeCheckOutAssetButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxMangeCheckOutAssetButton.Location = new System.Drawing.Point(510, 375);
             this.uxMangeCheckOutAssetButton.Name = "uxMangeCheckOutAssetButton";
-            this.uxMangeCheckOutAssetButton.Size = new System.Drawing.Size(251, 63);
+            this.uxMangeCheckOutAssetButton.Size = new System.Drawing.Size(359, 105);
             this.uxMangeCheckOutAssetButton.TabIndex = 11;
             this.uxMangeCheckOutAssetButton.Text = "Manage Check Out Asset";
             this.uxMangeCheckOutAssetButton.UseVisualStyleBackColor = true;
@@ -136,10 +128,9 @@ namespace LibraryProject
             // uxManageLibrarianButton
             // 
             this.uxManageLibrarianButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxManageLibrarianButton.Location = new System.Drawing.Point(52, 316);
-            this.uxManageLibrarianButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxManageLibrarianButton.Location = new System.Drawing.Point(74, 527);
             this.uxManageLibrarianButton.Name = "uxManageLibrarianButton";
-            this.uxManageLibrarianButton.Size = new System.Drawing.Size(251, 63);
+            this.uxManageLibrarianButton.Size = new System.Drawing.Size(359, 105);
             this.uxManageLibrarianButton.TabIndex = 12;
             this.uxManageLibrarianButton.Text = "Manage Librarian";
             this.uxManageLibrarianButton.UseVisualStyleBackColor = true;
@@ -147,21 +138,20 @@ namespace LibraryProject
             // 
             // HomeScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 495);
+            this.ClientSize = new System.Drawing.Size(991, 732);
             this.Controls.Add(this.uxManageLibrarianButton);
             this.Controls.Add(this.uxMangeCheckOutAssetButton);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.uxLibManSysLabel);
             this.Controls.Add(this.uxCreatorButton);
             this.Controls.Add(this.uxSloganLabel);
             this.Controls.Add(this.uxUserButton);
             this.Controls.Add(this.uxRankButton);
             this.Controls.Add(this.uxAssetButton);
             this.Controls.Add(this.uxLibraryNameLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HomeScreen";
-            this.Text = "HomeScreen";
+            this.Text = "Home Screen";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,7 +165,7 @@ namespace LibraryProject
         private System.Windows.Forms.Button uxUserButton;
         private System.Windows.Forms.Label uxSloganLabel;
         private System.Windows.Forms.Button uxCreatorButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label uxLibManSysLabel;
         private System.Windows.Forms.Button uxMangeCheckOutAssetButton;
         private System.Windows.Forms.Button uxManageLibrarianButton;
     }

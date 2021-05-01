@@ -131,8 +131,8 @@ namespace LibraryProject
 
         private void uxUpdateButton_Click(object sender, EventArgs e)
         {
-            int assetID = Convert.ToInt32(textBox1.Text);
-            int stock = Convert.ToInt32(textBox2.Text);
+            int assetID = Convert.ToInt32(uxUpAssetIDTextBox.Text);
+            int stock = Convert.ToInt32(uxUpStockTextBox.Text);
             assetQ.UpdateAsset(assetID, stock);
             var check = assetQ.FetchAsset(assetID);
             if (check.Stock == stock) MessageBox.Show(assetID + " stock has been updated!", "Stock Updated");

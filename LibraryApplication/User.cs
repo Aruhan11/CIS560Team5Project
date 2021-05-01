@@ -43,19 +43,19 @@ namespace LibraryProject
 
         private void uxDeleteButton_Click(object sender, EventArgs e)
         {
-            if (userRepo.CheckInt(textBox9.Text))
+            if (userRepo.CheckInt(uxDelUserIDTextBox.Text))
             {
-                int userid = Convert.ToInt32(textBox9.Text);
+                int userid = Convert.ToInt32(uxDelUserIDTextBox.Text);
 
                 userRepo.DeleteUser(userid);
                 var checkDel = userRepo.FetchUser(userid);
                 if (checkDel.IsDeleted == 1) MessageBox.Show(userid + " have been deleted", "User Added");
-                textBox9.Clear();
+                uxDelUserIDTextBox.Clear();
             }
             else
             {
                 MessageBox.Show("Please input a valid number for UserID", "Invalid UserID");
-                textBox9.Text = "";
+                uxDelUserIDTextBox.Text = "";
 
             }
         }
@@ -64,16 +64,16 @@ namespace LibraryProject
         {
 
 
-            if (userRepo.CheckInt(textBox1.Text))
+            if (userRepo.CheckInt(uxFetchUserIDTextBox.Text))
             {
-                int userId = Convert.ToInt32(textBox1.Text);
+                int userId = Convert.ToInt32(uxFetchUserIDTextBox.Text);
                 var fetchedUser = userRepo.FetchUser(userId);
                 if (fetchedUser == null) MessageBox.Show("UserID does not exist", "Invalid UserID");
                 else
                 {
-                    textBox4.Text = fetchedUser.FirstName.ToString();
-                    textBox3.Text = fetchedUser.LastName.ToString();
-                    textBox2.Text = fetchedUser.PhoneNumber.ToString();
+                    uxFetchFNameTextBox.Text = fetchedUser.FirstName.ToString();
+                    uxFetchLNameTextBox.Text = fetchedUser.LastName.ToString();
+                    uxFetchPhoneTextBox.Text = fetchedUser.PhoneNumber.ToString();
                 }
             }
             else MessageBox.Show("Please input a valid number for UserID", "Invalid UserID");
@@ -82,19 +82,19 @@ namespace LibraryProject
 
         private void uxGetButton_Click(object sender, EventArgs e)
         {
-            if (userRepo.CheckInt(textBox8.Text))
+            if (userRepo.CheckInt(uxGetPhoneTextBox.Text))
             {
-                string phone = textBox8.Text;
+                string phone = uxGetPhoneTextBox.Text;
                 var user = userRepo.GetUser(phone);
-                textBox7.Text = user.UserID.ToString();
-                textBox6.Text = user.FirstName.ToString();
-                textBox5.Text = user.LastName.ToString();
+                uxGetUserIDTextBox.Text = user.UserID.ToString();
+                uxGetFNameTextBox.Text = user.FirstName.ToString();
+                uxGetLNameTextBox.Text = user.LastName.ToString();
             }
             else
             {
 
                 MessageBox.Show("Please input a valid number for Phone Number", "Invalid Phone Number");
-                textBox8.Text = "";
+                uxGetPhoneTextBox.Text = "";
             }
         }
 
@@ -104,14 +104,26 @@ namespace LibraryProject
 
             if (userRepo.CheckInt(uxUpdateUserIDTextBox.Text) && userRepo.CheckInt(uxUpdatePhonenumberTextBox.Text))
             {
-                string phonenumber = uxUpdatePhonenumberTextBox.Text;
-                int userid = Convert.ToInt32(uxUpdateUserIDTextBox.Text);
+                string phonenumber = Regex.Replace(uxUpdatePhonenumberTextBox.Text, "[^0-9]", "");
+                if (phonenumber.Length != 10)
+                {
+                    MessageBox.Show("Invalid entry, please insert in the format (###) ###-####", "Error", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    phonenumber = phonenumber.Insert(0, "(");
+                    phonenumber = phonenumber.Insert(4, ")");
+                    phonenumber = phonenumber.Insert(5, " ");
+                    phonenumber = phonenumber.Insert(9, "-");
 
-                var checkNumber = userRepo.UpdateUser(userid, phonenumber);
-                var check = userRepo.FetchUser(userid);
-                if (String.Compare(check.PhoneNumber, phonenumber) == 0 && checkNumber == true) MessageBox.Show(phonenumber + " have been updated", "Update User Phone Number");
-                else { MessageBox.Show("Phone Number Already Exists", "Number Exists"); }
-                textBox9.Clear();
+                    int userid = Convert.ToInt32(uxUpdateUserIDTextBox.Text);
+
+                    var checkNumber = userRepo.UpdateUser(userid, phonenumber);
+                    var check = userRepo.FetchUser(userid);
+                    if (String.Compare(check.PhoneNumber, phonenumber) == 0 && checkNumber == true) MessageBox.Show(phonenumber + " have been updated", "Update User Phone Number");
+                    else { MessageBox.Show("Phone Number Already Exists", "Number Exists"); }
+                    uxDelUserIDTextBox.Clear();
+                }
             }
             else
             {
@@ -177,18 +189,18 @@ namespace LibraryProject
             else uxUpdateUserButton.Enabled = false;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void uxFetchUserIDTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text.Trim().Length > 0)
+            if (uxFetchUserIDTextBox.Text.Trim().Length > 0)
             {
                 uxFetchButton.Enabled = true;
             }
             else uxFetchButton.Enabled = false;
         }
 
-        private void textBox9_TextChanged(object sender, EventArgs e)
+        private void uxDelUserIDTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (textBox9.Text.Trim().Length > 0)
+            if (uxDelUserIDTextBox.Text.Trim().Length > 0)
             {
                 uxDeleteButton.Enabled = true;
             }
@@ -196,9 +208,9 @@ namespace LibraryProject
            
         }
 
-        private void textBox8_TextChanged(object sender, EventArgs e)
+        private void uxGetPhoneTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (textBox8.Text.Trim().Length > 0)
+            if (uxGetPhoneTextBox.Text.Trim().Length > 0)
             {
                 uxGetButton.Enabled = true;
             }
