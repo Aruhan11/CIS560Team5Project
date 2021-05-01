@@ -29,6 +29,7 @@ namespace LibraryProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Creator));
             this.uxFetchProductionsByCreatorGridView = new System.Windows.Forms.DataGridView();
             this.uxGetCreatorByTypeButton = new System.Windows.Forms.Button();
             this.uxCreatorCreatorTypeLabel = new System.Windows.Forms.Label();
@@ -67,18 +68,20 @@ namespace LibraryProject
             // uxFetchProductionsByCreatorGridView
             // 
             this.uxFetchProductionsByCreatorGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uxFetchProductionsByCreatorGridView.Location = new System.Drawing.Point(906, 767);
+            this.uxFetchProductionsByCreatorGridView.Location = new System.Drawing.Point(634, 460);
+            this.uxFetchProductionsByCreatorGridView.Margin = new System.Windows.Forms.Padding(2);
             this.uxFetchProductionsByCreatorGridView.Name = "uxFetchProductionsByCreatorGridView";
             this.uxFetchProductionsByCreatorGridView.RowHeadersWidth = 62;
             this.uxFetchProductionsByCreatorGridView.RowTemplate.Height = 33;
-            this.uxFetchProductionsByCreatorGridView.Size = new System.Drawing.Size(770, 379);
+            this.uxFetchProductionsByCreatorGridView.Size = new System.Drawing.Size(539, 227);
             this.uxFetchProductionsByCreatorGridView.TabIndex = 81;
             // 
             // uxGetCreatorByTypeButton
             // 
-            this.uxGetCreatorByTypeButton.Location = new System.Drawing.Point(296, 695);
+            this.uxGetCreatorByTypeButton.Location = new System.Drawing.Point(207, 417);
+            this.uxGetCreatorByTypeButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxGetCreatorByTypeButton.Name = "uxGetCreatorByTypeButton";
-            this.uxGetCreatorByTypeButton.Size = new System.Drawing.Size(254, 62);
+            this.uxGetCreatorByTypeButton.Size = new System.Drawing.Size(178, 37);
             this.uxGetCreatorByTypeButton.TabIndex = 80;
             this.uxGetCreatorByTypeButton.Text = "Get Creators By Type";
             this.uxGetCreatorByTypeButton.UseVisualStyleBackColor = true;
@@ -88,17 +91,20 @@ namespace LibraryProject
             // 
             this.uxCreatorCreatorTypeLabel.AutoSize = true;
             this.uxCreatorCreatorTypeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxCreatorCreatorTypeLabel.Location = new System.Drawing.Point(81, 632);
+            this.uxCreatorCreatorTypeLabel.Location = new System.Drawing.Point(57, 379);
+            this.uxCreatorCreatorTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxCreatorCreatorTypeLabel.Name = "uxCreatorCreatorTypeLabel";
-            this.uxCreatorCreatorTypeLabel.Size = new System.Drawing.Size(155, 32);
+            this.uxCreatorCreatorTypeLabel.Size = new System.Drawing.Size(101, 21);
             this.uxCreatorCreatorTypeLabel.TabIndex = 79;
             this.uxCreatorCreatorTypeLabel.Text = "Creator Type:";
             // 
             // uxFetchProductionsByCreatorButton
             // 
-            this.uxFetchProductionsByCreatorButton.Location = new System.Drawing.Point(1163, 695);
+            this.uxFetchProductionsByCreatorButton.Enabled = false;
+            this.uxFetchProductionsByCreatorButton.Location = new System.Drawing.Point(814, 417);
+            this.uxFetchProductionsByCreatorButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxFetchProductionsByCreatorButton.Name = "uxFetchProductionsByCreatorButton";
-            this.uxFetchProductionsByCreatorButton.Size = new System.Drawing.Size(254, 62);
+            this.uxFetchProductionsByCreatorButton.Size = new System.Drawing.Size(178, 37);
             this.uxFetchProductionsByCreatorButton.TabIndex = 84;
             this.uxFetchProductionsByCreatorButton.Text = "Fetch Productions by Creator";
             this.uxFetchProductionsByCreatorButton.UseVisualStyleBackColor = true;
@@ -108,46 +114,52 @@ namespace LibraryProject
             // 
             this.uxCreatorCreatorIDLabel.AutoSize = true;
             this.uxCreatorCreatorIDLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxCreatorCreatorIDLabel.Location = new System.Drawing.Point(960, 632);
+            this.uxCreatorCreatorIDLabel.Location = new System.Drawing.Point(672, 379);
+            this.uxCreatorCreatorIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxCreatorCreatorIDLabel.Name = "uxCreatorCreatorIDLabel";
-            this.uxCreatorCreatorIDLabel.Size = new System.Drawing.Size(120, 32);
+            this.uxCreatorCreatorIDLabel.Size = new System.Drawing.Size(80, 21);
             this.uxCreatorCreatorIDLabel.TabIndex = 83;
             this.uxCreatorCreatorIDLabel.Text = "CreatorID:";
             // 
             // uxCreatorCreatorIDTextBox
             // 
             this.uxCreatorCreatorIDTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxCreatorCreatorIDTextBox.Location = new System.Drawing.Point(1086, 632);
+            this.uxCreatorCreatorIDTextBox.Location = new System.Drawing.Point(760, 379);
+            this.uxCreatorCreatorIDTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.uxCreatorCreatorIDTextBox.Name = "uxCreatorCreatorIDTextBox";
-            this.uxCreatorCreatorIDTextBox.Size = new System.Drawing.Size(413, 39);
+            this.uxCreatorCreatorIDTextBox.Size = new System.Drawing.Size(290, 29);
             this.uxCreatorCreatorIDTextBox.TabIndex = 82;
+            this.uxCreatorCreatorIDTextBox.TextChanged += new System.EventHandler(this.uxCreatorCreatorIDTextBox_TextChanged);
             // 
             // uxCreatorTypeDDL
             // 
             this.uxCreatorTypeDDL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uxCreatorTypeDDL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.uxCreatorTypeDDL.FormattingEnabled = true;
-            this.uxCreatorTypeDDL.Location = new System.Drawing.Point(243, 632);
+            this.uxCreatorTypeDDL.Location = new System.Drawing.Point(170, 379);
+            this.uxCreatorTypeDDL.Margin = new System.Windows.Forms.Padding(2);
             this.uxCreatorTypeDDL.Name = "uxCreatorTypeDDL";
-            this.uxCreatorTypeDDL.Size = new System.Drawing.Size(390, 40);
+            this.uxCreatorTypeDDL.Size = new System.Drawing.Size(274, 29);
             this.uxCreatorTypeDDL.TabIndex = 85;
             // 
             // uxGetCreatorByTypeGridView
             // 
             this.uxGetCreatorByTypeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uxGetCreatorByTypeGridView.Location = new System.Drawing.Point(52, 767);
+            this.uxGetCreatorByTypeGridView.Location = new System.Drawing.Point(36, 460);
+            this.uxGetCreatorByTypeGridView.Margin = new System.Windows.Forms.Padding(2);
             this.uxGetCreatorByTypeGridView.Name = "uxGetCreatorByTypeGridView";
             this.uxGetCreatorByTypeGridView.RowHeadersWidth = 62;
             this.uxGetCreatorByTypeGridView.RowTemplate.Height = 33;
-            this.uxGetCreatorByTypeGridView.Size = new System.Drawing.Size(750, 381);
+            this.uxGetCreatorByTypeGridView.Size = new System.Drawing.Size(525, 229);
             this.uxGetCreatorByTypeGridView.TabIndex = 86;
             // 
             // uxLine3
             // 
             this.uxLine3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.uxLine3.Location = new System.Drawing.Point(848, 36);
+            this.uxLine3.Location = new System.Drawing.Point(594, 22);
+            this.uxLine3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxLine3.Name = "uxLine3";
-            this.uxLine3.Size = new System.Drawing.Size(2, 1167);
+            this.uxLine3.Size = new System.Drawing.Size(1, 700);
             this.uxLine3.TabIndex = 87;
             this.uxLine3.Text = "                             ";
             // 
@@ -155,68 +167,77 @@ namespace LibraryProject
             // 
             this.uxCreatorIDCLabel.AutoSize = true;
             this.uxCreatorIDCLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxCreatorIDCLabel.Location = new System.Drawing.Point(117, 47);
+            this.uxCreatorIDCLabel.Location = new System.Drawing.Point(82, 28);
+            this.uxCreatorIDCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxCreatorIDCLabel.Name = "uxCreatorIDCLabel";
-            this.uxCreatorIDCLabel.Size = new System.Drawing.Size(120, 32);
+            this.uxCreatorIDCLabel.Size = new System.Drawing.Size(80, 21);
             this.uxCreatorIDCLabel.TabIndex = 89;
             this.uxCreatorIDCLabel.Text = "CreatorID:";
             // 
             // uxUpdateCreatorIDTextBox
             // 
             this.uxUpdateCreatorIDTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxUpdateCreatorIDTextBox.Location = new System.Drawing.Point(253, 47);
+            this.uxUpdateCreatorIDTextBox.Location = new System.Drawing.Point(177, 28);
+            this.uxUpdateCreatorIDTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.uxUpdateCreatorIDTextBox.Name = "uxUpdateCreatorIDTextBox";
-            this.uxUpdateCreatorIDTextBox.Size = new System.Drawing.Size(413, 39);
+            this.uxUpdateCreatorIDTextBox.Size = new System.Drawing.Size(290, 29);
             this.uxUpdateCreatorIDTextBox.TabIndex = 88;
+            this.uxUpdateCreatorIDTextBox.TextChanged += new System.EventHandler(this.UpdateCreator_EventListener);
             // 
             // uxAuthorCheckBox
             // 
             this.uxAuthorCheckBox.AutoSize = true;
-            this.uxAuthorCheckBox.Location = new System.Drawing.Point(263, 105);
-            this.uxAuthorCheckBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.uxAuthorCheckBox.Location = new System.Drawing.Point(184, 63);
+            this.uxAuthorCheckBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxAuthorCheckBox.Name = "uxAuthorCheckBox";
-            this.uxAuthorCheckBox.Size = new System.Drawing.Size(93, 29);
+            this.uxAuthorCheckBox.Size = new System.Drawing.Size(63, 19);
             this.uxAuthorCheckBox.TabIndex = 90;
             this.uxAuthorCheckBox.Text = "Author";
             this.uxAuthorCheckBox.UseVisualStyleBackColor = true;
+            this.uxAuthorCheckBox.CheckedChanged += new System.EventHandler(this.UpdateCreator_EventListener);
             // 
             // uxProducerCheckBox
             // 
             this.uxProducerCheckBox.AutoSize = true;
-            this.uxProducerCheckBox.Location = new System.Drawing.Point(401, 105);
-            this.uxProducerCheckBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.uxProducerCheckBox.Location = new System.Drawing.Point(281, 63);
+            this.uxProducerCheckBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxProducerCheckBox.Name = "uxProducerCheckBox";
-            this.uxProducerCheckBox.Size = new System.Drawing.Size(109, 29);
+            this.uxProducerCheckBox.Size = new System.Drawing.Size(74, 19);
             this.uxProducerCheckBox.TabIndex = 91;
             this.uxProducerCheckBox.Text = "Producer";
             this.uxProducerCheckBox.UseVisualStyleBackColor = true;
+            this.uxProducerCheckBox.CheckedChanged += new System.EventHandler(this.UpdateCreator_EventListener);
             // 
             // uxDeveloperCheckBox
             // 
             this.uxDeveloperCheckBox.AutoSize = true;
-            this.uxDeveloperCheckBox.Location = new System.Drawing.Point(541, 105);
-            this.uxDeveloperCheckBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.uxDeveloperCheckBox.Location = new System.Drawing.Point(379, 63);
+            this.uxDeveloperCheckBox.Margin = new System.Windows.Forms.Padding(1);
             this.uxDeveloperCheckBox.Name = "uxDeveloperCheckBox";
-            this.uxDeveloperCheckBox.Size = new System.Drawing.Size(119, 29);
+            this.uxDeveloperCheckBox.Size = new System.Drawing.Size(79, 19);
             this.uxDeveloperCheckBox.TabIndex = 92;
             this.uxDeveloperCheckBox.Text = "Developer";
             this.uxDeveloperCheckBox.UseVisualStyleBackColor = true;
+            this.uxDeveloperCheckBox.CheckedChanged += new System.EventHandler(this.UpdateCreator_EventListener);
             // 
             // uxCreatorTypeCLabel
             // 
             this.uxCreatorTypeCLabel.AutoSize = true;
             this.uxCreatorTypeCLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxCreatorTypeCLabel.Location = new System.Drawing.Point(100, 98);
+            this.uxCreatorTypeCLabel.Location = new System.Drawing.Point(70, 59);
+            this.uxCreatorTypeCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxCreatorTypeCLabel.Name = "uxCreatorTypeCLabel";
-            this.uxCreatorTypeCLabel.Size = new System.Drawing.Size(148, 32);
+            this.uxCreatorTypeCLabel.Size = new System.Drawing.Size(97, 21);
             this.uxCreatorTypeCLabel.TabIndex = 93;
             this.uxCreatorTypeCLabel.Text = "CreatorType:";
             // 
             // uxUpdateButton
             // 
-            this.uxUpdateButton.Location = new System.Drawing.Point(289, 163);
+            this.uxUpdateButton.Enabled = false;
+            this.uxUpdateButton.Location = new System.Drawing.Point(202, 98);
+            this.uxUpdateButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxUpdateButton.Name = "uxUpdateButton";
-            this.uxUpdateButton.Size = new System.Drawing.Size(254, 65);
+            this.uxUpdateButton.Size = new System.Drawing.Size(178, 39);
             this.uxUpdateButton.TabIndex = 94;
             this.uxUpdateButton.Text = "Update Creator\'s Identity";
             this.uxUpdateButton.UseVisualStyleBackColor = true;
@@ -226,61 +247,72 @@ namespace LibraryProject
             // 
             this.uxCreatorCLabel.AutoSize = true;
             this.uxCreatorCLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxCreatorCLabel.Location = new System.Drawing.Point(97, 280);
+            this.uxCreatorCLabel.Location = new System.Drawing.Point(68, 168);
+            this.uxCreatorCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxCreatorCLabel.Name = "uxCreatorCLabel";
-            this.uxCreatorCLabel.Size = new System.Drawing.Size(120, 32);
+            this.uxCreatorCLabel.Size = new System.Drawing.Size(80, 21);
             this.uxCreatorCLabel.TabIndex = 96;
             this.uxCreatorCLabel.Text = "CreatorID:";
             // 
             // uxFetchCreatorIDTextBox
             // 
             this.uxFetchCreatorIDTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxFetchCreatorIDTextBox.Location = new System.Drawing.Point(230, 280);
+            this.uxFetchCreatorIDTextBox.Location = new System.Drawing.Point(161, 168);
+            this.uxFetchCreatorIDTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.uxFetchCreatorIDTextBox.Name = "uxFetchCreatorIDTextBox";
-            this.uxFetchCreatorIDTextBox.Size = new System.Drawing.Size(413, 39);
+            this.uxFetchCreatorIDTextBox.Size = new System.Drawing.Size(290, 29);
             this.uxFetchCreatorIDTextBox.TabIndex = 95;
+            this.uxFetchCreatorIDTextBox.TextChanged += new System.EventHandler(this.uxFetchCreatorIDTextBox_TextChanged);
             // 
             // uxFNameCLabel
             // 
             this.uxFNameCLabel.AutoSize = true;
             this.uxFNameCLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxFNameCLabel.Location = new System.Drawing.Point(81, 407);
+            this.uxFNameCLabel.Location = new System.Drawing.Point(57, 244);
+            this.uxFNameCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxFNameCLabel.Name = "uxFNameCLabel";
-            this.uxFNameCLabel.Size = new System.Drawing.Size(141, 32);
+            this.uxFNameCLabel.Size = new System.Drawing.Size(93, 21);
             this.uxFNameCLabel.TabIndex = 98;
             this.uxFNameCLabel.Text = "First Name: ";
             // 
             // uxFirstNameTextBox
             // 
+            this.uxFirstNameTextBox.Enabled = false;
             this.uxFirstNameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxFirstNameTextBox.Location = new System.Drawing.Point(230, 407);
+            this.uxFirstNameTextBox.Location = new System.Drawing.Point(161, 244);
+            this.uxFirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.uxFirstNameTextBox.Name = "uxFirstNameTextBox";
-            this.uxFirstNameTextBox.Size = new System.Drawing.Size(413, 39);
+            this.uxFirstNameTextBox.Size = new System.Drawing.Size(290, 29);
             this.uxFirstNameTextBox.TabIndex = 97;
             // 
             // uxLNameLabel
             // 
             this.uxLNameLabel.AutoSize = true;
             this.uxLNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxLNameLabel.Location = new System.Drawing.Point(81, 460);
+            this.uxLNameLabel.Location = new System.Drawing.Point(57, 276);
+            this.uxLNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxLNameLabel.Name = "uxLNameLabel";
-            this.uxLNameLabel.Size = new System.Drawing.Size(138, 32);
+            this.uxLNameLabel.Size = new System.Drawing.Size(91, 21);
             this.uxLNameLabel.TabIndex = 100;
             this.uxLNameLabel.Text = "Last Name: ";
             // 
             // uxLastNameTextBox
             // 
+            this.uxLastNameTextBox.Enabled = false;
             this.uxLastNameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxLastNameTextBox.Location = new System.Drawing.Point(230, 455);
+            this.uxLastNameTextBox.Location = new System.Drawing.Point(161, 273);
+            this.uxLastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.uxLastNameTextBox.Name = "uxLastNameTextBox";
-            this.uxLastNameTextBox.Size = new System.Drawing.Size(413, 39);
+            this.uxLastNameTextBox.Size = new System.Drawing.Size(290, 29);
             this.uxLastNameTextBox.TabIndex = 99;
             // 
             // uxFetchButton
             // 
-            this.uxFetchButton.Location = new System.Drawing.Point(296, 338);
+            this.uxFetchButton.Enabled = false;
+            this.uxFetchButton.Location = new System.Drawing.Point(207, 203);
+            this.uxFetchButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxFetchButton.Name = "uxFetchButton";
-            this.uxFetchButton.Size = new System.Drawing.Size(254, 50);
+            this.uxFetchButton.Size = new System.Drawing.Size(178, 30);
             this.uxFetchButton.TabIndex = 101;
             this.uxFetchButton.Text = "Fetch Creator";
             this.uxFetchButton.UseVisualStyleBackColor = true;
@@ -290,25 +322,29 @@ namespace LibraryProject
             // 
             this.uxCompanyCLabel.AutoSize = true;
             this.uxCompanyCLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxCompanyCLabel.Location = new System.Drawing.Point(81, 510);
+            this.uxCompanyCLabel.Location = new System.Drawing.Point(57, 306);
+            this.uxCompanyCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxCompanyCLabel.Name = "uxCompanyCLabel";
-            this.uxCompanyCLabel.Size = new System.Drawing.Size(128, 32);
+            this.uxCompanyCLabel.Size = new System.Drawing.Size(84, 21);
             this.uxCompanyCLabel.TabIndex = 103;
             this.uxCompanyCLabel.Text = "Company: ";
             // 
             // uxCompanyTextBox
             // 
+            this.uxCompanyTextBox.Enabled = false;
             this.uxCompanyTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxCompanyTextBox.Location = new System.Drawing.Point(230, 508);
+            this.uxCompanyTextBox.Location = new System.Drawing.Point(161, 305);
+            this.uxCompanyTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.uxCompanyTextBox.Name = "uxCompanyTextBox";
-            this.uxCompanyTextBox.Size = new System.Drawing.Size(413, 39);
+            this.uxCompanyTextBox.Size = new System.Drawing.Size(290, 29);
             this.uxCompanyTextBox.TabIndex = 102;
             // 
             // uxRetriveButton
             // 
-            this.uxRetriveButton.Location = new System.Drawing.Point(1181, 47);
+            this.uxRetriveButton.Location = new System.Drawing.Point(827, 28);
+            this.uxRetriveButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxRetriveButton.Name = "uxRetriveButton";
-            this.uxRetriveButton.Size = new System.Drawing.Size(254, 73);
+            this.uxRetriveButton.Size = new System.Drawing.Size(178, 44);
             this.uxRetriveButton.TabIndex = 104;
             this.uxRetriveButton.Text = "Retrieve All Creators";
             this.uxRetriveButton.UseVisualStyleBackColor = true;
@@ -318,45 +354,49 @@ namespace LibraryProject
             // 
             this.uxRetriveCreatorsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.uxRetriveCreatorsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uxRetriveCreatorsGridView.Location = new System.Drawing.Point(906, 164);
+            this.uxRetriveCreatorsGridView.Location = new System.Drawing.Point(634, 98);
+            this.uxRetriveCreatorsGridView.Margin = new System.Windows.Forms.Padding(2);
             this.uxRetriveCreatorsGridView.Name = "uxRetriveCreatorsGridView";
             this.uxRetriveCreatorsGridView.RowHeadersWidth = 62;
             this.uxRetriveCreatorsGridView.RowTemplate.Height = 33;
-            this.uxRetriveCreatorsGridView.Size = new System.Drawing.Size(770, 383);
+            this.uxRetriveCreatorsGridView.Size = new System.Drawing.Size(539, 230);
             this.uxRetriveCreatorsGridView.TabIndex = 105;
             // 
             // uxLine4
             // 
             this.uxLine4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.uxLine4.Location = new System.Drawing.Point(37, 595);
+            this.uxLine4.Location = new System.Drawing.Point(26, 357);
+            this.uxLine4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxLine4.Name = "uxLine4";
-            this.uxLine4.Size = new System.Drawing.Size(780, 2);
+            this.uxLine4.Size = new System.Drawing.Size(546, 1);
             this.uxLine4.TabIndex = 106;
             this.uxLine4.Text = "                             ";
             // 
             // uxLine2
             // 
             this.uxLine2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.uxLine2.Location = new System.Drawing.Point(37, 248);
+            this.uxLine2.Location = new System.Drawing.Point(26, 149);
+            this.uxLine2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxLine2.Name = "uxLine2";
-            this.uxLine2.Size = new System.Drawing.Size(780, 2);
+            this.uxLine2.Size = new System.Drawing.Size(546, 1);
             this.uxLine2.TabIndex = 107;
             this.uxLine2.Text = "                             ";
             // 
             // uxLine1
             // 
             this.uxLine1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.uxLine1.Location = new System.Drawing.Point(896, 595);
+            this.uxLine1.Location = new System.Drawing.Point(627, 357);
+            this.uxLine1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uxLine1.Name = "uxLine1";
-            this.uxLine1.Size = new System.Drawing.Size(780, 2);
+            this.uxLine1.Size = new System.Drawing.Size(546, 1);
             this.uxLine1.TabIndex = 108;
             this.uxLine1.Text = "                             ";
             // 
             // Creator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1740, 1247);
+            this.ClientSize = new System.Drawing.Size(1218, 748);
             this.Controls.Add(this.uxLine1);
             this.Controls.Add(this.uxLine2);
             this.Controls.Add(this.uxLine4);
@@ -387,6 +427,8 @@ namespace LibraryProject
             this.Controls.Add(this.uxFetchProductionsByCreatorGridView);
             this.Controls.Add(this.uxGetCreatorByTypeButton);
             this.Controls.Add(this.uxCreatorCreatorTypeLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Creator";
             this.Text = "Creator Controls";
             ((System.ComponentModel.ISupportInitialize)(this.uxFetchProductionsByCreatorGridView)).EndInit();
