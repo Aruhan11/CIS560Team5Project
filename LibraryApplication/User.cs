@@ -15,14 +15,11 @@ namespace LibraryProject
     public partial class User : Form
     {
         const string connectionString = @"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;";
-        // private IGeneralQueryRepository general;
-        //  private IQuestionQueryRepository question;
+     
         private IUserQueryRepository userRepo;
 
         public User()
         {
-            //general = new SqlGeneralQueryRepository(connectionString);
-            //  question = new SqlQuestionQueryRepository(connectionString);
             userRepo = new SqlUserQueryRepository(connectionString);
             
             InitializeComponent();

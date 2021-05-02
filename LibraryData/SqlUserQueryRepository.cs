@@ -100,19 +100,6 @@ namespace LibraryData
 
 
 
-        /*
-         *   private bool checkUserId(int id)
-        {
-            var checkLength = userRepo.RetrieveUsers();
-           
-            if (checkLength.Count >= id && checkLength.Count != 0)
-            {
-                return true;
-            }
-            return false;
-        }
-         */
-
         public bool CheckInt(string s)
         {
             if (s != "" && !s.Any(c => Char.IsLetter(c))&& s != "0")
