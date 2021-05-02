@@ -37,7 +37,7 @@ namespace LibraryProject
                 if (phonenumber.Length != 10)
                 {
                     uxAddPhoneTextBox.BackColor = Color.LightCoral;
-                    MessageBox.Show("Invalid entry, please insert in the format (###) ###-####", "Error", MessageBoxButtons.OK);
+                    MessageBox.Show("Invalid entry, please insert in the format (###) ###-####", "Invalid Input", MessageBoxButtons.OK);
                     
                 }
                 else
@@ -47,11 +47,11 @@ namespace LibraryProject
                     phonenumber = phonenumber.Insert(5, " ");
                     phonenumber = phonenumber.Insert(9, "-");
                     var user = userRepo.CreateUser(uxAddFirstNameTextBox.Text, uxAddLastNameTextBox.Text, phonenumber, default(DateTime), 0);
-                    if (user != null) MessageBox.Show(user.FirstName + user.LastName + " have been added!", "User Added");
+                    if (user != null) MessageBox.Show(user.FirstName + " " + user.LastName + " has been added!", "User Added");
                     else
                     {
                         uxAddPhoneTextBox.BackColor = Color.LightCoral;
-                        MessageBox.Show("Phone Number Not Added Number Already Exists", "Invalid Phone Number");
+                        MessageBox.Show("Number Already Exists", "Invalid Input");
 
                     }
                 }
@@ -61,7 +61,7 @@ namespace LibraryProject
                 if (!userRepo.CheckString(uxAddFirstNameTextBox.Text)) uxAddFirstNameTextBox.BackColor = Color.LightCoral;
                 if (!userRepo.CheckString(uxAddLastNameTextBox.Text)) uxAddLastNameTextBox.BackColor = Color.LightCoral;
                 if (!userRepo.CheckInt(uxAddPhoneTextBox.Text)) uxAddPhoneTextBox.BackColor = Color.LightCoral;
-                MessageBox.Show("Invalid Input", "Invalid");
+                MessageBox.Show("Invalid Input", "Invalid Input");
             }
 
 
@@ -80,7 +80,7 @@ namespace LibraryProject
                 if (checkDel == null) 
                 {
                     uxDelUserIDTextBox.BackColor = Color.LightCoral;
-                    MessageBox.Show("UserID does not exist", "Invalid UserID");
+                    MessageBox.Show("UserID does not exist", "Invalid Input");
                 } 
                 else if (checkDel.IsDeleted == 1) MessageBox.Show(userid + " have been deleted", "User Added");
                 uxDelUserIDTextBox.Clear();
@@ -88,7 +88,7 @@ namespace LibraryProject
             else
             {
                 uxDelUserIDTextBox.BackColor = Color.LightCoral;
-                MessageBox.Show("Please input a valid number for UserID", "Invalid UserID");
+                MessageBox.Show("Please input a valid number for UserID", "Invalid Input");
                 uxDelUserIDTextBox.Text = "";
 
             }
@@ -105,7 +105,7 @@ namespace LibraryProject
                 if (fetchedUser == null)
                 {
                     uxFetchUserIDTextBox.BackColor = Color.LightCoral;
-                    MessageBox.Show("UserID does not exist", "Invalid UserID");
+                    MessageBox.Show("UserID does not exist", "Invalid Input");
                 }
                 else
                 {
@@ -118,7 +118,7 @@ namespace LibraryProject
             {
                 uxFetchUserIDTextBox.BackColor = Color.LightCoral;
            
-                MessageBox.Show("Please input a valid number for UserID", "Invalid UserID");
+                MessageBox.Show("Please input a valid number for UserID", "Invalid Input");
                 
             }
 
@@ -147,7 +147,7 @@ namespace LibraryProject
                     if(user == null)
                     {
                         uxGetPhoneTextBox.BackColor = Color.LightCoral;
-                        MessageBox.Show("Phone Number Does Not Exists", "Invalid Phone Number");
+                        MessageBox.Show("Phone Number Does Not Exists", "Invalid Input");
 
                     }
                     else
@@ -162,7 +162,7 @@ namespace LibraryProject
             else
             {
                 uxGetPhoneTextBox.BackColor = Color.LightCoral;
-                MessageBox.Show("Please input a valid number for Phone Number", "Invalid Phone Number");
+                MessageBox.Show("Please input a valid number for Phone Number", "Invalid Input");
                 uxGetPhoneTextBox.Text = "";
             }
         }
@@ -193,7 +193,7 @@ namespace LibraryProject
                     if (check == null)
                     {
                         uxUpdateUserIDTextBox.BackColor = Color.LightCoral;
-                        MessageBox.Show("UserID does not exist", "Invalid UserID");
+                        MessageBox.Show("UserID does not exist", "Invalid Input");
                     }
                     else
                     {
@@ -201,7 +201,7 @@ namespace LibraryProject
                         else
                         {
                             uxUpdatePhonenumberTextBox.BackColor = Color.LightCoral;
-                            MessageBox.Show("Phone Number Already Exists", "Number Exists");
+                            MessageBox.Show("Phone Number Already Exists", "Invalid Input");
                         }
                         uxDelUserIDTextBox.Clear();
                     }

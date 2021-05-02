@@ -57,7 +57,7 @@ namespace LibraryApplication
                 else
                 {
                     var checkOutAsset = checkOutAssetRepo.CreateCheckOutAsset(assetID, userID, librarianID);
-                    if (checkOutAsset != null) MessageBox.Show(checkOutAsset.CheckOutAssetID + " have been added!", "CheckOutAsset Added");
+                    if (checkOutAsset != null) MessageBox.Show(checkOutAsset.CheckOutAssetID + " has been added!", "CheckOutAsset Added");
                 }
             }
             else
@@ -89,7 +89,7 @@ namespace LibraryApplication
                 }
                 else
                 {
-                    if (check.IsReturned == 1) MessageBox.Show(checkoutID + " have returned", "CheckOutAsset Returned");
+                    if (check.IsReturned == 1) MessageBox.Show(checkoutID + " is returned", "CheckOutAsset Returned");
                     uxUpdateTextBox.Clear();
                 }
 

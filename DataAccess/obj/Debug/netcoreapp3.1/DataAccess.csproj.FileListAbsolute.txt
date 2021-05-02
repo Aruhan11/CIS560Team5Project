@@ -91,3 +91,12 @@ D:\Study\Spring21\CIS560\FinalRepo\DataAccess\obj\Debug\netcoreapp3.1\DataAccess
 D:\Study\Spring21\CIS560\FinalRepo\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache
 D:\Study\Spring21\CIS560\FinalRepo\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
 D:\Study\Spring21\CIS560\FinalRepo\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\amb10\Source\Repos\CIS560Team5ProjectDumb\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
+C:\Users\amb10\Source\Repos\CIS560Team5ProjectDumb\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\amb10\Source\Repos\CIS560Team5ProjectDumb\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\amb10\Source\Repos\CIS560Team5ProjectDumb\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csprojAssemblyReference.cache
+C:\Users\amb10\Source\Repos\CIS560Team5ProjectDumb\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfoInputs.cache
+C:\Users\amb10\Source\Repos\CIS560Team5ProjectDumb\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfo.cs
+C:\Users\amb10\Source\Repos\CIS560Team5ProjectDumb\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\amb10\Source\Repos\CIS560Team5ProjectDumb\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\amb10\Source\Repos\CIS560Team5ProjectDumb\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb
