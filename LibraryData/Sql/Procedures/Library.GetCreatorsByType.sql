@@ -9,15 +9,15 @@ AS
 
 
 SELECT
-	    (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, A.Stock AS Stock, COA.CheckOutDate, COA.ReturnByDate, COUNT(COA.CheckOutID) AS InBorrowingTotal
+	    C.CreatorID,(C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, A.Stock AS Stock, COA.CheckOutDate, COA.ReturnByDate, COUNT(COA.CheckOutID) AS InBorrowingTotal
 	   
 FROM  [Library].CreatorType CT 
 INNER JOIN [Library].CreatorCreatorType CCT ON CCT.CreatorTypeID = CT.CreatorTypeID
 INNER JOIN [Library].Creator C ON C.CreatorID = CCT.CreatorID
-INNER JOIN Library.Asset A ON A.CreatorID = C.CreatorID
-INNER JOIN Library.CheckedOutAsset COA ON COA.AssetID = A.AssetID
+INNER JOIN [Library].Asset A ON A.CreatorID = C.CreatorID
+INNER JOIN [Library].CheckedOutAsset COA ON COA.AssetID = A.AssetID
 WHERE CT.[Name] = @creatorType
-GROUP BY FirstName, LastName, Company, Stock, CheckOutDate, ReturnByDate
+GROUP BY C.CreatorID, FirstName, LastName, Company, Stock, CheckOutDate, ReturnByDate
 GO
 
 

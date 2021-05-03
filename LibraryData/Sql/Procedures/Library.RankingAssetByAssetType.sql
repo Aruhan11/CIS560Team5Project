@@ -1,5 +1,5 @@
 /*
-*  9. The ranking of assets which are borrowed the most in each  asset type by year and season.
+*  9. The ranking of assets which are borrowed the most in each  asset type 
 */
 CREATE OR ALTER PROCEDURE [Library].RankingAssetByAssetType
 
@@ -7,7 +7,7 @@ AS
 
 WITH SourceCTE(AssetID, [Name], AssetTypeID, CheckOutAssetsCount) AS
 (
-    SELECT COA.AssetID, A.[Name], A.AssetTypeID, COUNT(*)
+    SELECT  COA.AssetID, A.[Name], A.AssetTypeID, COUNT(*)
     FROM [Library].CheckedOutAsset COA
     INNER JOIN [Library].[Asset] A ON A.AssetID = COA.AssetID
     GROUP BY COA.AssetID, A.[Name], A.AssetTypeID

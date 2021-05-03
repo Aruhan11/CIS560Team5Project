@@ -210,7 +210,8 @@ VALUES
  (N'hendrerit at vulputate', 2, 97, '1952-12-14', 2),
  (N'dapibus augue', 2, 98, '1996-08-06', 1),
  (N'tempus vel', 1, 99, '1915-12-13', 3),
- (N'sed interdum venenatis turpis', 1, 100, '1919-07-31', 1);
+ (N'sed interdum venenatis turpis', 1, 100, '1919-07-31', 1),
+ (N'A Love Stroy', 3, 1,'2014-11-15', 3);
 
 
 

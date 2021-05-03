@@ -24,6 +24,7 @@ namespace LibarayData.DataDelegates
             while (reader.Read())
             {
                 creatorList.Add(new CreatorByAssetType(
+                    reader.GetInt32("CreatorID"),
                     reader.GetString("CreatorName"),
                     reader.GetString("Company"),
                     reader.GetString("AssetType"),

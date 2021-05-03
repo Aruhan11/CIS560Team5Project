@@ -6,12 +6,10 @@ namespace LibarayData.Model
 {
     public class CreatorByType
     {
-        //SELECT ROW_NUMBER() OVER(ORDER BY C.CreatorID ASC),
-	   //CT.[Name], (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, 
-	   //A.Stock, COA.CheckOutDate, COA.ReturnByDate, S.InBorrowingTotal
+        
 
 
-       // public int RowNumber { get; }
+        public int CreatorID { get; }
 
         public string CreatorType { get; }
 
@@ -28,12 +26,12 @@ namespace LibarayData.Model
         public int InBorrowingTotal { get; }
 
 
-        public CreatorByType(string CreatorType, string CreatorName, string CompanyName, 
+        public CreatorByType(string CreatorType, int CreatorID, string CreatorName, string CompanyName, 
                               int Stock, DateTime CheckOutDate, DateTime ReturnByDate, int InBorrowingTotal)
         {
-            //this.CreatorTypeName = CreatorTypeName;
-           // this.RowNumber = RowNumber;
+            
             this.CreatorType = CreatorType;
+            this.CreatorID = CreatorID;
             this.CreatorName = CreatorName;
             this.CompanyName = CompanyName;
             this.Stock = Stock;

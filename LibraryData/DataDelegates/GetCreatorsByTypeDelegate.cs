@@ -35,7 +35,8 @@ namespace LibarayData.DataDelegates
             while (reader.Read())
             {
                 creators.Add(new CreatorByType(
-               creatorType,
+               creatorType,               
+               reader.GetInt32("CreatorID"),
                reader.GetString("CreatorName"),
                reader.GetString("Company"),
                reader.GetInt32("Stock"),

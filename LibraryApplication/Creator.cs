@@ -46,7 +46,7 @@ namespace LibraryProject
 
                 if (uxAuthorCheckBox.Checked) { creatorTypeIDs.Add(1); }
                 if (uxProducerCheckBox.Checked) { creatorTypeIDs.Add(2); }
-                if (uxProducerCheckBox.Checked) { creatorTypeIDs.Add(3); }
+                if (uxDeveloperCheckBox.Checked) { creatorTypeIDs.Add(3); }
                 if (creatorRepo.FetchCreator(creataorID) == null)
                 {
                     uxUpdateCreatorIDTextBox.BackColor = Color.LightCoral;
@@ -65,7 +65,7 @@ namespace LibraryProject
             else
             {
                 if (uxUpdateCreatorIDTextBox.Text == "" || uxUpdateCreatorIDTextBox.Text.Any(c => Char.IsLetter(c))) uxUpdateCreatorIDTextBox.BackColor = Color.LightCoral;
-                if (!uxAuthorCheckBox.Checked && !uxProducerCheckBox.Checked && !uxDeveloperCheckBox.Checked) 
+                if ((!uxAuthorCheckBox.Checked) && (!uxProducerCheckBox.Checked) && (!uxDeveloperCheckBox.Checked)) 
                 {
                     uxAuthorCheckBox.BackColor = Color.LightCoral;
                     uxProducerCheckBox.BackColor = Color.LightCoral;
@@ -75,7 +75,7 @@ namespace LibraryProject
                 MessageBox.Show("Invalid CreatorID", "Invalid Input");
             }
 
-            // fetch creatorcreatortype
+            
 
         }
 
@@ -138,7 +138,7 @@ namespace LibraryProject
 
         private void UpdateCreator_EventListener(object sender, EventArgs e)
         {
-            if (uxUpdateCreatorIDTextBox.Text.Trim().Length > 0 && (uxAuthorCheckBox.Checked || uxProducerCheckBox.Checked || uxProducerCheckBox.Checked))
+            if (uxUpdateCreatorIDTextBox.Text.Trim().Length > 0 && (uxAuthorCheckBox.Checked || uxProducerCheckBox.Checked || uxDeveloperCheckBox.Checked))
             {
                 uxUpdateButton.Enabled = true;
                 uxUpdateCreatorIDTextBox.BackColor = Color.White;

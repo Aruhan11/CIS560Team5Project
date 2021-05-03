@@ -5,18 +5,17 @@ CREATE OR ALTER PROCEDURE [Library].FetchSituationOfAsset
    @AssetID INT
 AS
 
-WITH SourceCTE(RowNumber,AssetID,CheckOutDate, ReturnByDate, InBorrowingTotal) AS
+WITH SourceCTE(AssetID,UserID, CheckOutDate, ReturnByDate, IsReturned) AS
 (
-	SELECT ROW_NUMBER() OVER(ORDER BY COA.CheckOutDate ASC),
-		   COA.AssetID, COA.CheckOutDate, COA.ReturnByDate, 
-		   SUM(IIF(COA.IsReturned = 0,1,0))
+	SELECT
+		   COA.AssetID, COA.UserID, COA.CheckOutDate, COA.ReturnByDate, COA.IsReturned
 	FROM [Library].CheckedOutAsset COA
 	WHERE COA.AssetID = @AssetID
-	GROUP BY COA.AssetID, COA.CheckOutDate, COA.ReturnByDate
+	GROUP BY COA.AssetID, COA.UserID, COA.CheckOutDate, COA.ReturnByDate, COA.IsReturned
 )
 
-SELECT S.AssetID, A.[Name], [AT].[Name] AS TypeName, (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, 
-	   S.CheckOutDate, S.ReturnByDate, A.Stock
+SELECT S.AssetID, A.[Name], [AT].[Name] AS TypeName, (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, A.Stock,
+	   S.UserID, S.CheckOutDate, S.ReturnByDate, S.Isreturned
 FROM SourceCTE S
 INNER JOIN [Library].Asset A ON A.AssetID = S.AssetID
 INNER JOIN [Library].AssetType [AT] ON [AT].AssetTypeID = A.AssetTypeID

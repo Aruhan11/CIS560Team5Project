@@ -6,12 +6,9 @@ namespace LibarayData.Model
 {
     public class SituationOfAsset
     {
-        //SELECT S.RowNumber, A.[Name], [AT].TypeName, (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, 
-        //A.Stock, COA.CheckOutDate, COA.ReturnByDate, S.InBorrowingTotal
+       
 
-        public int AssetID { get; }
-
-        // public int RowNumber { get; }
+        public int AssetID { get; } 
 
         public string Name { get; }
 
@@ -23,24 +20,28 @@ namespace LibarayData.Model
 
         public int Stock { get; }
 
+        public int UserID { get; }
+
         public DateTime CheckOutDate { get; }
 
         public DateTime ReturnByDate { get; }
 
-        public int InBorrowingTotal { get; }
+        public int IsReturned { get; }
 
 
-        public SituationOfAsset(int AssetID, string Name, string TypeName, string CreatorName, string CompanyName, DateTime CheckOutDate, DateTime ReturnByDate, int Stock)
+        public SituationOfAsset(int AssetID, string Name, string TypeName, string CreatorName, string CompanyName, int Stock, int UserID, DateTime CheckOutDate, DateTime ReturnByDate,  int IsReturned)
         {
             this.AssetID = AssetID;
-            // this.RowNumber = RowNumber;
+        
             this.Name = Name;
             this.TypeName = TypeName;
             this.CreatorName = CreatorName;
             this.CompanyName = CompanyName;
+            this.Stock = Stock;
+            this.UserID = UserID;
             this.CheckOutDate = CheckOutDate;
             this.ReturnByDate = ReturnByDate;
-            this.Stock = Stock;
+            this.IsReturned = IsReturned;
 
 
         }
@@ -54,9 +55,12 @@ namespace LibarayData.Model
             sb.Append("  Type Name: " + TypeName);
             sb.Append("  Creator Name: " + CreatorName);
             sb.Append("  Company Name: " + CompanyName);
+            sb.Append("  Stock: " + Stock.ToString());
+            sb.Append("  UserID: " + UserID);
             sb.Append("  Check Out Date: " + CheckOutDate.ToShortDateString());
             sb.Append("  Return By Date: " + ReturnByDate.ToShortDateString());
-            sb.Append("  Stock: " + Stock.ToString());
+            sb.Append("  IsReturned: " + IsReturned.ToString());
+
             return sb.ToString();
         }
     }

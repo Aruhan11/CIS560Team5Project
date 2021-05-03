@@ -23,12 +23,12 @@ namespace LibarayData.DataDelegates
             while (reader.Read())
             {
                 assetList.Add(new TopTenAsset(
+                    reader.GetInt32("AssetID"),
                     reader.GetString("AssetName"),
                     reader.GetString("AssetType"),
                     reader.GetString("CreatorName"),
                     reader.GetString("Company"),
                     reader.GetInt32("BorrowedTimes")));
-
 
             }
 

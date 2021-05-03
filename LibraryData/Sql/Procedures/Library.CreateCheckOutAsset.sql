@@ -8,6 +8,9 @@ CREATE OR ALTER PROCEDURE [Library].CreateCheckOutAsset
    @IsReturned INT OUTPUT
 AS
 
+
+
+
 INSERT [Library].CheckedOutAsset(AssetID, UserID, LibrarianID)
 VALUES(@AssetID, @UserID, @LibrarianID);
 
@@ -33,5 +36,10 @@ SET @IsReturned =
 	FROM [Library].CheckedOutAsset COA 
 	WHERE COA.CheckOutID = @CheckOutID
 )
+
+UPDATE [Library].Asset
+SET
+	Stock = Stock - 1
+WHERE AssetID = @AssetID;
 
 GO

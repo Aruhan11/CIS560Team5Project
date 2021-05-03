@@ -6,7 +6,9 @@ namespace LibarayData.Model
 {
     public class TopTenAsset
     {
-       // public int RowNumber { get; }
+        // public int RowNumber { get; }
+
+        public int AssetID { get; }
 
         public string AssetName { get; }
 
@@ -19,10 +21,11 @@ namespace LibarayData.Model
         public int BorrowedTimes { get; }
 
 
-        public TopTenAsset( string AssetName, string AssetTypeName, 
+        public TopTenAsset(int AssetID, string AssetName, string AssetTypeName, 
                           string CreatorName, string CompanyName, int BorrowedTimes)
         {
-           // this.RowNumber = RowNumber;
+            // this.RowNumber = RowNumber;
+            this.AssetID = AssetID;
             this.CreatorName = CreatorName;
             this.CompanyName = CompanyName;
             this.AssetName = AssetName;

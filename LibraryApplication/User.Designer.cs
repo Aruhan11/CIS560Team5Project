@@ -75,9 +75,9 @@ namespace LibraryProject
             // 
             // uxAddFirstNameTextBox
             // 
-            this.uxAddFirstNameTextBox.Location = new System.Drawing.Point(264, 62);
+            this.uxAddFirstNameTextBox.Location = new System.Drawing.Point(295, 59);
             this.uxAddFirstNameTextBox.Name = "uxAddFirstNameTextBox";
-            this.uxAddFirstNameTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxAddFirstNameTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxAddFirstNameTextBox.TabIndex = 0;
             this.uxAddFirstNameTextBox.TextChanged += new System.EventHandler(this.uxAddFirstNameTextBox_TextChanged_1);
             // 
@@ -85,16 +85,16 @@ namespace LibraryProject
             // 
             this.uxAddFirstNameLabel.AutoSize = true;
             this.uxAddFirstNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddFirstNameLabel.Location = new System.Drawing.Point(89, 65);
+            this.uxAddFirstNameLabel.Location = new System.Drawing.Point(41, 62);
             this.uxAddFirstNameLabel.Name = "uxAddFirstNameLabel";
-            this.uxAddFirstNameLabel.Size = new System.Drawing.Size(89, 21);
+            this.uxAddFirstNameLabel.Size = new System.Drawing.Size(223, 54);
             this.uxAddFirstNameLabel.TabIndex = 1;
             this.uxAddFirstNameLabel.Text = "First Name:";
             // 
             // uxCreateUserButton
             // 
             this.uxCreateUserButton.Enabled = false;
-            this.uxCreateUserButton.Location = new System.Drawing.Point(351, 272);
+            this.uxCreateUserButton.Location = new System.Drawing.Point(264, 272);
             this.uxCreateUserButton.Name = "uxCreateUserButton";
             this.uxCreateUserButton.Size = new System.Drawing.Size(254, 85);
             this.uxCreateUserButton.TabIndex = 2;
@@ -106,17 +106,17 @@ namespace LibraryProject
             // 
             this.uxAddLastNameLabel.AutoSize = true;
             this.uxAddLastNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddLastNameLabel.Location = new System.Drawing.Point(89, 127);
+            this.uxAddLastNameLabel.Location = new System.Drawing.Point(46, 123);
             this.uxAddLastNameLabel.Name = "uxAddLastNameLabel";
-            this.uxAddLastNameLabel.Size = new System.Drawing.Size(87, 21);
+            this.uxAddLastNameLabel.Size = new System.Drawing.Size(218, 54);
             this.uxAddLastNameLabel.TabIndex = 3;
             this.uxAddLastNameLabel.Text = "Last Name:";
             // 
             // uxAddLastNameTextBox
             // 
-            this.uxAddLastNameTextBox.Location = new System.Drawing.Point(264, 120);
+            this.uxAddLastNameTextBox.Location = new System.Drawing.Point(295, 120);
             this.uxAddLastNameTextBox.Name = "uxAddLastNameTextBox";
-            this.uxAddLastNameTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxAddLastNameTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxAddLastNameTextBox.TabIndex = 4;
             this.uxAddLastNameTextBox.TextChanged += new System.EventHandler(this.uxAddLastNameTextBox_TextChanged);
             // 
@@ -124,24 +124,24 @@ namespace LibraryProject
             // 
             this.uxAddPhoneLabel.AutoSize = true;
             this.uxAddPhoneLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxAddPhoneLabel.Location = new System.Drawing.Point(41, 187);
+            this.uxAddPhoneLabel.Location = new System.Drawing.Point(2, 184);
             this.uxAddPhoneLabel.Name = "uxAddPhoneLabel";
-            this.uxAddPhoneLabel.Size = new System.Drawing.Size(119, 21);
+            this.uxAddPhoneLabel.Size = new System.Drawing.Size(301, 54);
             this.uxAddPhoneLabel.TabIndex = 6;
             this.uxAddPhoneLabel.Text = "Phone Number:";
             // 
             // uxFetchUserIDTextBox
             // 
-            this.uxFetchUserIDTextBox.Location = new System.Drawing.Point(264, 512);
+            this.uxFetchUserIDTextBox.Location = new System.Drawing.Point(240, 508);
             this.uxFetchUserIDTextBox.Name = "uxFetchUserIDTextBox";
-            this.uxFetchUserIDTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxFetchUserIDTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxFetchUserIDTextBox.TabIndex = 8;
             this.uxFetchUserIDTextBox.TextChanged += new System.EventHandler(this.uxFetchUserIDTextBox_TextChanged);
             // 
             // uxFetchButton
             // 
             this.uxFetchButton.Enabled = false;
-            this.uxFetchButton.Location = new System.Drawing.Point(351, 580);
+            this.uxFetchButton.Location = new System.Drawing.Point(264, 580);
             this.uxFetchButton.Name = "uxFetchButton";
             this.uxFetchButton.Size = new System.Drawing.Size(254, 85);
             this.uxFetchButton.TabIndex = 9;
@@ -153,36 +153,35 @@ namespace LibraryProject
             // 
             this.uxFetchPhoneLabel.AutoSize = true;
             this.uxFetchPhoneLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxFetchPhoneLabel.Location = new System.Drawing.Point(64, 843);
+            this.uxFetchPhoneLabel.Location = new System.Drawing.Point(2, 820);
             this.uxFetchPhoneLabel.Name = "uxFetchPhoneLabel";
-            this.uxFetchPhoneLabel.Size = new System.Drawing.Size(119, 21);
+            this.uxFetchPhoneLabel.Size = new System.Drawing.Size(301, 54);
             this.uxFetchPhoneLabel.TabIndex = 15;
             this.uxFetchPhoneLabel.Text = "Phone Number:";
             // 
             // uxFetchPhoneTextBox
             // 
             this.uxFetchPhoneTextBox.Enabled = false;
-            this.uxFetchPhoneTextBox.Location = new System.Drawing.Point(264, 836);
+            this.uxFetchPhoneTextBox.Location = new System.Drawing.Point(295, 820);
             this.uxFetchPhoneTextBox.Name = "uxFetchPhoneTextBox";
-            this.uxFetchPhoneTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxFetchPhoneTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxFetchPhoneTextBox.TabIndex = 14;
-            this.uxFetchPhoneTextBox.TextChanged += new System.EventHandler(this.uxFetchPhoneTextBox_TextChanged);
             // 
             // uxFetchLNameTextBox
             // 
             this.uxFetchLNameTextBox.Enabled = false;
-            this.uxFetchLNameTextBox.Location = new System.Drawing.Point(264, 773);
+            this.uxFetchLNameTextBox.Location = new System.Drawing.Point(295, 765);
             this.uxFetchLNameTextBox.Name = "uxFetchLNameTextBox";
-            this.uxFetchLNameTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxFetchLNameTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxFetchLNameTextBox.TabIndex = 13;
             // 
             // uxFetchLNameLabel
             // 
             this.uxFetchLNameLabel.AutoSize = true;
             this.uxFetchLNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxFetchLNameLabel.Location = new System.Drawing.Point(115, 776);
+            this.uxFetchLNameLabel.Location = new System.Drawing.Point(64, 757);
             this.uxFetchLNameLabel.Name = "uxFetchLNameLabel";
-            this.uxFetchLNameLabel.Size = new System.Drawing.Size(87, 21);
+            this.uxFetchLNameLabel.Size = new System.Drawing.Size(218, 54);
             this.uxFetchLNameLabel.TabIndex = 12;
             this.uxFetchLNameLabel.Text = "Last Name:";
             // 
@@ -190,27 +189,27 @@ namespace LibraryProject
             // 
             this.uxFetchFNameLabel.AutoSize = true;
             this.uxFetchFNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxFetchFNameLabel.Location = new System.Drawing.Point(115, 707);
+            this.uxFetchFNameLabel.Location = new System.Drawing.Point(59, 703);
             this.uxFetchFNameLabel.Name = "uxFetchFNameLabel";
-            this.uxFetchFNameLabel.Size = new System.Drawing.Size(89, 21);
+            this.uxFetchFNameLabel.Size = new System.Drawing.Size(223, 54);
             this.uxFetchFNameLabel.TabIndex = 11;
             this.uxFetchFNameLabel.Text = "First Name:";
             // 
             // uxFetchFNameTextBox
             // 
             this.uxFetchFNameTextBox.Enabled = false;
-            this.uxFetchFNameTextBox.Location = new System.Drawing.Point(264, 707);
+            this.uxFetchFNameTextBox.Location = new System.Drawing.Point(295, 706);
             this.uxFetchFNameTextBox.Name = "uxFetchFNameTextBox";
-            this.uxFetchFNameTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxFetchFNameTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxFetchFNameTextBox.TabIndex = 10;
             // 
             // uxFetchUserIDLabel
             // 
             this.uxFetchUserIDLabel.AutoSize = true;
             this.uxFetchUserIDLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxFetchUserIDLabel.Location = new System.Drawing.Point(115, 515);
+            this.uxFetchUserIDLabel.Location = new System.Drawing.Point(64, 508);
             this.uxFetchUserIDLabel.Name = "uxFetchUserIDLabel";
-            this.uxFetchUserIDLabel.Size = new System.Drawing.Size(64, 21);
+            this.uxFetchUserIDLabel.Size = new System.Drawing.Size(161, 54);
             this.uxFetchUserIDLabel.TabIndex = 16;
             this.uxFetchUserIDLabel.Text = "UserID :";
             // 
@@ -218,9 +217,9 @@ namespace LibraryProject
             // 
             this.uxGetPhoneLabel.AutoSize = true;
             this.uxGetPhoneLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxGetPhoneLabel.Location = new System.Drawing.Point(815, 515);
+            this.uxGetPhoneLabel.Location = new System.Drawing.Point(757, 508);
             this.uxGetPhoneLabel.Name = "uxGetPhoneLabel";
-            this.uxGetPhoneLabel.Size = new System.Drawing.Size(119, 21);
+            this.uxGetPhoneLabel.Size = new System.Drawing.Size(301, 54);
             this.uxGetPhoneLabel.TabIndex = 26;
             this.uxGetPhoneLabel.Text = "Phone Number:";
             // 
@@ -228,9 +227,9 @@ namespace LibraryProject
             // 
             this.uxGetLNameLabel.AutoSize = true;
             this.uxGetLNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxGetLNameLabel.Location = new System.Drawing.Point(838, 842);
+            this.uxGetLNameLabel.Location = new System.Drawing.Point(772, 839);
             this.uxGetLNameLabel.Name = "uxGetLNameLabel";
-            this.uxGetLNameLabel.Size = new System.Drawing.Size(87, 21);
+            this.uxGetLNameLabel.Size = new System.Drawing.Size(218, 54);
             this.uxGetLNameLabel.TabIndex = 25;
             this.uxGetLNameLabel.Text = "Last Name:";
             // 
@@ -239,7 +238,7 @@ namespace LibraryProject
             this.uxGetLNameTextBox.Enabled = false;
             this.uxGetLNameTextBox.Location = new System.Drawing.Point(1017, 839);
             this.uxGetLNameTextBox.Name = "uxGetLNameTextBox";
-            this.uxGetLNameTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxGetLNameTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxGetLNameTextBox.TabIndex = 24;
             // 
             // uxGetFNameTextBox
@@ -247,16 +246,16 @@ namespace LibraryProject
             this.uxGetFNameTextBox.Enabled = false;
             this.uxGetFNameTextBox.Location = new System.Drawing.Point(1017, 769);
             this.uxGetFNameTextBox.Name = "uxGetFNameTextBox";
-            this.uxGetFNameTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxGetFNameTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxGetFNameTextBox.TabIndex = 23;
             // 
             // uxGetFNameLabel
             // 
             this.uxGetFNameLabel.AutoSize = true;
             this.uxGetFNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxGetFNameLabel.Location = new System.Drawing.Point(835, 772);
+            this.uxGetFNameLabel.Location = new System.Drawing.Point(767, 776);
             this.uxGetFNameLabel.Name = "uxGetFNameLabel";
-            this.uxGetFNameLabel.Size = new System.Drawing.Size(89, 21);
+            this.uxGetFNameLabel.Size = new System.Drawing.Size(223, 54);
             this.uxGetFNameLabel.TabIndex = 22;
             this.uxGetFNameLabel.Text = "First Name:";
             // 
@@ -264,9 +263,9 @@ namespace LibraryProject
             // 
             this.uxGetUserIDLabel.AutoSize = true;
             this.uxGetUserIDLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxGetUserIDLabel.Location = new System.Drawing.Point(853, 706);
+            this.uxGetUserIDLabel.Location = new System.Drawing.Point(780, 707);
             this.uxGetUserIDLabel.Name = "uxGetUserIDLabel";
-            this.uxGetUserIDLabel.Size = new System.Drawing.Size(64, 21);
+            this.uxGetUserIDLabel.Size = new System.Drawing.Size(161, 54);
             this.uxGetUserIDLabel.TabIndex = 21;
             this.uxGetUserIDLabel.Text = "User ID:";
             // 
@@ -275,13 +274,13 @@ namespace LibraryProject
             this.uxGetUserIDTextBox.Enabled = false;
             this.uxGetUserIDTextBox.Location = new System.Drawing.Point(1017, 700);
             this.uxGetUserIDTextBox.Name = "uxGetUserIDTextBox";
-            this.uxGetUserIDTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxGetUserIDTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxGetUserIDTextBox.TabIndex = 20;
             // 
             // uxGetButton
             // 
             this.uxGetButton.Enabled = false;
-            this.uxGetButton.Location = new System.Drawing.Point(1099, 576);
+            this.uxGetButton.Location = new System.Drawing.Point(1032, 580);
             this.uxGetButton.Name = "uxGetButton";
             this.uxGetButton.Size = new System.Drawing.Size(254, 85);
             this.uxGetButton.TabIndex = 19;
@@ -291,16 +290,16 @@ namespace LibraryProject
             // 
             // uxGetPhoneTextBox
             // 
-            this.uxGetPhoneTextBox.Location = new System.Drawing.Point(1017, 508);
+            this.uxGetPhoneTextBox.Location = new System.Drawing.Point(1045, 505);
             this.uxGetPhoneTextBox.Name = "uxGetPhoneTextBox";
-            this.uxGetPhoneTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxGetPhoneTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxGetPhoneTextBox.TabIndex = 18;
             this.uxGetPhoneTextBox.TextChanged += new System.EventHandler(this.uxGetPhoneTextBox_TextChanged);
             // 
             // uxDeleteButton
             // 
             this.uxDeleteButton.Enabled = false;
-            this.uxDeleteButton.Location = new System.Drawing.Point(1857, 805);
+            this.uxDeleteButton.Location = new System.Drawing.Point(1831, 805);
             this.uxDeleteButton.Name = "uxDeleteButton";
             this.uxDeleteButton.Size = new System.Drawing.Size(254, 85);
             this.uxDeleteButton.TabIndex = 28;
@@ -312,9 +311,9 @@ namespace LibraryProject
             // 
             this.uxDelUserLabel.AutoSize = true;
             this.uxDelUserLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxDelUserLabel.Location = new System.Drawing.Point(1626, 730);
+            this.uxDelUserLabel.Location = new System.Drawing.Point(1589, 733);
             this.uxDelUserLabel.Name = "uxDelUserLabel";
-            this.uxDelUserLabel.Size = new System.Drawing.Size(64, 21);
+            this.uxDelUserLabel.Size = new System.Drawing.Size(161, 54);
             this.uxDelUserLabel.TabIndex = 30;
             this.uxDelUserLabel.Text = "UserID :";
             // 
@@ -322,7 +321,7 @@ namespace LibraryProject
             // 
             this.uxDelUserIDTextBox.Location = new System.Drawing.Point(1767, 730);
             this.uxDelUserIDTextBox.Name = "uxDelUserIDTextBox";
-            this.uxDelUserIDTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxDelUserIDTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxDelUserIDTextBox.TabIndex = 29;
             this.uxDelUserIDTextBox.TextChanged += new System.EventHandler(this.uxDelUserIDTextBox_TextChanged);
             // 
@@ -330,26 +329,26 @@ namespace LibraryProject
             // 
             this.uxUpPhoneLabel.AutoSize = true;
             this.uxUpPhoneLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxUpPhoneLabel.Location = new System.Drawing.Point(806, 167);
+            this.uxUpPhoneLabel.Location = new System.Drawing.Point(753, 149);
             this.uxUpPhoneLabel.Name = "uxUpPhoneLabel";
-            this.uxUpPhoneLabel.Size = new System.Drawing.Size(119, 21);
+            this.uxUpPhoneLabel.Size = new System.Drawing.Size(301, 54);
             this.uxUpPhoneLabel.TabIndex = 31;
             this.uxUpPhoneLabel.Text = "Phone Number:";
             // 
             // uxUpdatePhonenumberTextBox
             // 
-            this.uxUpdatePhonenumberTextBox.Location = new System.Drawing.Point(1017, 170);
+            this.uxUpdatePhonenumberTextBox.Location = new System.Drawing.Point(1045, 149);
             this.uxUpdatePhonenumberTextBox.Name = "uxUpdatePhonenumberTextBox";
-            this.uxUpdatePhonenumberTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxUpdatePhonenumberTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxUpdatePhonenumberTextBox.TabIndex = 32;
             this.uxUpdatePhonenumberTextBox.TextChanged += new System.EventHandler(this.uxUpdatePhonenumberTextBox_TextChanged);
             // 
             // uxUpdateUserButton
             // 
             this.uxUpdateUserButton.Enabled = false;
-            this.uxUpdateUserButton.Location = new System.Drawing.Point(911, 243);
+            this.uxUpdateUserButton.Location = new System.Drawing.Point(854, 272);
             this.uxUpdateUserButton.Name = "uxUpdateUserButton";
-            this.uxUpdateUserButton.Size = new System.Drawing.Size(539, 85);
+            this.uxUpdateUserButton.Size = new System.Drawing.Size(596, 85);
             this.uxUpdateUserButton.TabIndex = 33;
             this.uxUpdateUserButton.Text = "Update User\'s Phone number";
             this.uxUpdateUserButton.UseVisualStyleBackColor = true;
@@ -380,17 +379,17 @@ namespace LibraryProject
             // 
             this.uxUpUserIDLabel.AutoSize = true;
             this.uxUpUserIDLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uxUpUserIDLabel.Location = new System.Drawing.Point(853, 103);
+            this.uxUpUserIDLabel.Location = new System.Drawing.Point(868, 95);
             this.uxUpUserIDLabel.Name = "uxUpUserIDLabel";
-            this.uxUpUserIDLabel.Size = new System.Drawing.Size(64, 21);
+            this.uxUpUserIDLabel.Size = new System.Drawing.Size(161, 54);
             this.uxUpUserIDLabel.TabIndex = 37;
             this.uxUpUserIDLabel.Text = "UserID :";
             // 
             // uxUpdateUserIDTextBox
             // 
-            this.uxUpdateUserIDTextBox.Location = new System.Drawing.Point(1017, 103);
+            this.uxUpdateUserIDTextBox.Location = new System.Drawing.Point(1045, 88);
             this.uxUpdateUserIDTextBox.Name = "uxUpdateUserIDTextBox";
-            this.uxUpdateUserIDTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxUpdateUserIDTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxUpdateUserIDTextBox.TabIndex = 36;
             this.uxUpdateUserIDTextBox.TextChanged += new System.EventHandler(this.uxUpdateUserIDTextBox_TextChanged);
             // 
@@ -442,17 +441,20 @@ namespace LibraryProject
             // uxAddPhoneTextBox
             // 
             this.uxAddPhoneTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.uxAddPhoneTextBox.Location = new System.Drawing.Point(264, 184);
+            this.uxAddPhoneTextBox.Location = new System.Drawing.Point(295, 181);
             this.uxAddPhoneTextBox.Name = "uxAddPhoneTextBox";
-            this.uxAddPhoneTextBox.Size = new System.Drawing.Size(433, 29);
+            this.uxAddPhoneTextBox.Size = new System.Drawing.Size(433, 61);
             this.uxAddPhoneTextBox.TabIndex = 5;
             this.uxAddPhoneTextBox.TextChanged += new System.EventHandler(this.uxAddPhoneTextBox_TextChanged);
             // 
             // User
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 54F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2400, 979);
+            this.Controls.Add(this.uxGetPhoneTextBox);
+            this.Controls.Add(this.uxFetchPhoneTextBox);
+            this.Controls.Add(this.uxAddPhoneTextBox);
             this.Controls.Add(this.uxLine5);
             this.Controls.Add(this.uxLine1);
             this.Controls.Add(this.uxLine4);
@@ -476,10 +478,8 @@ namespace LibraryProject
             this.Controls.Add(this.uxGetUserIDLabel);
             this.Controls.Add(this.uxGetUserIDTextBox);
             this.Controls.Add(this.uxGetButton);
-            this.Controls.Add(this.uxGetPhoneTextBox);
             this.Controls.Add(this.uxFetchUserIDLabel);
             this.Controls.Add(this.uxFetchPhoneLabel);
-            this.Controls.Add(this.uxFetchPhoneTextBox);
             this.Controls.Add(this.uxFetchLNameTextBox);
             this.Controls.Add(this.uxFetchLNameLabel);
             this.Controls.Add(this.uxFetchFNameLabel);
@@ -487,7 +487,6 @@ namespace LibraryProject
             this.Controls.Add(this.uxFetchButton);
             this.Controls.Add(this.uxFetchUserIDTextBox);
             this.Controls.Add(this.uxAddPhoneLabel);
-            this.Controls.Add(this.uxAddPhoneTextBox);
             this.Controls.Add(this.uxAddLastNameTextBox);
             this.Controls.Add(this.uxAddLastNameLabel);
             this.Controls.Add(this.uxCreateUserButton);

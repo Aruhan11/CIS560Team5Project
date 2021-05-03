@@ -1,5 +1,5 @@
 /*
-* 10. The ranking of creators whose productions are borrowed in most  in each asset type by year
+* 10. The ranking of creators whose productions are borrowed in most  in each asset type 
 */
 CREATE OR ALTER PROCEDURE [Library].RankingCreatorByAssetType
 
@@ -7,16 +7,16 @@ AS
 
 WITH SourseCTE(CreatorID,AssetID,AssetName,AssetTypeID,CheckOutAssetsCount) AS
 (
-    SELECT C.CreatorID, COA.AssetID, A.[Name], A.AssetTypeID, COUNT(*)OVER(PARTITION BY C.CreatorID)
+    SELECT C.CreatorID, COA.AssetID, A.[Name], A.AssetTypeID, COUNT(*)
     FROM [Library].CheckedOutAsset COA
     INNER JOIN [Library].[Asset] A ON A.AssetID = COA.AssetID
     INNER JOIN [Library].Creator C ON C.CreatorID = A.CreatorID
+    GROUP BY  C.CreatorID, COA.AssetID, A.[Name], A.AssetTypeID
     
 )
 
 SELECT 
-      
-      (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, 
+      S.CreatorID, (C.FirstName + N' '+ C.LastName) AS CreatorName, C.Company, 
       [AT].[Name] AS AssetType,
       RANK() OVER( PARTITION BY S.AssetTypeID ORDER BY S.CheckOutAssetsCount DESC) AS CheckOutRank,
       S.AssetName,  

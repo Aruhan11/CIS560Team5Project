@@ -10,6 +10,7 @@ INSERT @AssetCategoryStaging(AssetID,CategoryID)
 VALUES
  (1, 13),
  (1, 14),
+ (1,12),
  (2, 4),
  (3, 7),
  (4, 1),
